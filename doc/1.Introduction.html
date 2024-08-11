@@ -1,0 +1,1568 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+/* try fix https://github.com/typora/typora-issues/issues/5253 */
+.file-node-expanded>.file-node-children {
+    display: grid;
+  }
+
+.md-alert-text-note {
+    color: rgb(47, 129, 247);
+}
+.md-alert-text-important {
+    color: rgb(163, 113, 247);
+}
+.md-alert-text-warning {
+    color:  rgb(210, 153, 34);
+}
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title></title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='proxmox-ve-administration-guide-proxmox-ve-管理指南'><img src="data:image/svg+xml;base64,%0APD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjwh%0ALS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoK%0APHN2ZwogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgIHht%0AbG5zOmNjPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9ucyMiCiAgIHhtbG5zOnJkZj0iaHR0%0AcDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyIKICAgeG1sbnM6c3ZnPSJo%0AdHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIw%0AMDAvc3ZnIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5l%0AdC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3Nj%0AYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB3aWR0aD0iODAwIgogICBoZWlnaHQ9IjEy%0AOS4wMzkyOSIKICAgaWQ9InN2ZzMwMTgiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVy%0Ac2lvbj0iMC40OC4zLjEgcjk4ODYiCiAgIHNvZGlwb2RpOmRvY25hbWU9IlByb3htb3hfbG9nb19z%0AdGFuZGFyZF9oZXguc3ZnIgogICBpbmtzY2FwZTpleHBvcnQtZmlsZW5hbWU9IlM6XFByb3htb3gt%0ATG9nby1ORVdcU3RhbmRhcmQtTG9nb1xQTkdcUHJveG1veF9sb2dvX3N0YW5kYXJkX2hleF84MDBw%0AeC5wbmciCiAgIGlua3NjYXBlOmV4cG9ydC14ZHBpPSI5MCIKICAgaW5rc2NhcGU6ZXhwb3J0LXlk%0AcGk9IjkwIj4KICA8c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgaWQ9ImJhc2UiCiAgICAgcGFnZWNv%0AbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNp%0AdHk9IjEuMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBh%0AZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMi44IgogICAgIGlua3NjYXBlOmN4PSIz%0ANDkuMDE2MDIiCiAgICAgaW5rc2NhcGU6Y3k9IjY0LjUwNTI2NSIKICAgICBpbmtzY2FwZTpkb2N1%0AbWVudC11bml0cz0icHgiCiAgICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0ibGF5ZXIxIgogICAg%0AIHNob3dncmlkPSJmYWxzZSIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjI1NjAiCiAgICAg%0AaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTM3NyIKICAgICBpbmtzY2FwZTp3aW5kb3cteD0iLTgi%0ACiAgICAgaW5rc2NhcGU6d2luZG93LXk9Ii04IgogICAgIGlua3NjYXBlOndpbmRvdy1tYXhpbWl6%0AZWQ9IjEiCiAgICAgc2hvd2d1aWRlcz0idHJ1ZSIKICAgICBpbmtzY2FwZTpndWlkZS1iYm94PSJ0%0AcnVlIgogICAgIG9iamVjdHRvbGVyYW5jZT0iNCIKICAgICBncmlkdG9sZXJhbmNlPSIyIgogICAg%0AIGd1aWRldG9sZXJhbmNlPSIxIgogICAgIGZpdC1tYXJnaW4tdG9wPSI1IgogICAgIGZpdC1tYXJn%0AaW4tbGVmdD0iNSIKICAgICBmaXQtbWFyZ2luLXJpZ2h0PSI1IgogICAgIGZpdC1tYXJnaW4tYm90%0AdG9tPSI1IgogICAgIGlua3NjYXBlOnNob3dwYWdlc2hhZG93PSJmYWxzZSIgLz4KICA8ZGVmcwog%0AICAgIGlkPSJkZWZzMzAyMCI+CiAgICA8Y2xpcFBhdGgKICAgICAgIGNsaXBQYXRoVW5pdHM9InVz%0AZXJTcGFjZU9uVXNlIgogICAgICAgaWQ9ImNsaXBQYXRoMzEwMi0xIj4KICAgICAgPHJlY3QKICAg%0AICAgICAgc3R5bGU9ImZpbGw6I2U1NzAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9k%0AZDtzdHJva2U6bm9uZSIKICAgICAgICAgaWQ9InJlY3QzMTA0LTciCiAgICAgICAgIHdpZHRoPSI0%0AMzYuNDAxODkiCiAgICAgICAgIGhlaWdodD0iMzI2LjQwOTkxIgogICAgICAgICB4PSItODIuOTk5%0AOTE2IgogICAgICAgICB5PSItMzQ3LjcxMzg3IgogICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgw%0ALjczNDQ5MTYxLDAuNjc4NjE3NzYsLTAuNzg0OTcxOTMsMC42MTk1MzEzMywwLDApIiAvPgogICAg%0APC9jbGlwUGF0aD4KICAgIDxjbGlwUGF0aAogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNl%0AT25Vc2UiCiAgICAgICBpZD0iY2xpcFBhdGg0NzQ2Ij4KICAgICAgPHJlY3QKICAgICAgICAgc3R5%0AbGU9ImZpbGw6I2U1NzAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6%0Abm9uZSIKICAgICAgICAgaWQ9InJlY3Q0NzQ4IgogICAgICAgICB3aWR0aD0iNDM2LjQwMTg5Igog%0AICAgICAgICBoZWlnaHQ9IjMyNi40MDk5MSIKICAgICAgICAgeD0iLTgyLjk5OTkxNiIKICAgICAg%0AICAgeT0iLTM0Ny43MTM4NyIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMC43MzQ0OTE2MSww%0ALjY3ODYxNzc2LC0wLjc4NDk3MTkzLDAuNjE5NTMxMzMsMCwwKSIgLz4KICAgIDwvY2xpcFBhdGg+%0ACiAgICA8Y2xpcFBhdGgKICAgICAgIGlkPSJjbGlwUGF0aDI5OTktMi0zLTQtMSIKICAgICAgIGNs%0AaXBQYXRoVW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHBhdGgKICAgICAgICAgaW5rc2Nh%0AcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgICAgaWQ9InBhdGgzMDAxLTgtOC02LTAi%0ACiAgICAgICAgIGQ9Im0gMCwxNDQwMCAxNDQwMCwwIEwgMTQ0MDAsMCAwLDAgMCwxNDQwMCB6IiAv%0APgogICAgPC9jbGlwUGF0aD4KICAgIDxjbGlwUGF0aAogICAgICAgY2xpcFBhdGhVbml0cz0idXNl%0AclNwYWNlT25Vc2UiCiAgICAgICBpZD0iY2xpcFBhdGgzMTAyLTQiPgogICAgICA8cmVjdAogICAg%0AICAgICBzdHlsZT0iZmlsbDojZTU3MDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2Rk%0AO3N0cm9rZTpub25lIgogICAgICAgICBpZD0icmVjdDMxMDQtMSIKICAgICAgICAgd2lkdGg9IjQz%0ANi40MDE4OSIKICAgICAgICAgaGVpZ2h0PSIzMjYuNDA5OTEiCiAgICAgICAgIHg9Ii04Mi45OTk5%0AMTYiCiAgICAgICAgIHk9Ii0zNDcuNzEzODciCiAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDAu%0ANzM0NDkxNjEsMC42Nzg2MTc3NiwtMC43ODQ5NzE5MywwLjYxOTUzMTMzLDAsMCkiIC8+CiAgICA8%0AL2NsaXBQYXRoPgogICAgPGNsaXBQYXRoCiAgICAgICBjbGlwUGF0aFVuaXRzPSJ1c2VyU3BhY2VP%0AblVzZSIKICAgICAgIGlkPSJjbGlwUGF0aDMwMDgiPgogICAgICA8cmVjdAogICAgICAgICBzdHls%0AZT0iZmlsbDojZTU3MDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpu%0Ab25lIgogICAgICAgICBpZD0icmVjdDMwMTAiCiAgICAgICAgIHdpZHRoPSI0MzYuNDAxODkiCiAg%0AICAgICAgIGhlaWdodD0iMzI2LjQwOTkxIgogICAgICAgICB4PSItODIuOTk5OTE2IgogICAgICAg%0AICB5PSItMzQ3LjcxMzg3IgogICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjczNDQ5MTYxLDAu%0ANjc4NjE3NzYsLTAuNzg0OTcxOTMsMC42MTk1MzEzMywwLDApIiAvPgogICAgPC9jbGlwUGF0aD4K%0AICAgIDxjbGlwUGF0aAogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25Vc2UiCiAgICAg%0AICBpZD0iY2xpcFBhdGgzMTAyIj4KICAgICAgPHJlY3QKICAgICAgICAgc3R5bGU9ImZpbGw6I2U1%0ANzAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6ZXZlbm9kZDtzdHJva2U6bm9uZSIKICAgICAg%0AICAgaWQ9InJlY3QzMTA0IgogICAgICAgICB3aWR0aD0iNDM2LjQwMTg5IgogICAgICAgICBoZWln%0AaHQ9IjMyNi40MDk5MSIKICAgICAgICAgeD0iLTgyLjk5OTkxNiIKICAgICAgICAgeT0iLTM0Ny43%0AMTM4NyIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMC43MzQ0OTE2MSwwLjY3ODYxNzc2LC0w%0ALjc4NDk3MTkzLDAuNjE5NTMxMzMsMCwwKSIgLz4KICAgIDwvY2xpcFBhdGg+CiAgICA8Y2xpcFBh%0AdGgKICAgICAgIGNsaXBQYXRoVW5pdHM9InVzZXJTcGFjZU9uVXNlIgogICAgICAgaWQ9ImNsaXBQ%0AYXRoNDgxNCI+CiAgICAgIDxyZWN0CiAgICAgICAgIHN0eWxlPSJmaWxsOiNlNTcwMDA7ZmlsbC1v%0AcGFjaXR5OjE7ZmlsbC1ydWxlOmV2ZW5vZGQ7c3Ryb2tlOm5vbmUiCiAgICAgICAgIGlkPSJyZWN0%0ANDgxNiIKICAgICAgICAgd2lkdGg9IjQzNi40MDE4OSIKICAgICAgICAgaGVpZ2h0PSIzMjYuNDA5%0AOTEiCiAgICAgICAgIHg9Ii04Mi45OTk5MTYiCiAgICAgICAgIHk9Ii0zNDcuNzEzODciCiAgICAg%0AICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuNzM0NDkxNjEsMC42Nzg2MTc3NiwtMC43ODQ5NzE5Myww%0ALjYxOTUzMTMzLDAsMCkiIC8+CiAgICA8L2NsaXBQYXRoPgogICAgPGNsaXBQYXRoCiAgICAgICBp%0AZD0iY2xpcFBhdGgyOTk5LTItMy00IgogICAgICAgY2xpcFBhdGhVbml0cz0idXNlclNwYWNlT25V%0Ac2UiPgogICAgICA8cGF0aAogICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIw%0AIgogICAgICAgICBpZD0icGF0aDMwMDEtOC04LTYiCiAgICAgICAgIGQ9Im0gMCwxNDQwMCAxNDQw%0AMCwwIEwgMTQ0MDAsMCAwLDAgMCwxNDQwMCB6IiAvPgogICAgPC9jbGlwUGF0aD4KICA8L2RlZnM+%0ACiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhMzAyMyI+CiAgICA8cmRmOlJERj4KICAgICAg%0APGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uv%0Ac3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291%0AcmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8%0AZGM6dGl0bGU+PC9kYzp0aXRsZT4KICAgICAgPC9jYzpXb3JrPgogICAgPC9yZGY6UkRGPgogIDwv%0AbWV0YWRhdGE+CiAgPGcKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDUxLjEzNzQsMzguOTMy%0AMjkzKSIKICAgICBpZD0ibGF5ZXIxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAg%0AICAgaW5rc2NhcGU6bGFiZWw9IkxheWVyIDEiPgogICAgPGcKICAgICAgIGlkPSJnMzM3OCIKICAg%0AICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuMjgwMjY3MTksMCwwLDAuMjgwMjY3MTksLTEwNDAuODMy%0ANSw2MS4yNTQyOTQpIgogICAgICAgaW5rc2NhcGU6ZXhwb3J0LWZpbGVuYW1lPSJTOlxsdWNpYVxO%0AZXctTG9nby1TeW1ib2xcU3RhbmRhcmQtTG9nb1xQTkdcUHJveG1veF9sb2dvX3N0YW5kYXJkX2hl%0AeF8zMDBweC5wbmciCiAgICAgICBpbmtzY2FwZTpleHBvcnQteGRwaT0iOTAiCiAgICAgICBpbmtz%0AY2FwZTpleHBvcnQteWRwaT0iOTAiPgogICAgICA8ZwogICAgICAgICBpZD0iZzMwMTYtOSIKICAg%0AICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMCIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMC44%0ANTI4NjU5NCwwLDAsMC44NTI4NjU5NCwtMjIwNC43OTY0LC05NzAuMDY0OTUpIj4KICAgICAgICA8%0AZwogICAgICAgICAgIHN0eWxlPSJmb250LXNpemU6MTQ0cHg7Zm9udC1zdHlsZTpub3JtYWw7Zm9u%0AdC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zdHJldGNoOm5vcm1hbDts%0AaW5lLWhlaWdodDoxMjUlO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O2ZpbGw6%0AIzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtmb250LWZhbWlseTpIZWxpb247LWlu%0Aa3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpIZWxpb24iCiAgICAgICAgICAgaWQ9InRleHQzMDkz%0ALTUiCiAgICAgICAgICAgY2xpcC1wYXRoPSJ1cmwoI2NsaXBQYXRoMzEwMi00KSIKICAgICAgICAg%0AICB0cmFuc2Zvcm09Im1hdHJpeCgtMC45OTc5MTk3OSwwLDAsMC45OTc5MTk3OSwxNDUyLjM1ODYs%0ANzQ2LjA0Nzg0KSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgZD0iTSAyNzYuMzA0NDMs%0AMjI2LjYyMzEgNDY2Ljg5MjI3LDE3LjAyMDYwNSBDIDQ1OS40OTkwMyw5LjYyODA4NzEgNDUwLjg4%0ANzYyLDMuODE5NDMyMSA0NDEuMDU3OTYsLTAuNDA1Mzc2OTUgNDMxLjIyNzU2LC00LjYyOTUxNzEg%0ANDIwLjY2NjQsLTYuNzgyMzcyMSA0MDkuMzc0MzcsLTYuODYzOTQ3OSAzOTcuMzgwOTksLTYuNzcy%0AMjAzMSAzODYuMzkzMjgsLTQuMzk1OTMyNiAzNzYuNDExMjMsMC4yNjQ4NzA5NiAzNjYuNDI4Niw0%0ALjkyNjM0MTcgMzU3Ljc1NjIzLDExLjMyMzk4IDM1MC4zOTQxMywxOS40NTc4MDUgTCAyNzYuMzAz%0AMjcsMTAwLjM3MjgyIDIwMi42OTk4NSwxOS40NTc4MDUgQyAxOTUuMDczMzUsMTEuMzIzOTcgMTg2%0ALjE5Nzg3LDQuOTI2MzI0OCAxNzYuMDczNDQsMC4yNjQ4NDkzIDE2NS45NDg4MSwtNC4zOTU5NTkg%0AMTU1LjAwMTc1LC02Ljc3MjIyMjQgMTQzLjIzMjIsLTYuODYzOTQ3OSAxMzEuOTM5NzgsLTYuNzgy%0AMzYxNiAxMjEuMzc4NiwtNC42Mjk1MDUgMTExLjU0ODYsLTAuNDA1MzY5NTEgMTAxLjcxODU1LDMu%0AODE5NDM0NSA5My4xMDcxMjIsOS42MjgwODcxIDg1LjcxNDI4NywxNy4wMjA2MDUgTCAyNzYuMzA3%0ANjksMjI2LjYxNzUyIgogICAgICAgICAgICAgaWQ9InBhdGgzMDk4LTUiCiAgICAgICAgICAgICBp%0AbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgc29kaXBvZGk6bm9k%0AZXR5cGVzPSJjY2NjY2NjY2NjY2NjIgogICAgICAgICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDtm%0AaWxsLW9wYWNpdHk6MSIgLz4KICAgICAgICA8L2c+CiAgICAgICAgPGcKICAgICAgICAgICB0cmFu%0Ac2Zvcm09Im1hdHJpeCgwLjk5NzkxOTc5LDAsMCwtMC45OTc5MTk3OSw5MDAuODk2MDQsMTIzMC4z%0ANTc2KSIKICAgICAgICAgICBjbGlwLXBhdGg9InVybCgjY2xpcFBhdGgzMTAyLTQpIgogICAgICAg%0AICAgIGlkPSJnMzE5Ni05IgogICAgICAgICAgIHN0eWxlPSJmb250LXNpemU6MTQ0cHg7Zm9udC1z%0AdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1z%0AdHJldGNoOm5vcm1hbDtsaW5lLWhlaWdodDoxMjUlO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNw%0AYWNpbmc6MHB4O2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtzdHJva2U6bm9uZTtmb250LWZh%0AbWlseTpIZWxpb247LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpIZWxpb24iPgogICAgICAg%0AICAgPHBhdGgKICAgICAgICAgICAgIHN0eWxlPSJmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjEi%0ACiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2NjY2MiCiAgICAgICAg%0AICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBh%0AdGgzMTk4LTEiCiAgICAgICAgICAgICBkPSJNIDI3Ni4zMDQ0MywyMjYuNjIzMSA0NjYuODkyMjcs%0AMTcuMDIwNjA1IEMgNDU5LjQ5OTAzLDkuNjI4MDg3MSA0NTAuODg3NjIsMy44MTk0MzIxIDQ0MS4w%0ANTc5NiwtMC40MDUzNzY5NSA0MzEuMjI3NTYsLTQuNjI5NTE3MSA0MjAuNjY2NCwtNi43ODIzNzIx%0AIDQwOS4zNzQzNywtNi44NjM5NDc5IDM5Ny4zODA5OSwtNi43NzIyMDMxIDM4Ni4zOTMyOCwtNC4z%0AOTU5MzI2IDM3Ni40MTEyMywwLjI2NDg3MDk2IDM2Ni40Mjg2LDQuOTI2MzQxNyAzNTcuNzU2MjMs%0AMTEuMzIzOTggMzUwLjM5NDEzLDE5LjQ1NzgwNSBMIDI3Ni4zMDMyNywxMDAuMzcyODIgMjAyLjY5%0AOTg1LDE5LjQ1NzgwNSBDIDE5NS4wNzMzNSwxMS4zMjM5NyAxODYuMTk3ODcsNC45MjYzMjQ4IDE3%0ANi4wNzM0NCwwLjI2NDg0OTMgMTY1Ljk0ODgxLC00LjM5NTk1OSAxNTUuMDAxNzUsLTYuNzcyMjIy%0ANCAxNDMuMjMyMiwtNi44NjM5NDc5IDEzMS45Mzk3OCwtNi43ODIzNjE2IDEyMS4zNzg2LC00LjYy%0AOTUwNSAxMTEuNTQ4NiwtMC40MDUzNjk1MSAxMDEuNzE4NTUsMy44MTk0MzQ1IDkzLjEwNzEyMiw5%0ALjYyODA4NzEgODUuNzE0Mjg3LDE3LjAyMDYwNSBMIDI3Ni4zMDc2OSwyMjYuNjE3NTIiIC8+CiAg%0AICAgICAgPC9nPgogICAgICAgIDxwYXRoCiAgICAgICAgICAgc3R5bGU9ImZvbnQtc2l6ZToxMDU5%0ALjYxMjc5Mjk3cHg7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdl%0AaWdodDpub3JtYWw7Zm9udC1zdHJldGNoOm5vcm1hbDtsaW5lLWhlaWdodDoxMjUlO2xldHRlci1z%0AcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O2ZpbGw6I2U1NzAwMDtmaWxsLW9wYWNpdHk6MTtz%0AdHJva2U6bm9uZTtmb250LWZhbWlseTpIZWxpb247LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlv%0AbjpIZWxpb24iCiAgICAgICAgICAgZD0ibSAxMTYwLjYyOTIsOTg4LjIwNTM4IDAsMCAtMTQzLjI2%0ANjUsLTE1Ny4xMTIzMiBjIC04LjMzMywtOC44ODcyMSAtMTguMDMwNjEsLTE1Ljg3NzU0IC0yOS4w%0AOTI3OSwtMjAuOTcwNzggLTExLjA2MjUyLC01LjA5MjU1IC0yMy4wMjM2NiwtNy42ODg4OSAtMzUu%0AODgzNDMsLTcuNzg5MTQgLTEyLjMzODQzLDAuMDg5MiAtMjMuODc3OTIsMi40NDE0NyAtMzQuNjE4%0ANDksNy4wNTY4NSAtMTAuNzQwNjIsNC42MTYxMyAtMjAuMTQ5NzIsMTAuOTYyODQgLTI4LjIyNzM2%0ALDE5LjA0MDE2IEwgMTAzNC45MzgzLDk4OC4yMDc3NyA4ODkuNTQwNjMsMTE0Ny45ODU0IGMgOC4w%0ANzc2Miw4LjMzMjkgMTcuNDg2NzQsMTQuODM0OSAyOC4yMjczNiwxOS41MDYyIDEwLjc0MDU3LDQu%0ANjcxMiAyMi4yODAwNiw3LjA0NTcgMzQuNjE4NDksNy4xMjM0IDEyLjg5MzA4LC0wLjEgMjQuOTIw%0ANzMsLTIuNjk2MiAzNi4wODMwNywtNy43ODkxIDExLjE2MjIzLC01LjA5MjkgMjAuNzkzMjUsLTEy%0ALjA4MzMgMjguODkzMTUsLTIwLjk3MDggbCAxNDMuMjY2MiwtMTU3LjY0OTE3IgogICAgICAgICAg%0AIGlkPSJwYXRoMzI3OC00IgogICAgICAgICAgIGlua3NjYXBlOmNvbm5lY3Rvci1jdXJ2YXR1cmU9%0AIjAiCiAgICAgICAgICAgc29kaXBvZGk6bm9kZXR5cGVzPSJjY2NjY2NjY2NzY3NjYyIgLz4KICAg%0AICAgICA8cGF0aAogICAgICAgICAgIHNvZGlwb2RpOm5vZGV0eXBlcz0iY2NjY2NjY2Njc2NzY2Mi%0ACiAgICAgICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgICAgICBp%0AZD0icGF0aDMyODAtNSIKICAgICAgICAgICBkPSJtIDExOTIuNjIwOCw5ODguMjA1MzggMCwwIDE0%0AMy4yNjY1LC0xNTcuMTEyMzIgYyA4LjMzMywtOC44ODcyMSAxOC4wMzA2LC0xNS44Nzc1NCAyOS4w%0AOTI4LC0yMC45NzA3OCAxMS4wNjI1LC01LjA5MjU1IDIzLjAyMzcsLTcuNjg4ODkgMzUuODgzNCwt%0ANy43ODkxNCAxMi4zMzg1LDAuMDg5MiAyMy44NzgsMi40NDE0NyAzNC42MTg1LDcuMDU2ODUgMTAu%0ANzQwNyw0LjYxNjEzIDIwLjE0OTgsMTAuOTYyODQgMjguMjI3NCwxOS4wNDAxNiBsIC0xNDUuMzk3%0ANywxNTkuNzc3NjIgMTQ1LjM5NzcsMTU5Ljc3NzYzIGMgLTguMDc3Niw4LjMzMjkgLTE3LjQ4Njcs%0AMTQuODM0OSAtMjguMjI3NCwxOS41MDYyIC0xMC43NDA1LDQuNjcxMiAtMjIuMjgsNy4wNDU3IC0z%0ANC42MTg0LDcuMTIzNCAtMTIuODkzMSwtMC4xIC0yNC45MjA4LC0yLjY5NjIgLTM2LjA4MzEsLTcu%0ANzg5MSAtMTEuMTYyMywtNS4wOTI5IC0yMC43OTMzLC0xMi4wODMzIC0yOC44OTMyLC0yMC45NzA4%0AIEwgMTE5Mi42MjExLDk4OC4yMDU5MyIKICAgICAgICAgICBzdHlsZT0iZm9udC1zaXplOjEwNTku%0ANjEyNzkyOTdweDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2Vp%0AZ2h0Om5vcm1hbDtmb250LXN0cmV0Y2g6bm9ybWFsO2xpbmUtaGVpZ2h0OjEyNSU7bGV0dGVyLXNw%0AYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7ZmlsbDojZTU3MDAwO2ZpbGwtb3BhY2l0eToxO3N0%0Acm9rZTpub25lO2ZvbnQtZmFtaWx5OkhlbGlvbjstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9u%0AOkhlbGlvbiIgLz4KICAgICAgPC9nPgogICAgICA8ZwogICAgICAgICBpZD0iZzMzNjgiPgogICAg%0AICAgIDxnCiAgICAgICAgICAgaWQ9InRleHQzMjIzIgogICAgICAgICAgIHN0eWxlPSJmb250LXNp%0AemU6Mzg3LjUyMjA2NDIxcHg7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtm%0Ab250LXdlaWdodDpub3JtYWw7Zm9udC1zdHJldGNoOm5vcm1hbDt0ZXh0LWFsaWduOnN0YXJ0O2xp%0AbmUtaGVpZ2h0OjEyNSU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7d3JpdGlu%0AZy1tb2RlOmxyLXRiO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6%0AMTtzdHJva2U6bm9uZTtmb250LWZhbWlseTpIZWxpb247LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNh%0AdGlvbjpIZWxpb24iPgogICAgICAgICAgPHBhdGgKICAgICAgICAgICAgIGlua3NjYXBlOmNvbm5l%0AY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICAgICAgICBpZD0icGF0aDMzNTQiCiAgICAgICAgICAg%0AICBkPSJtIC02ODYuMTgxMSwtMjYyLjM4NzM3IC0xNzcuODcwMzQsMCBjIC02Ljk4MzQsMC4xOTQw%0AMyAtMTIuODc2ODksMi43MTI4OCAtMTcuNjgwNDgsNy41NTY1OCAtNC44MDM2LDQuODQ0MjIgLTcu%0AMzA2MzEsMTAuODUwNzMgLTcuNTA4MTMsMTguMDE5NTUgbCAwLDI0NS42ODU4MjIzIGMgMTkuMDg1%0AMiwtMC40NzYzMjg5IDM0Ljk3MzM4LC03LjA4MDI2MiA0Ny42NjQ2LC0xOS44MTE4MTkzIDEyLjY5%0AMTEyLC0xMi43MzE1MTcgMTkuMjc4OSwtMjguNzMyNzI0IDE5Ljc2MzM3LC00OC4wMDM2NjkgbCAx%0AMzUuNjMwOTgsMCBjIDE5LjI4NjgyLC0wLjQ3NjI2MSAzNS4zNTI2MSwtNy4wODAxOTQgNDguMTk3%0ANDIsLTE5LjgxMTgxOSAxMi44NDQzMiwtMTIuNzMxNDUgMTkuNTEyODQsLTI4LjczMjY1NSAyMC4w%0AMDU1OCwtNDguMDAzNjY1IGwgMCwtNjcuNDI3OTggYyAtMC40OTI3NCwtMTkuMjg2ODIgLTcuMTYx%0AMjUsLTM1LjM1MjYyIC0yMC4wMDU1NywtNDguMTk3NDQgLTEyLjg0NDgyLC0xMi44NDQzMiAtMjgu%0AOTEwNjEsLTE5LjUxMjgzIC00OC4xOTc0MywtMjAuMDA1NTYgeiBtIC0xMzUuNjMwOTgsMTQ0LjE1%0ANjM1IDAsLTc1Ljk1MzM1IDExOC45Njc3NCwwIGMgMC42OTQxMSwtMC4zNDY5NCAzLjQ3MTMxLDAu%0AMzQ3MzYgOC4zMzE2MSwyLjA4MjkxIDQuODU5OTEsMS43MzU5NSA3LjYzNzEyLDYuNTk2MDUgOC4z%0AMzE2MywxNC41ODAzMyBsIDAsNDIuMjM5MzYgYyAwLjM0Njk0LDAuNzEwNiAtMC4zNDczNiwzLjU1%0AMjM4IC0yLjA4MjkxLDguNTI1MzggLTEuNzM1OTUsNC45NzMyNiAtNi41OTYwNiw3LjgxNTA1IC0x%0ANC41ODAzMyw4LjUyNTM3IHoiIC8+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgaW5rc2Nh%0AcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgICAgICAgIGlkPSJwYXRoMzM1NiIKICAg%0AICAgICAgICAgIGQ9Im0gLTMwOC4wNDUyMSwtMTQzLjQxOTYzIDAsLTUwLjc2NDc0IGMgLTAuNDc2%0ANiwtMTkuMjg2ODIgLTcuMDgwNTMsLTM1LjM1MjYyIC0xOS44MTE4MiwtNDguMTk3NDQgLTEyLjcz%0AMTc5LC0xMi44NDQzMiAtMjguNzMzLC0xOS41MTI4MyAtNDguMDAzNjcsLTIwLjAwNTU2IGwgLTE3%0ANy44NzAzNCwwIGMgLTcuMTUyOTMsMC4xOTQwMyAtMTMuMDk0ODUsMi43MTI4OCAtMTcuODI1Nzgs%0ANy41NTY1OCAtNC43MzA5NSw0Ljg0NDIyIC03LjE4NTIyLDEwLjg1MDczIC03LjM2MjgzLDE4LjAx%0AOTU1IGwgMCwyNDUuNjg1ODIyMyBjIDE5LjEwMTM1LC0wLjQ3NjMyODkgMzUuMDU0MTIsLTcuMDgw%0AMjYyIDQ3Ljg1ODM2LC0xOS44MTE4MTkzIDEyLjgwNDE0LC0xMi43MzE1MTcgMTkuNDU2NTEsLTI4%0ALjczMjcyNCAxOS45NTcxMywtNDguMDAzNjY5IGwgMCwtMTcuMDUwNzUxIDc3LjExNTksMCAzOS4x%0AMzkyMiw1NS44MDI0NTkgYyA2LjI4MDgyLDkuMDA5Nzk0IDE0LjE2MDMzLDE2LjA4MTk3MzIgMjMu%0ANjM4NTQsMjEuMjE2NTU5NSA5LjQ3NzgxLDUuMTM0NjAyMSAyMC4wNjk5Myw3Ljc1MDMzOTcgMzEu%0ANzc2NDEsNy44NDcyMjA4IDUuNjQyOTYsLTAuMDA4MDggMTEuMTE2NjMsLTAuNjcwMDg3MiAxNi40%0AMjEwMiwtMS45ODYwMzM3IDUuMzAzODgsLTEuMzE1OTQyNSAxMC4yOTMxNiwtMy4yMzczNzY1IDE0%0ALjk2Nzg2LC01Ljc2NDMwNzggbCAtNTQuNjM5OTEsLTc3Ljg5MDkzMTggYyAxNS44Mzk1MiwtMy40%0AMzEwNTIgMjguODIxMzMsLTExLjE5NzUzNSAzOC45NDU0NiwtMjMuMjk5NDY5IDEwLjEyMzYyLC0x%0AMi4xMDE3MiAxNS4zNTUxLC0yNi41NTI4NiAxNS42OTQ0NSwtNDMuMzUzNDcgeiBtIC0yMDMuMDU4%0AOTUsOC4xMzc4NiAwLC01OC45MDI2IDExOC4xOTI3MSwwIGMgMC43MTAyNiwtMC4zNDY5NCAzLjU1%0AMjA1LDAuMzQ3MzYgOC41MjUzNywyLjA4MjkxIDQuOTcyOTQsMS43MzU5NSA3LjgxNDczLDYuNTk2%0AMDUgOC41MjUzOCwxNC41ODAzMyBsIDAsMjUuNTc2MTMgYyAwLjM1NTAyLDAuNjk0NDUgLTAuMzU1%0ANDMsMy40NzE2NiAtMi4xMzEzNSw4LjMzMTYxIC0xLjc3NjMyLDQuODYwMjUgLTYuNzQ5NDUsNy42%0AMzc0NiAtMTQuOTE5NCw4LjMzMTYyIHoiIC8+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAg%0AaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAgICAgICAgIGlkPSJwYXRoMzM1%0AOCIKICAgICAgICAgICAgIGQ9Im0gLTY2LjI5NzE5MywtMjYyLjM4NzM3IC0xMzUuMjQzNDU3LDAg%0AYyAtMTkuMjcwOTUsMC40OTI3NSAtMzUuMjcyMTcsNy4xNjEyNiAtNDguMDAzNjgsMjAuMDA1NTgg%0ALTEyLjczMTU2LDEyLjg0NDgxIC0xOS4zMzU0OSwyOC45MTA2MSAtMTkuODExODEsNDguMTk3NDIg%0AbCAwLDEzNS4yNDM0NjQgYyAwLjQ3NjMyLDE5LjI3MDk0NSA3LjA4MDI1LDM1LjI3MjE1NCAxOS44%0AMTE4MSw0OC4wMDM2NzUgMTIuNzMxNTIsMTIuNzMxNTYxIDI4LjczMjczLDE5LjMzNTQ5MjEgNDgu%0AMDAzNjgsMTkuODExODEzMyBsIDEzNS4yNDM0NTcsMCBDIC00Ny4wMjY1MTksOC4zOTgyNTM0IC0z%0AMS4wMjUzMSwxLjc5NDMyMDMgLTE4LjI5MzUxOCwtMTAuOTM3MjM3IC01LjU2MjIyNzksLTIzLjY2%0AODc1NCAxLjA0MTcwMzMsLTM5LjY2OTk2MSAxLjUxODI5NTMsLTU4Ljk0MDkwNiBsIDAsLTEzNS4y%0ANDM0NjQgYyAtMC40NzY1OTk3LC0xOS4yODY4MiAtNy4wODA1MzI4LC0zNS4zNTI2MiAtMTkuODEx%0AODE5MywtNDguMTk3NDQgLTEyLjczMTc4OCwtMTIuODQ0MzIgLTI4LjczMjk5NSwtMTkuNTEyODMg%0ALTQ4LjAwMzY2OSwtMjAuMDA1NTYgeiBtIDAsMTg2LjM5NTcxMyBjIDAuMzU1MDIzLDAuNzEwNTM2%0AIC0wLjM1NTQyNywzLjU1MjMyNSAtMi4xMzEzNSw4LjUyNTM3NiAtMS43NzYzMjQsNC45NzMyMDMg%0ALTYuNzQ5NDUzLDcuODE0OTkyIC0xNC45MTk0MDEsOC41MjUzNzUgbCAtMTAxLjE0MTk1NiwwIGMg%0ALTAuNzEwNTMsMC4zNTUyOTQgLTMuNTUyMzIsLTAuMzU1MTU2IC04LjUyNTM4LC0yLjEzMTM1IC00%0ALjk3MzIxLC0xLjc3NjA1NCAtNy44MTUsLTYuNzQ5MTgyIC04LjUyNTM3LC0xNC45MTk0MDEgbCAw%0ALC0xMDEuNTI5NDczIGMgLTAuMzU1MywtMC42OTQxMSAwLjM1NTE1LC0zLjQ3MTMyIDIuMTMxMzQs%0ALTguMzMxNjIgMS43NzYwNCwtNC44NTk5MiA2Ljc0OTE4LC03LjYzNzEyIDE0LjkxOTQxLC04LjMz%0AMTYyIGwgMTAxLjE0MTk1NiwwIGMgMC43MTAyNjUsLTAuMzQ2OTQgMy41NTIwNTQsMC4zNDczNiA4%0ALjUyNTM3NiwyLjA4MjkxIDQuOTcyOTMyLDEuNzM1OTUgNy44MTQ3MjEsNi41OTYwNSA4LjUyNTM3%0ANSwxNC41ODAzMyB6IiAvPgogICAgICAgICAgPHBhdGgKICAgICAgICAgICAgIGlua3NjYXBlOmNv%0Abm5lY3Rvci1jdXJ2YXR1cmU9IjAiCiAgICAgICAgICAgICBpZD0icGF0aDMzNjAiCiAgICAgICAg%0AICAgICBzdHlsZT0iZmlsbDojZTU3MDAwO2ZpbGwtb3BhY2l0eToxIgogICAgICAgICAgICAgZD0i%0AbSAzNDMuMjQ1ODEsLTI0My4wMTE1MiBjIC01Ljg3NzY0LC01Ljg3NzA4IC0xMi43MjM3NywtMTAu%0ANDk0OTkgLTIwLjUzODQsLTEzLjg1Mzc0IC03LjgxNTIsLTMuMzU4MjEgLTE2LjIxMTQsLTUuMDY5%0ANzQgLTI1LjE4ODYxLC01LjEzNDU5IC05LjU1MDkzLDAuMDcyOSAtMTguMzUwNzksMS45NjIwOCAt%0AMjYuMzk5Niw1LjY2NzQ0IC04LjA0OTI4LDMuNzA1ODkgLTE1LjAwODQzLDguNzkyMDUgLTIwLjg3%0ANzQ5LDE1LjI1ODQ4IGwgLTU4LjUxNTA4LDY0LjMyNzgzIC01OC45MDI1OSwtNjQuMzI3ODMgYyAt%0ANi4wMjI3NSwtNi42MzU5OCAtMTIuOTY1NzYsLTExLjc3MDU4IC0yMC44MjkwNSwtMTUuNDAzODEg%0ALTcuODYzNDMsLTMuNjMyNyAtMTYuNTUwMjYyLC01LjQ3MzQxIC0yNi4wNjA1MTcsLTUuNTIyMTEg%0ALTguOTc3NTE5LDAuMDY0OSAtMTcuMzczNzE0LDEuNzc2MzkgLTI1LjE4ODYxLDUuMTM0NiAtNy44%0AMTQ5MzYsMy4zNTg3NCAtMTQuNjYxMDY0LDcuOTc2NjUgLTIwLjUzODQwNSwxMy44NTM3MyBMIDE0%0ANS45OTk2MiwtMTI2Ljc1NjM5IDQwLjIwNzQ1OCwtMTAuNTAxMjcxIGMgNS44NzczMzMsNi4wNjMw%0AMzcxIDEyLjcyMzQ2MSwxMC43OTM5NjcwNiAyMC41Mzg0MDUsMTQuMTkyODAzOCA3LjgxNDkwNCwz%0ALjM5ODg0NyAxNi4yMTEwOTksNS4xMjY1Mjg1IDI1LjE4ODYxLDUuMTgzMDQ5NSA5LjM4MTA5MSwt%0AMC4wNzI2NTkgMTguMTMyNTA3LC0xLjk2MTgwMzcgMjYuMjU0Mjg3LC01LjY2NzQ0MDEgOC4xMjE2%0AMywtMy43MDU2MjUwOCAxNS4xMjkyMywtOC43OTE3ODA2IDIxLjAyMjgsLTE1LjI1ODQ4MjIgbCA1%0AOC41MTUwNywtNjQuMzI3ODM0IDU4LjUxNTA4LDY0LjMyNzgzNCBjIDUuODY5MDYsNi40NjY3MDE2%0AIDEyLjgyODIxLDExLjU1Mjg1NTE5IDIwLjg3NzQ5LDE1LjI1ODQ3NjQgOC4wNDg4MSwzLjcwNTYz%0AMjYgMTYuODQ4NjcsNS41OTQ3NzkzIDI2LjM5OTYsNS42Njc0NDU5IDguOTc3MjEsLTAuMDU2NTEz%0AIDE3LjM3MzQsLTEuNzg0MTkyOSAyNS4xODg2MSwtNS4xODMwNDM4IDcuODE0NjQsLTMuMzk4ODQw%0ANTIgMTQuNjYwNzcsLTguMTI5NzcyNCAyMC41Mzg0LC0xNC4xOTI4MDk1IEwgMjM3LjQ1MzY1LC0x%0AMjYuNzU2MzkgeiIgLz4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25u%0AZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMzYyIgogICAgICAgICAg%0AICAgZD0ibSA2OTUuODE4MDMsLTI2Mi4zODczNyAtNDIuNjI2ODgsMCBjIC0xMy45NDI4MSwwLjE5%0ANDAzIC0yNi4zNTk0OSwzLjk3MjMyIC0zNy4yNTAwOCwxMS4zMzQ4NyAtMTAuODkxMDcsNy4zNjMw%0AOCAtMTkuMTQxOTQsMTcuMTQ3ODcgLTI0Ljc1MjY2LDI5LjM1NDQyIGwgMC4zODc1MiwtMC43NzUw%0AMyAtMzkuOTE0MjYsODcuNTc4ODYgLTM5LjUyNjc0LC04Ny41Nzg4NiAwLDAuNzc1MDMgYyAtNS40%0ANDE1MiwtMTIuMjA2NTUgLTEzLjY0Mzk1LC0yMS45OTEzNCAtMjQuNjA3MzQsLTI5LjM1NDQyIC0x%0AMC45NjM1OSwtNy4zNjI1NiAtMjMuNDI4NzEsLTExLjE0MDg0IC0zNy4zOTUzOSwtMTEuMzM0ODcg%0AbCAtNDIuMjM5MzYsMCBjIC03LjMzODYyLDAuMTk0MDMgLTEzLjM5MzU3LDIuNzEyODggLTE4LjE2%0ANDg3LDcuNTU2NTggLTQuNzcxMzEsNC44NDQyMiAtNy4yNDE3MywxMC44NTA3MyAtNy40MTEyNiwx%0AOC4wMTk1NSBsIDAsMjQ1LjY4NTgyMjMgYyAxOS4xMDEzNSwtMC40NzYzMjg5IDM1LjA1NDExLC03%0ALjA4MDI2MiA0Ny44NTgzNSwtMTkuODExODE5MyAxMi44MDQxNSwtMTIuNzMxNTE3IDE5LjQ1NjUy%0ALC0yOC43MzI3MjQgMTkuOTU3MTQsLTQ4LjAwMzY2OSBsIDAsLTEyOS44MTgyMjQgYyAwLjAyNDEs%0ALTEuNzY3ODQgMC41NTY5OSwtMy4xNzI1OSAxLjU5ODUxLC00LjIxNDI1IDEuMDQxMzgsLTEuMDQx%0AMjUgMi40NDYxMywtMS41NzQwOCA0LjIxNDI1LC0xLjU5ODUgMS4wMDkwOCwwLjAzMjUgMS45OTQw%0AMiwwLjM1NTQyIDIuOTU0ODIsMC45Njg3OCAwLjk2MDY0LDAuNjEzNzcgMS42NTQ5NCwxLjMyNDIy%0AIDIuMDgyOSwyLjEzMTM1IGwgNzUuMTc4MzEsMTY1Ljg1NzMxMyBjIDEuNDIwNzQsMi45NjI5MTkg%0AMy41MTk3OSw1LjM2ODc0OSA2LjI5NzE1LDcuMjE3NDk2IDIuNzc3MDUsMS44NDg4MDMgNS44NDQ4%0AOSwyLjgwMTQ1MSA5LjIwMzUzLDIuODU3OTQ4IDMuMzM0MDksLTAuMDQwMzQgNi4zNTM0OSwtMC45%0AMjgzOTQgOS4wNTgyMSwtMi42NjQxNzcgMi43MDQzNiwtMS43MzU3MyA0Ljg1MTg1LC00LjA3Njk3%0ANyA2LjQ0MjQ4LC03LjAyMzc1IGwgNzUuMTc4MzEsLTE2Ni4yNDQ4MyBjIDAuNTg5MDksLTAuODA3%0AMTIgMS4zNDc5NywtMS41MTc1NyAyLjI3NjY2LC0yLjEzMTM1IDAuOTI4MTcsLTAuNjEzMzcgMS45%0ANzc2OSwtMC45MzYzIDMuMTQ4NTgsLTAuOTY4NzggMS41ODIxLDAuMDI0NCAyLjg3MzgyLDAuNTU3%0AMjYgMy44NzUxNywxLjU5ODUxIDEuMDAwODEsMS4wNDE2NSAxLjUxNzUsMi40NDY0IDEuNTUwMDcs%0ANC4yMTQyNCBsIDAsMTI5LjgxODIyNCBjIDAuNTAwMjcsMTkuMjcwOTQ1IDcuMTUyNjQsMzUuMjcy%0AMTU0IDE5Ljk1NzEyLDQ4LjAwMzY3NSAxMi44MDM5LDEyLjczMTU2MSAyOC43NTY2NywxOS4zMzU0%0AOTIxIDQ3Ljg1ODM2LDE5LjgxMTgxMzMgbCAwLC0yNDUuNjg1ODIyMyBjIC0wLjE3Nzk0LC03LjE2%0AODgyIC0yLjYzMjIxLC0xMy4xNzUzMyAtNy4zNjI4MiwtMTguMDE5NTUgLTQuNzMxMjcsLTQuODQz%0ANyAtMTAuNjczMTksLTcuMzYyNTUgLTE3LjgyNTc4LC03LjU1NjU4IHoiIC8+CiAgICAgICAgICA8%0AcGF0aAogICAgICAgICAgICAgaW5rc2NhcGU6Y29ubmVjdG9yLWN1cnZhdHVyZT0iMCIKICAgICAg%0AICAgICAgIGlkPSJwYXRoMzM2NCIKICAgICAgICAgICAgIGQ9Im0gOTYzLjA1ODQsLTI2Mi4zODcz%0ANyAtMTM1LjI0MzQ2LDAgYyAtMTkuMjcwOTUsMC40OTI3NSAtMzUuMjcyMTYsNy4xNjEyNiAtNDgu%0AMDAzNjgsMjAuMDA1NTggLTEyLjczMTU2LDEyLjg0NDgxIC0xOS4zMzU0OSwyOC45MTA2MSAtMTku%0AODExODEsNDguMTk3NDIgbCAwLDEzNS4yNDM0NjQgYyAwLjQ3NjMyLDE5LjI3MDk0NSA3LjA4MDI1%0ALDM1LjI3MjE1NCAxOS44MTE4MSw0OC4wMDM2NzUgMTIuNzMxNTMsMTIuNzMxNTYxIDI4LjczMjcz%0ALDE5LjMzNTQ5MjEgNDguMDAzNjgsMTkuODExODEzMyBsIDEzNS4yNDM0NiwwIGMgMTkuMjcwNjcs%0ALTAuNDc2MzI4OSAzNS4yNzE4OCwtNy4wODAyNjIgNDguMDAzNywtMTkuODExODE5MyAxMi43MzEz%0ALC0xMi43MzE1MTcgMTkuMzM1MiwtMjguNzMyNzI0IDE5LjgxMTgsLTQ4LjAwMzY2OSBsIDAsLTEz%0ANS4yNDM0NjQgYyAtMC40NzY2LC0xOS4yODY4MiAtNy4wODA1LC0zNS4zNTI2MiAtMTkuODExOCwt%0ANDguMTk3NDQgLTEyLjczMTgyLC0xMi44NDQzMiAtMjguNzMzMDMsLTE5LjUxMjgzIC00OC4wMDM3%0ALC0yMC4wMDU1NiB6IG0gMCwxODYuMzk1NzEzIGMgMC4zNTUwMiwwLjcxMDUzNiAtMC4zNTU0Mywz%0ALjU1MjMyNSAtMi4xMzEzNSw4LjUyNTM3NiAtMS43NzYzMyw0Ljk3MzIwMyAtNi43NDk0Niw3Ljgx%0ANDk5MiAtMTQuOTE5NCw4LjUyNTM3NSBsIC0xMDEuMTQxOTYsMCBjIC0wLjcxMDUzLDAuMzU1Mjk0%0AIC0zLjU1MjMyLC0wLjM1NTE1NiAtOC41MjUzOCwtMi4xMzEzNSAtNC45NzMyMSwtMS43NzYwNTQg%0ALTcuODE1LC02Ljc0OTE4MiAtOC41MjUzNywtMTQuOTE5NDAxIGwgMCwtMTAxLjUyOTQ3MyBjIC0w%0ALjM1NTI5LC0wLjY5NDExIDAuMzU1MTUsLTMuNDcxMzIgMi4xMzEzNCwtOC4zMzE2MiAxLjc3NjA0%0ALC00Ljg1OTkyIDYuNzQ5MTgsLTcuNjM3MTIgMTQuOTE5NDEsLTguMzMxNjIgbCAxMDEuMTQxOTYs%0AMCBjIDAuNzEwMjYsLTAuMzQ2OTQgMy41NTIwNSwwLjM0NzM2IDguNTI1MzcsMi4wODI5MSA0Ljk3%0AMjkzLDEuNzM1OTUgNy44MTQ3Miw2LjU5NjA1IDguNTI1MzgsMTQuNTgwMzMgeiIgLz4KICAgICAg%0AICAgIDxwYXRoCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgog%0AICAgICAgICAgICAgaWQ9InBhdGgzMzY2IgogICAgICAgICAgICAgc3R5bGU9ImZpbGw6I2U1NzAw%0AMDtmaWxsLW9wYWNpdHk6MSIKICAgICAgICAgICAgIGQ9Im0gMTM3Mi42MDEzLC0yNDMuMDExNTIg%0AYyAtNS44Nzc3LC01Ljg3NzA4IC0xMi43MjM4LC0xMC40OTQ5OSAtMjAuNTM4NCwtMTMuODUzNzQg%0ALTcuODE1MiwtMy4zNTgyMSAtMTYuMjExNCwtNS4wNjk3NCAtMjUuMTg4NiwtNS4xMzQ1OSAtOS41%0ANTEsMC4wNzI5IC0xOC4zNTA4LDEuOTYyMDggLTI2LjM5OTYsNS42Njc0NCAtOC4wNDkzLDMuNzA1%0AODkgLTE1LjAwODUsOC43OTIwNSAtMjAuODc3NSwxNS4yNTg0OCBsIC01OC41MTUxLDY0LjMyNzgz%0AIC01OC45MDI2LC02NC4zMjc4MyBjIC02LjAyMjcsLTYuNjM1OTggLTEyLjk2NTgsLTExLjc3MDU4%0AIC0yMC44MjksLTE1LjQwMzgxIC03Ljg2MzUsLTMuNjMyNyAtMTYuNTUwMywtNS40NzM0MSAtMjYu%0AMDYwNiwtNS41MjIxMSAtOC45Nzc1LDAuMDY0OSAtMTcuMzczNywxLjc3NjM5IC0yNS4xODg2LDUu%0AMTM0NiAtNy44MTQ5LDMuMzU4NzQgLTE0LjY2MSw3Ljk3NjY1IC0yMC41Mzg0LDEzLjg1MzczIGwg%0AMTA1Ljc5MjIsMTE2LjI1NTEzIC0xMDUuNzkyMiwxMTYuMjU1MTE5IGMgNS44Nzc0LDYuMDYzMDM3%0AMSAxMi43MjM1LDEwLjc5Mzk2NzA2IDIwLjUzODQsMTQuMTkyODAzOCA3LjgxNDksMy4zOTg4NDcg%0AMTYuMjExMSw1LjEyNjUyODUgMjUuMTg4Niw1LjE4MzA0OTUgOS4zODExLC0wLjA3MjY1OSAxOC4x%0AMzI2LC0xLjk2MTgwMzcgMjYuMjU0MywtNS42Njc0NDAxIDguMTIxNywtMy43MDU2MjUwOCAxNS4x%0AMjkzLC04Ljc5MTc4MDYgMjEuMDIyOCwtMTUuMjU4NDgyMiBsIDU4LjUxNTEsLTY0LjMyNzgzNCA1%0AOC41MTUxLDY0LjMyNzgzNCBjIDUuODY5LDYuNDY2NzAxNiAxMi44MjgyLDExLjU1Mjg1NTE5IDIw%0ALjg3NzUsMTUuMjU4NDc2NCA4LjA0ODgsMy43MDU2MzI2IDE2Ljg0ODYsNS41OTQ3NzkzIDI2LjM5%0AOTYsNS42Njc0NDU5IDguOTc3MiwtMC4wNTY1MTMgMTcuMzczNCwtMS43ODQxOTI5IDI1LjE4ODYs%0ALTUuMTgzMDQzOCA3LjgxNDYsLTMuMzk4ODQwNTIgMTQuNjYwNywtOC4xMjk3NzI0IDIwLjUzODQs%0ALTE0LjE5MjgwOTUgTCAxMjY2LjgwOTEsLTEyNi43NTYzOSB6IiAvPgogICAgICAgIDwvZz4KICAg%0AICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==" alt="./images/proxmox-logo.svg" /><span> Proxmox VE Administration Guide Proxmox VE 管理指南</span></h1><p><strong><span>Proxmox Server Solutions GmbH</span></strong>
+<a href='mailto:[support@proxmox.com](mailto:support@proxmox.com)' target='_blank' class='url'>[support@proxmox.com](mailto:support@proxmox.com)</a>
+<span>version 8.2.3, Wed Jul 31 16:58:41 CEST 2024</span>
+<span>版本 8.2.3， Wed Jul 31 16：58：41 CEST 2024</span></p><h2 id='1-introduction-1-引言'><span>1. Introduction 1. 引言</span></h2><p><span>Proxmox VE is a platform to run virtual machines and containers. It is based on Debian Linux, and completely open source. For maximum flexibility, we implemented two virtualization technologies - Kernel-based Virtual Machine (KVM) and container-based virtualization (LXC).</span>
+<span>Proxmox VE是一个运行虚拟机和容器的平台。它基于 Debian Linux，并且完全开源。为了获得最大的灵活性，我们实施了两种虚拟化技术 - 基于内核的虚拟机 （KVM） 和基于容器的虚拟化 （LXC）。</span></p><p><span>One main design goal was to make administration as easy as possible. You can use Proxmox VE on a single node, or assemble a cluster of many nodes. All management tasks can be done using our web-based management interface, and even a novice user can setup and install Proxmox VE within minutes.</span>
+<span>一个主要的设计目标是使管理尽可能简单。您可以在单个节点上使用Proxmox VE，也可以组装由多个节点组成的集群。所有管理任务都可以使用我们基于Web的管理界面完成，即使是新手用户也可以在几分钟内设置和安装Proxmox VE。</span></p><p><img src="data:image/svg+xml;base64,%0APD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjwh%0ARE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIKICJodHRwOi8vd3d3%0ALnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8IS0tIEdlbmVyYXRlZCBi%0AeSBncmFwaHZpeiB2ZXJzaW9uIDIuMzguMCAoMjAxNDA0MTMuMjA0MSkKIC0tPgo8IS0tIFRpdGxl%0AOiBwdmVfc29mdHdhcmVfc3RhY2sgUGFnZXM6IDEgLS0+Cjxzdmcgd2lkdGg9IjUyNnB0IiBoZWln%0AaHQ9IjQwMXB0Igogdmlld0JveD0iMC4wMCAwLjAwIDUyNi4wMCA0MDEuMDAiIHhtbG5zPSJodHRw%0AOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5%0AOTkveGxpbmsiPgo8ZyBpZD0iZ3JhcGgwIiBjbGFzcz0iZ3JhcGgiIHRyYW5zZm9ybT0ic2NhbGUo%0AMSAxKSByb3RhdGUoMCkgdHJhbnNsYXRlKDQgMzk3KSI+Cjx0aXRsZT5wdmVfc29mdHdhcmVfc3Rh%0AY2s8L3RpdGxlPgo8cG9seWdvbiBmaWxsPSJub25lIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iLTQs%0ANCAtNCwtMzk3IDUyMiwtMzk3IDUyMiw0IC00LDQiLz4KPCEtLSBzdGFjayAtLT4KPGcgaWQ9Im5v%0AZGUxIiBjbGFzcz0ibm9kZSI+PHRpdGxlPnN0YWNrPC90aXRsZT4KPHBvbHlnb24gZmlsbD0iIzAw%0ANjE3ZiIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjEyLC0yODkuNSAxMiwtMzg0LjUgNTA2LC0zODQu%0ANSA1MDYsLTI4OS41IDEyLC0yODkuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjIx%0AMC41IiB5PSItMzY2LjUiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1z%0AaXplPSIyMC4wMCIgZmlsbD0id2hpdGUiPlVzZXIgVG9vbHM8L3RleHQ+Cjxwb2x5Z29uIGZpbGw9%0AIiMwMDYxN2YiIHN0cm9rZT0ibm9uZSIgcG9pbnRzPSIxNCwtMjkxLjUgMTQsLTM1Ni41IDUwNCwt%0AMzU2LjUgNTA0LC0yOTEuNSAxNCwtMjkxLjUiLz4KPHBvbHlnb24gZmlsbD0iI2ZmOTEwMCIgc3Ry%0Ab2tlPSJub25lIiBwb2ludHM9IjE5LC0zMjYuNSAxOSwtMzUxLjUgMTA5LC0zNTEuNSAxMDksLTMy%0ANi41IDE5LC0zMjYuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjU0IiB5PSItMzM1%0ALjMiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIxNC4wMCIg%0AZmlsbD0id2hpdGUiPnFtPC90ZXh0Pgo8cG9seWdvbiBmaWxsPSIjZmY5MTAwIiBzdHJva2U9Im5v%0AbmUiIHBvaW50cz0iMTE0LC0zMjYuNSAxMTQsLTM1MS41IDIyNSwtMzUxLjUgMjI1LC0zMjYuNSAx%0AMTQsLTMyNi41Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMTQ5IiB5PSItMzM1LjMi%0AIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIxNC4wMCIgZmls%0AbD0id2hpdGUiPnB2ZXNtPC90ZXh0Pgo8cG9seWdvbiBmaWxsPSIjZmY5MTAwIiBzdHJva2U9Im5v%0AbmUiIHBvaW50cz0iMjMwLC0zMjYuNSAyMzAsLTM1MS41IDM1MSwtMzUxLjUgMzUxLC0zMjYuNSAy%0AMzAsLTMyNi41Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMjY5LjUiIHk9Ii0zMzUu%0AMyIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNlcmlmIiBmb250LXNpemU9IjE0LjAwIiBm%0AaWxsPSJ3aGl0ZSI+cHZldW08L3RleHQ+Cjxwb2x5Z29uIGZpbGw9IiNmZjkxMDAiIHN0cm9rZT0i%0Abm9uZSIgcG9pbnRzPSIzNTYsLTMyNi41IDM1NiwtMzUxLjUgNDk5LC0zNTEuNSA0OTksLTMyNi41%0AIDM1NiwtMzI2LjUiLz4KPHRleHQgdGV4dC1hbmNob3I9InN0YXJ0IiB4PSIzOTAuNSIgeT0iLTMz%0ANS4zIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMtU2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAi%0AIGZpbGw9IndoaXRlIj5oYSYjNDU7bWFuYWdlcjwvdGV4dD4KPHBvbHlnb24gZmlsbD0iI2ZmOTEw%0AMCIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjE5LC0yOTYuNSAxOSwtMzIxLjUgMTA5LC0zMjEuNSAx%0AMDksLTI5Ni41IDE5LC0yOTYuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjU0LjUi%0AIHk9Ii0zMDUuMyIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNlcmlmIiBmb250LXNpemU9%0AIjE0LjAwIiBmaWxsPSJ3aGl0ZSI+cGN0PC90ZXh0Pgo8cG9seWdvbiBmaWxsPSIjZmY5MTAwIiBz%0AdHJva2U9Im5vbmUiIHBvaW50cz0iMTE0LC0yOTYuNSAxMTQsLTMyMS41IDIyNSwtMzIxLjUgMjI1%0ALC0yOTYuNSAxMTQsLTI5Ni41Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMTQ5IiB5%0APSItMzA1LjMiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIx%0ANC4wMCIgZmlsbD0id2hpdGUiPnB2ZWNtPC90ZXh0Pgo8cG9seWdvbiBmaWxsPSIjZmY5MTAwIiBz%0AdHJva2U9Im5vbmUiIHBvaW50cz0iMjMwLC0yOTYuNSAyMzAsLTMyMS41IDM1MSwtMzIxLjUgMzUx%0ALC0yOTYuNSAyMzAsLTI5Ni41Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMjY0LjUi%0AIHk9Ii0zMDUuMyIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNlcmlmIiBmb250LXNpemU9%0AIjE0LjAwIiBmaWxsPSJ3aGl0ZSI+cHZlY2VwaDwvdGV4dD4KPHBvbHlnb24gZmlsbD0iI2ZmOTEw%0AMCIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjM1NiwtMjk2LjUgMzU2LC0zMjEuNSA0OTksLTMyMS41%0AIDQ5OSwtMjk2LjUgMzU2LC0yOTYuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjM5%0AMyIgeT0iLTMwNS4zIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMtU2VyaWYiIGZvbnQtc2l6%0AZT0iMTQuMDAiIGZpbGw9IndoaXRlIj5wdmUmIzQ1O2ZpcmV3YWxsPC90ZXh0Pgo8cG9seWdvbiBm%0AaWxsPSIjMDA2MTdmIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iMTIsLTIxOC41IDEyLC0yODMuNSA1%0AMDYsLTI4My41IDUwNiwtMjE4LjUgMTIsLTIxOC41Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFy%0AdCIgeD0iMjIwLjUiIHk9Ii0yNjUuNSIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNlcmlm%0AIiBmb250LXNpemU9IjIwLjAwIiBmaWxsPSJ3aGl0ZSI+U2VydmljZXM8L3RleHQ+Cjxwb2x5Z29u%0AIGZpbGw9IiMwMDYxN2YiIHN0cm9rZT0ibm9uZSIgcG9pbnRzPSIxNCwtMjIwLjUgMTQsLTI1NS41%0AIDUwNCwtMjU1LjUgNTA0LC0yMjAuNSAxNCwtMjIwLjUiLz4KPHBvbHlnb24gZmlsbD0iI2U1NzAw%0AMCIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjE5LC0yMjUuNSAxOSwtMjUwLjUgMTA0LC0yNTAuNSAx%0AMDQsLTIyNS41IDE5LC0yMjUuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjM0IiB5%0APSItMjM0LjMiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIx%0ANC4wMCIgZmlsbD0id2hpdGUiPnB2ZXByb3h5PC90ZXh0Pgo8cG9seWdvbiBmaWxsPSIjZTU3MDAw%0AIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iMTA5LC0yMjUuNSAxMDksLTI1MC41IDIxMSwtMjUwLjUg%0AMjExLC0yMjUuNSAxMDksLTIyNS41Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMTI0%0AIiB5PSItMjM0LjMiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXpl%0APSIxNC4wMCIgZmlsbD0id2hpdGUiPnB2ZWRhZW1vbjwvdGV4dD4KPHBvbHlnb24gZmlsbD0iI2U1%0ANzAwMCIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjIxNiwtMjI1LjUgMjE2LC0yNTAuNSAyOTgsLTI1%0AMC41IDI5OCwtMjI1LjUgMjE2LC0yMjUuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9%0AIjIzMSIgeT0iLTIzNC4zIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMtU2VyaWYiIGZvbnQt%0Ac2l6ZT0iMTQuMDAiIGZpbGw9IndoaXRlIj5wdmVzdGF0ZDwvdGV4dD4KPHBvbHlnb24gZmlsbD0i%0AI2U1NzAwMCIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjMwMywtMjI1LjUgMzAzLC0yNTAuNSAzOTgs%0ALTI1MC41IDM5OCwtMjI1LjUgMzAzLC0yMjUuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQi%0AIHg9IjMxNy41IiB5PSItMjM0LjMiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIg%0AZm9udC1zaXplPSIxNC4wMCIgZmlsbD0id2hpdGUiPnB2ZSYjNDU7aGEmIzQ1O2xybTwvdGV4dD4K%0APHBvbHlnb24gZmlsbD0iI2U1NzAwMCIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjQwMywtMjI1LjUg%0ANDAzLC0yNTAuNSA0OTksLTI1MC41IDQ5OSwtMjI1LjUgNDAzLC0yMjUuNSIvPgo8dGV4dCB0ZXh0%0ALWFuY2hvcj0ic3RhcnQiIHg9IjQxNy41IiB5PSItMjM0LjMiIGZvbnQtZmFtaWx5PSJIZWx2ZXRp%0AY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIxNC4wMCIgZmlsbD0id2hpdGUiPnB2ZSYjNDU7Y2x1%0Ac3RlcjwvdGV4dD4KPHBvbHlnb24gZmlsbD0iI2FiYmFiYSIgc3Ryb2tlPSJub25lIiBwb2ludHM9%0AIjIwLC05NS41IDIwLC0yMDQuNSAxMzMsLTIwNC41IDEzMywtOTUuNSAyMCwtOTUuNSIvPgo8dGV4%0AdCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjYxIiB5PSItMTc4LjUiIGZvbnQtZmFtaWx5PSJIZWx2%0AZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIyMC4wMCIgZmlsbD0id2hpdGUiPlZNPC90ZXh0%0APgo8cG9seWdvbiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjI1LC0xMzcuNSAy%0ANSwtMTYyLjUgNzQsLTE2Mi41IDc0LC0xMzcuNSAyNSwtMTM3LjUiLz4KPHRleHQgdGV4dC1hbmNo%0Ab3I9InN0YXJ0IiB4PSIzNyIgeT0iLTE0Ni4zIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMt%0AU2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiIGZpbGw9IiMwMDYxN2YiPkFwcDwvdGV4dD4KPHBvbHln%0Ab24gZmlsbD0id2hpdGUiIHN0cm9rZT0ibm9uZSIgcG9pbnRzPSI3OSwtMTM3LjUgNzksLTE2Mi41%0AIDEyOCwtMTYyLjUgMTI4LC0xMzcuNSA3OSwtMTM3LjUiLz4KPHRleHQgdGV4dC1hbmNob3I9InN0%0AYXJ0IiB4PSI5MSIgeT0iLTE0Ni4zIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMtU2VyaWYi%0AIGZvbnQtc2l6ZT0iMTQuMDAiIGZpbGw9IiMwMDYxN2YiPkFwcDwvdGV4dD4KPHBvbHlnb24gZmls%0AbD0iIzAwNjE3ZiIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjI1LC0xMDAuNSAyNSwtMTMyLjUgMTI4%0ALC0xMzIuNSAxMjgsLTEwMC41IDI1LC0xMDAuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQi%0AIHg9IjMyLjUiIHk9Ii0xMTEuNSIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNlcmlmIiBm%0Ab250LXNpemU9IjIwLjAwIiBmaWxsPSJ3aGl0ZSI+R3Vlc3QgT1M8L3RleHQ+Cjxwb2x5Z29uIGZp%0AbGw9IiNhYmJhYmEiIHN0cm9rZT0ibm9uZSIgcG9pbnRzPSIxMzksLTk1LjUgMTM5LC0yMDQuNSAy%0ANTIsLTIwNC41IDI1MiwtOTUuNSAxMzksLTk1LjUiLz4KPHRleHQgdGV4dC1hbmNob3I9InN0YXJ0%0AIiB4PSIxODAiIHk9Ii0xNzguNSIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNlcmlmIiBm%0Ab250LXNpemU9IjIwLjAwIiBmaWxsPSJ3aGl0ZSI+Vk08L3RleHQ+Cjxwb2x5Z29uIGZpbGw9Indo%0AaXRlIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iMTQ0LC0xMzcuNSAxNDQsLTE2Mi41IDE5MywtMTYy%0ALjUgMTkzLC0xMzcuNSAxNDQsLTEzNy41Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0i%0AMTU2IiB5PSItMTQ2LjMiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1z%0AaXplPSIxNC4wMCIgZmlsbD0iIzAwNjE3ZiI+QXBwPC90ZXh0Pgo8cG9seWdvbiBmaWxsPSJ3aGl0%0AZSIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjE5OCwtMTM3LjUgMTk4LC0xNjIuNSAyNDcsLTE2Mi41%0AIDI0NywtMTM3LjUgMTk4LC0xMzcuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjIx%0AMCIgeT0iLTE0Ni4zIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMtU2VyaWYiIGZvbnQtc2l6%0AZT0iMTQuMDAiIGZpbGw9IiMwMDYxN2YiPkFwcDwvdGV4dD4KPHBvbHlnb24gZmlsbD0iIzAwNjE3%0AZiIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjE0NCwtMTAwLjUgMTQ0LC0xMzIuNSAyNDcsLTEzMi41%0AIDI0NywtMTAwLjUgMTQ0LC0xMDAuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjE1%0AMS41IiB5PSItMTExLjUiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1z%0AaXplPSIyMC4wMCIgZmlsbD0id2hpdGUiPkd1ZXN0IE9TPC90ZXh0Pgo8cG9seWdvbiBmaWxsPSIj%0AZmY5MTAwIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iMTgsLTY1LjUgMTgsLTkxLjUgMjU0LC05MS41%0AIDI1NCwtNjUuNSAxOCwtNjUuNSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjEwOC41%0AIiB5PSItNzMuNSIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNlcmlmIiBmb250LXNpemU9%0AIjIwLjAwIiBmaWxsPSJ3aGl0ZSI+UUVNVTwvdGV4dD4KPHRleHQgdGV4dC1hbmNob3I9InN0YXJ0%0AIiB4PSIzMjAuNSIgeT0iLTE5Mi44IiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMtU2VyaWYi%0AIGZvbnQtc2l6ZT0iMTQuMDAiPiA8L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0i%0AMzIwLjUiIHk9Ii0xNzAuOCIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNlcmlmIiBmb250%0ALXNpemU9IjE0LjAwIj4gPC90ZXh0Pgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjMyMC41%0AIiB5PSItMTQ5LjMiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXpl%0APSIxNC4wMCI+IDwvdGV4dD4KPHBvbHlnb24gZmlsbD0iI2FiYmFiYSIgc3Ryb2tlPSJub25lIiBw%0Ab2ludHM9IjI2NiwtNjcuNSAyNjYsLTEzOS41IDM3OSwtMTM5LjUgMzc5LC02Ny41IDI2NiwtNjcu%0ANSIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjI3OC41IiB5PSItMTEzLjUiIGZvbnQt%0AZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIyMC4wMCIgZmlsbD0id2hp%0AdGUiPkNvbnRhaW5lcjwvdGV4dD4KPHBvbHlnb24gZmlsbD0id2hpdGUiIHN0cm9rZT0ibm9uZSIg%0AcG9pbnRzPSIyNzEsLTcyLjUgMjcxLC05Ny41IDMyMCwtOTcuNSAzMjAsLTcyLjUgMjcxLC03Mi41%0AIi8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFydCIgeD0iMjgzIiB5PSItODEuMyIgZm9udC1mYW1p%0AbHk9IkhlbHZldGljYSxzYW5zLVNlcmlmIiBmb250LXNpemU9IjE0LjAwIiBmaWxsPSIjMDA2MTdm%0AIj5BcHA8L3RleHQ+Cjxwb2x5Z29uIGZpbGw9IndoaXRlIiBzdHJva2U9Im5vbmUiIHBvaW50cz0i%0AMzI1LC03Mi41IDMyNSwtOTcuNSAzNzQsLTk3LjUgMzc0LC03Mi41IDMyNSwtNzIuNSIvPgo8dGV4%0AdCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjMzNyIgeT0iLTgxLjMiIGZvbnQtZmFtaWx5PSJIZWx2%0AZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIxNC4wMCIgZmlsbD0iIzAwNjE3ZiI+QXBwPC90%0AZXh0Pgo8cG9seWdvbiBmaWxsPSIjYWJiYWJhIiBzdHJva2U9Im5vbmUiIHBvaW50cz0iMzg1LC02%0ANy41IDM4NSwtMTM5LjUgNDk4LC0xMzkuNSA0OTgsLTY3LjUgMzg1LC02Ny41Ii8+Cjx0ZXh0IHRl%0AeHQtYW5jaG9yPSJzdGFydCIgeD0iMzk3LjUiIHk9Ii0xMTMuNSIgZm9udC1mYW1pbHk9IkhlbHZl%0AdGljYSxzYW5zLVNlcmlmIiBmb250LXNpemU9IjIwLjAwIiBmaWxsPSJ3aGl0ZSI+Q29udGFpbmVy%0APC90ZXh0Pgo8cG9seWdvbiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjM5MCwt%0ANzIuNSAzOTAsLTk3LjUgNDM5LC05Ny41IDQzOSwtNzIuNSAzOTAsLTcyLjUiLz4KPHRleHQgdGV4%0AdC1hbmNob3I9InN0YXJ0IiB4PSI0MDIiIHk9Ii04MS4zIiBmb250LWZhbWlseT0iSGVsdmV0aWNh%0ALHNhbnMtU2VyaWYiIGZvbnQtc2l6ZT0iMTQuMDAiIGZpbGw9IiMwMDYxN2YiPkFwcDwvdGV4dD4K%0APHBvbHlnb24gZmlsbD0id2hpdGUiIHN0cm9rZT0ibm9uZSIgcG9pbnRzPSI0NDQsLTcyLjUgNDQ0%0ALC05Ny41IDQ5MywtOTcuNSA0OTMsLTcyLjUgNDQ0LC03Mi41Ii8+Cjx0ZXh0IHRleHQtYW5jaG9y%0APSJzdGFydCIgeD0iNDU2IiB5PSItODEuMyIgZm9udC1mYW1pbHk9IkhlbHZldGljYSxzYW5zLVNl%0AcmlmIiBmb250LXNpemU9IjE0LjAwIiBmaWxsPSIjMDA2MTdmIj5BcHA8L3RleHQ+Cjxwb2x5Z29u%0AIGZpbGw9IiMwMDYxN2YiIHN0cm9rZT0ibm9uZSIgcG9pbnRzPSIxMiwtNy41IDEyLC01My41IDUw%0ANiwtNTMuNSA1MDYsLTcuNSAxMiwtNy41Ii8+Cjxwb2x5Z29uIGZpbGw9IiMwMDYxN2YiIHN0cm9r%0AZT0ibm9uZSIgcG9pbnRzPSIxNCwtOS41IDE0LC01MS41IDUwNCwtNTEuNSA1MDQsLTkuNSAxNCwt%0AOS41Ii8+Cjxwb2x5Z29uIGZpbGw9IiNmZjkxMDAiIHN0cm9rZT0ibm9uZSIgcG9pbnRzPSIxOSwt%0AMTggMTksLTQzIDY0LC00MyA2NCwtMTggMTksLTE4Ii8+Cjx0ZXh0IHRleHQtYW5jaG9yPSJzdGFy%0AdCIgeD0iMjQiIHk9Ii0yNi44IiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMtU2VyaWYiIGZv%0AbnQtc2l6ZT0iMTQuMDAiIGZpbGw9IndoaXRlIj5LVk08L3RleHQ+Cjx0ZXh0IHRleHQtYW5jaG9y%0APSJzdGFydCIgeD0iMTUwLjUiIHk9Ii0yNS41IiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMt%0AU2VyaWYiIGZvbnQtc2l6ZT0iMjAuMDAiIGZpbGw9IndoaXRlIj5MaW51eCBLZXJuZWw8L3RleHQ+%0ACjxwb2x5Z29uIGZpbGw9IiNmZjkxMDAiIHN0cm9rZT0ibm9uZSIgcG9pbnRzPSIzNDksLTE4IDM0%0AOSwtNDMgNDI0LC00MyA0MjQsLTE4IDM0OSwtMTgiLz4KPHRleHQgdGV4dC1hbmNob3I9InN0YXJ0%0AIiB4PSIzNTQiIHk9Ii0yNi44IiBmb250LWZhbWlseT0iSGVsdmV0aWNhLHNhbnMtU2VyaWYiIGZv%0AbnQtc2l6ZT0iMTQuMDAiIGZpbGw9IndoaXRlIj5BcHBBcm1vcjwvdGV4dD4KPHBvbHlnb24gZmls%0AbD0iI2ZmOTEwMCIgc3Ryb2tlPSJub25lIiBwb2ludHM9IjQyOSwtMTggNDI5LC00MyA0OTksLTQz%0AIDQ5OSwtMTggNDI5LC0xOCIvPgo8dGV4dCB0ZXh0LWFuY2hvcj0ic3RhcnQiIHg9IjQzNCIgeT0i%0ALTI2LjgiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2Esc2Fucy1TZXJpZiIgZm9udC1zaXplPSIxNC4w%0AMCIgZmlsbD0id2hpdGUiPmNncm91cHM8L3RleHQ+CjwvZz4KPC9nPgo8L3N2Zz4K" alt="Proxmox Software Stack" /></p><h3 id='11-central-management-11-集中管理'><span>1.1. Central Management 1.1. 集中管理 </span></h3><p><span>While many people start with a single node, Proxmox VE can scale out to a large set of clustered nodes. The cluster stack is fully integrated and ships with the default installation.</span>
+<span>虽然许多人从单个节点开始，但Proxmox VE可以扩展到大量集群节点。群集堆栈已完全集成，并随默认安装一起提供。</span></p><ul><li><p><span>Unique Multi-Master Design 独特的多大师设计</span></p><p><span>The integrated web-based management interface gives you a clean overview of all your KVM guests and Linux containers and even of your whole cluster. You can easily manage your VMs and containers, storage or cluster from the GUI. There is no need to install a separate, complex, and pricey management server. 基于 Web 的集成管理界面可让您清晰地了解所有 KVM 客户机和 Linux 容器，甚至整个集群。您可以从 GUI 轻松管理虚拟机和容器、存储或集群。无需安装单独的、复杂的、昂贵的管理服务器。</span></p></li><li><p><span>Proxmox Cluster File System (pmxcfs) Proxmox 集群文件系统 （pmxcfs）</span></p><p><span>Proxmox VE uses the unique Proxmox Cluster file system (pmxcfs), a database-driven file system for storing configuration files. This enables you to store the configuration of thousands of virtual machines. By using corosync, these files are replicated in real time on all cluster nodes. The file system stores all data inside a persistent database on disk, nonetheless, a copy of the data resides in RAM which provides a maximum storage size of 30MB - more than enough for thousands of VMs. Proxmox VE使用独特的Proxmox Cluster文件系统（pmxcfs），这是一个用于存储配置文件的数据库驱动文件系统。这使您能够存储数千个虚拟机的配置。通过使用 corosync，这些文件将在所有群集节点上实时复制。文件系统将所有数据存储在磁盘上的持久性数据库中，尽管如此，数据的副本仍驻留在 RAM 中，RAM 提供的最大存储大小为 30MB - 对于数千个 VM 来说绰绰有余。Proxmox VE is the only virtualization platform using this unique cluster file system. Proxmox VE是唯一使用这种独特集群文件系统的虚拟化平台。</span></p></li><li><p><span>Web-based Management Interface 基于 Web 的管理界面</span></p><p><span>Proxmox VE is simple to use. Management tasks can be done via the included web based management interface - there is no need to install a separate management tool or any additional management node with huge databases. The multi-master tool allows you to manage your whole cluster from any node of your cluster. The central web-based management - based on the JavaScript Framework (ExtJS) - empowers you to control all functionalities from the GUI and overview history and syslogs of each single node. This includes running backup or restore jobs, live-migration or HA triggered activities. Proxmox VE 使用简单。管理任务可以通过随附的基于 Web 的管理界面完成 - 无需安装单独的管理工具或具有庞大数据库的任何其他管理节点。多主节点工具允许您从集群的任何节点管理整个集群。基于 Web 的中央管理 - 基于 JavaScript 框架 （ExtJS） - 使您能够从 GUI 控制所有功能，并概述每个节点的历史记录和系统日志。这包括运行备份或还原作业、实时迁移或 HA 触发的活动。</span></p></li><li><p><span>Command Line 命令行</span></p><p><span>For advanced users who are used to the comfort of the Unix shell or Windows Powershell, Proxmox VE provides a command-line interface to manage all the components of your virtual environment. This command-line interface has intelligent tab completion and full documentation in the form of UNIX man pages. 对于习惯于舒适地使用Unix shell或Windows Powershell的高级用户，Proxmox VE提供了一个命令行界面来管理虚拟环境的所有组件。此命令行界面具有智能 Tab 自动补全和 UNIX 手册页形式的完整文档。</span></p></li><li><p><span>REST API REST 接口</span></p><p><span>Proxmox VE uses a RESTful API. We choose JSON as primary data format, and the whole API is formally defined using JSON Schema. This enables fast and easy integration for third party management tools like custom hosting environments. Proxmox VE 使用 RESTful API。我们选择 JSON 作为主要数据格式，整个 API 使用 JSON Schema 正式定义。这样可以快速轻松地集成第三方管理工具，例如自定义托管环境。</span></p></li><li><p><span>Role-based Administration 基于角色的管理</span></p><p><span>You can define granular access for all objects (like VMs, storages, nodes, etc.) by using the role based user- and permission management. This allows you to define privileges and helps you to control access to objects. This concept is also known as access control lists: Each permission specifies a subject (a user or group) and a role (set of privileges) on a specific path. 您可以使用基于角色的用户和权限管理来定义所有对象（如虚拟机、存储、节点等）的精细访问。这允许您定义权限并帮助您控制对对象的访问。此概念也称为访问控制列表：每个权限指定特定路径上的使用者（用户或组）和角色（权限集）。</span></p></li><li><p><span>Authentication Realms 身份验证领域</span></p><p><span>Proxmox VE supports multiple authentication sources like Microsoft Active Directory, LDAP, Linux PAM standard authentication or the built-in Proxmox VE authentication server. Proxmox VE支持多个身份验证源，如Microsoft Active Directory，LDAP，Linux PAM标准身份验证或内置的Proxmox VE身份验证服务器。</span></p></li></ul><h3 id='12-flexible-storage-12-灵活存储'><span>1.2. Flexible Storage 1.2. 灵活存储 </span></h3><p><span>The Proxmox VE storage model is very flexible. Virtual machine images can either be stored on one or several local storages or on shared storage like NFS and on SAN. There are no limits, you may configure as many storage definitions as you like. You can use all storage technologies available for Debian Linux.</span>
+<span>Proxmox VE存储模型非常灵活。虚拟机映像可以存储在一个或多个本地存储上，也可以存储在共享存储（如 NFS）和 SAN 上。没有限制，您可以根据需要配置任意数量的存储定义。您可以使用 Debian Linux 可用的所有存储技术。</span></p><p><span>One major benefit of storing VMs on shared storage is the ability to live-migrate running machines without any downtime, as all nodes in the cluster have direct access to VM disk images.</span>
+<span>将 VM 存储在共享存储上的一个主要好处是能够在没有任何停机时间的情况下实时迁移正在运行的计算机，因为群集中的所有节点都可以直接访问 VM 磁盘映像。</span></p><p><span>We currently support the following Network storage types:</span>
+<span>我们目前支持以下网络存储类型：</span></p><ul><li><p><span>LVM Group (network backing with iSCSI targets)</span>
+<span>LVM 组（使用 iSCSI 目标的网络支持）</span></p></li><li><p><span>iSCSI target iSCSI 目标</span></p></li><li><p><span>NFS Share NFS 共享</span></p></li><li><p><span>CIFS Share CIFS 分享</span></p></li><li><p><span>Ceph RBD Ceph RBD型</span></p></li><li><p><span>Directly use iSCSI LUNs 直接使用 iSCSI LUN</span></p></li><li><p><span>GlusterFS GlusterFS系列</span></p></li></ul><p><span>Local storage types supported are:</span>
+<span>支持的本地存储类型包括：</span></p><ul><li><p><span>LVM Group (local backing devices like block devices, FC devices, DRBD, etc.)</span>
+<span>LVM Group（本地支持设备，如块设备、FC 设备、DRBD 等）</span></p></li><li><p><span>Directory (storage on existing filesystem)</span>
+<span>目录（存储在现有文件系统上）</span></p></li><li><p><span>ZFS 采埃孚</span></p></li></ul><h3 id='13-integrated-backup-and-restore-13-集成备份和恢复'><span>1.3. Integrated Backup and Restore 1.3. 集成备份和恢复 </span></h3><p><span>The integrated backup tool (vzdump) creates consistent snapshots of running Containers and KVM guests. It basically creates an archive of the VM or CT data which includes the VM/CT configuration files.</span>
+<span>集成备份工具 （vzdump） 可为正在运行的容器和 KVM 客户机创建一致的快照。它基本上创建了 VM 或 CT 数据的存档，其中包括 VM/CT 配置文件。</span></p><p><span>KVM live backup works for all storage types including VM images on NFS, CIFS, iSCSI LUN, Ceph RBD. The new backup format is optimized for storing VM backups fast and effective (sparse files, out of order data, minimized I/O).</span>
+<span>KVM 实时备份适用于所有存储类型，包括 NFS、CIFS、iSCSI LUN 和 Ceph RBD 上的虚拟机映像。新的备份格式经过优化，可快速有效地存储 VM 备份（稀疏文件、无序数据、最小化 I/O）。</span></p><h3 id='14-high-availability-cluster-14-高可用性集群'><span>1.4. High Availability Cluster 1.4. 高可用性集群 </span></h3><p><span>A multi-node Proxmox VE HA Cluster enables the definition of highly available virtual servers. The Proxmox VE HA Cluster is based on proven Linux HA technologies, providing stable and reliable HA services.</span>
+<span>多节点Proxmox VE HA集群支持定义高可用性虚拟服务器。Proxmox VE HA 集群基于成熟的 Linux HA 技术，提供稳定可靠的 HA 服务。</span></p><h3 id='15-flexible-networking-15-灵活的组网'><span>1.5. Flexible Networking 1.5. 灵活的组网 </span></h3><p><span>Proxmox VE uses a bridged networking model. All VMs can share one bridge as if virtual network cables from each guest were all plugged into the same switch. For connecting VMs to the outside world, bridges are attached to physical network cards and assigned a TCP/IP configuration.</span>
+<span>Proxmox VE使用桥接网络模型。所有 VM 都可以共享一个网桥，就好像每个来宾的虚拟网络电缆都插入到同一交换机中一样。为了将 VM 连接到外部世界，网桥连接到物理网卡并分配了 TCP/IP 配置。</span></p><p><span>For further flexibility, VLANs (IEEE 802.1q) and network bonding/aggregation are possible. In this way it is possible to build complex, flexible virtual networks for the Proxmox VE hosts, leveraging the full power of the Linux network stack.</span>
+<span>为了进一步提高灵活性，可以进行 VLAN （IEEE 802.1q） 和网络绑定/聚合。通过这种方式，可以利用Linux网络堆栈的全部功能，为Proxmox VE主机构建复杂，灵活的虚拟网络。</span></p><h3 id='16-integrated-firewall-16-集成防火墙'><span>1.6. Integrated Firewall 1.6. 集成防火墙 </span></h3><p><span>The integrated firewall allows you to filter network packets on any VM or Container interface. Common sets of firewall rules can be grouped into “security groups”.</span>
+<span>集成防火墙允许您过滤任何虚拟机或容器接口上的网络数据包。常见的防火墙规则集可以分组到“安全组”中。</span></p><h3 id='17-hyper-converged-infrastructure-17-超融合基础架构'><span>1.7. Hyper-converged Infrastructure 1.7. 超融合基础架构 </span></h3><p><span>Proxmox VE is a virtualization platform that tightly integrates compute, storage and networking resources, manages highly available clusters, backup/restore as well as disaster recovery. All components are software-defined and compatible with one another.</span>
+<span>Proxmox VE 是一个虚拟化平台，可紧密集成计算、存储和网络资源，管理高可用性集群、备份/恢复以及灾难恢复。所有组件均由软件定义，并且彼此兼容。</span></p><p><span>Therefore it is possible to administrate them like a single system via the centralized web management interface. These capabilities make Proxmox VE an ideal choice to deploy and manage an open source </span><a href='https://en.wikipedia.org/wiki/Hyper-converged_infrastructure'><span>hyper-converged infrastructure</span></a><span>.</span>
+<span>因此，可以通过集中式 Web 管理界面像管理单个系统一样管理它们。这些功能使 Proxmox VE 成为部署和管理开源</span><a href='https://en.wikipedia.org/wiki/Hyper-converged_infrastructure'><span>超融合基础设施</span></a><span>的理想选择。</span></p><h4 id='171-benefits-of-a-hyper-converged-infrastructure-hci-with-proxmox-ve-171-proxmox-ve超融合基础设施hci）的优势'><span>1.7.1. Benefits of a Hyper-Converged Infrastructure (HCI) with Proxmox VE 1.7.1. Proxmox VE超融合基础设施（HCI）的优势</span></h4><p><span>A hyper-converged infrastructure (HCI) is especially useful for deployments in which a high infrastructure demand meets a low administration budget, for distributed setups such as remote and branch office environments or for virtual private and public clouds.</span>
+<span>超融合基础架构 （HCI） 对于基础架构需求高、管理预算低的部署、远程和分支机构环境等分布式设置，或者 Virtual Private 和公有云特别有用。</span></p><p><span>HCI provides the following advantages:</span>
+<span>HCI 具有以下优点：</span></p><ul><li><p><span>Scalability: seamless expansion of compute, network and storage devices (i.e. scale up servers and storage quickly and independently from each other).</span>
+<span>可扩展性：计算、网络和存储设备的无缝扩展（即快速且相互独立地扩展服务器和存储）。</span></p></li><li><p><span>Low cost: Proxmox VE is open source and integrates all components you need such as compute, storage, networking, backup, and management center. It can replace an expensive compute/storage infrastructure.</span>
+<span>低成本：Proxmox VE是开源的，集成了您需要的所有组件，如计算、存储、网络、备份和管理中心。它可以取代昂贵的计算/存储基础设施。</span></p></li><li><p><span>Data protection and efficiency: services such as backup and disaster recovery are integrated.</span>
+<span>数据保护和效率：集成备份和灾难恢复等服务。</span></p></li><li><p><span>Simplicity: easy configuration and centralized administration.</span>
+<span>简单：易于配置和集中管理。</span></p></li><li><p><span>Open Source: No vendor lock-in.</span>
+<span>开源：无供应商锁定。</span></p></li></ul><h4 id='172-hyper-converged-infrastructure-storage-172-超融合基础架构存储'><span>1.7.2. Hyper-Converged Infrastructure: Storage 1.7.2. 超融合基础架构：存储</span></h4><p><span>Proxmox VE has tightly integrated support for deploying a hyper-converged storage infrastructure. You can, for example, deploy and manage the following two storage technologies by using the web interface only:</span>
+<span>Proxmox VE对部署超融合存储基础设施提供了紧密集成的支持。例如，您可以仅使用 Web 界面部署和管理以下两种存储技术：</span></p><ul><li><p><strong><span>Ceph</span></strong><span>: a both self-healing and self-managing shared, reliable and highly scalable storage system. Checkout </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#chapter_pveceph'><span>how to manage Ceph services on Proxmox VE nodes</span></a>
+<strong><span>Ceph</span></strong><span>：一个自我修复和自我管理的共享、可靠且高度可扩展的存储系统。了解如何</span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#chapter_pveceph'><span>在 Proxmox VE 节点上管理 Ceph 服务</span></a></p></li><li><p><strong><span>ZFS</span></strong><span>: a combined file system and logical volume manager with extensive protection against data corruption, various RAID modes, fast and cheap snapshots - among other features. Find out </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#chapter_zfs'><span>how to leverage the power of ZFS on Proxmox VE nodes</span></a><span>.</span>
+<strong><span>ZFS</span></strong><span>：一个组合的文件系统和逻辑卷管理器，具有广泛的防止数据损坏、各种 RAID 模式、快速和廉价的快照 - 以及其他功能。了解如何</span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#chapter_zfs'><span>在 Proxmox VE 节点上利用 ZFS 的强大功能</span></a><span>。</span></p></li></ul><p><span>Besides above, Proxmox VE has support to integrate a wide range of additional storage technologies. You can find out about them in the </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#chapter_storage'><span>Storage Manager chapter</span></a><span>.</span>
+<span>除此之外，Proxmox VE还支持集成各种额外的存储技术。您可以在</span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#chapter_storage'><span>“存储管理器”一章</span></a><span>中找到有关它们的信息。</span></p><h3 id='18-why-open-source-18-为什么要开源'><span>1.8. Why Open Source 1.8. 为什么要开源 </span></h3><p><span>Proxmox VE uses a Linux kernel and is based on the Debian GNU/Linux Distribution. The source code of Proxmox VE is released under the </span><a href='https://www.gnu.org/licenses/agpl-3.0.html'><span>GNU Affero General Public License, version 3</span></a><span>. This means that you are free to inspect the source code at any time or contribute to the project yourself.</span>
+<span>Proxmox VE使用Linux内核，并基于Debian GNU / Linux发行版。Proxmox VE 的源代码是在 </span><a href='https://www.gnu.org/licenses/agpl-3.0.html'><span>GNU Affero 通用公共许可证第 3 版</span></a><span>下发布的。这意味着您可以随时检查源代码或自己为项目做出贡献。</span></p><p><span>At Proxmox we are committed to use open source software whenever possible. Using open source software guarantees full access to all functionalities - as well as high security and reliability. We think that everybody should have the right to access the source code of a software to run it, build on it, or submit changes back to the project. Everybody is encouraged to contribute while Proxmox ensures the product always meets professional quality criteria.</span>
+<span>在Proxmox，我们致力于尽可能使用开源软件。使用开源软件可以保证对所有功能的完全访问，以及高安全性和可靠性。我们认为每个人都应该有权访问软件的源代码来运行它、构建它或将更改提交回项目。我们鼓励每个人做出贡献，而Proxmox确保产品始终符合专业质量标准。</span></p><p><span>Open source software also helps to keep your costs low and makes your core infrastructure independent from a single vendor.</span>
+<span>开源软件还有助于降低成本，并使核心基础设施独立于单一供应商。</span></p><h3 id='19-your-benefits-with-proxmox-ve-19-proxmox-ve的优势'><span>1.9. Your benefits with Proxmox VE 1.9. Proxmox VE的优势 </span></h3><ul><li><p><span>Open source software 开源软件</span></p></li><li><p><span>No vendor lock-in 无供应商锁定</span></p></li><li><p><span>Linux kernel Linux 内核</span></p></li><li><p><span>Fast installation and easy-to-use</span>
+<span>安装快速，使用方便</span></p></li><li><p><span>Web-based management interface</span>
+<span>基于 Web 的管理界面</span></p></li><li><p><span>REST API REST 接口</span></p></li><li><p><span>Huge active community 庞大的活跃社区</span></p></li><li><p><span>Low administration costs and simple deployment</span>
+<span>管理成本低，部署简单</span></p></li></ul><h3 id='110-getting-help-110-获取帮助'><span>1.10. Getting Help 1.10. 获取帮助 </span></h3><h4 id='1101-proxmox-ve-wiki'><span>1.10.1. Proxmox VE Wiki </span></h4><p><span>The primary source of information is the </span><a href='https://pve.proxmox.com/wiki/'><span>Proxmox VE Wiki</span></a><span>. It combines the reference documentation with user contributed content.</span>
+<span>主要信息来源是 </span><a href='https://pve.proxmox.com/wiki/'><span>Proxmox VE Wiki</span></a><span>。它将参考文档与用户提供的内容相结合。</span></p><h4 id='1102-community-support-forum-1102-社区支持论坛'><span>1.10.2. Community Support Forum 1.10.2. 社区支持论坛</span></h4><p><span>Proxmox VE itself is fully open source, so we always encourage our users to discuss and share their knowledge using the </span><a href='https://forum.proxmox.com/'><span>Proxmox VE Community Forum</span></a><span>. The forum is moderated by the Proxmox support team, and has a large user base from all around the world. Needless to say, such a large forum is a great place to get information.</span>
+<span>Proxmox VE本身是完全开源的，因此我们始终鼓励用户使用</span><a href='https://forum.proxmox.com/'><span>Proxmox VE社区论坛</span></a><span>讨论和分享他们的知识。该论坛由 Proxmox 支持团队主持，拥有来自世界各地的大量用户群。毋庸置疑，这样一个大型论坛是获取信息的好地方。</span></p><h4 id='1103-mailing-lists-1103-邮件列表'><span>1.10.3. Mailing Lists 1.10.3. 邮件列表</span></h4><p><span>This is a fast way to communicate with the Proxmox VE community via email.</span>
+<span>这是通过电子邮件与Proxmox VE社区进行交流的快速方式。</span></p><ul><li><p><span>Mailing list for users: </span><a href='http://lists.proxmox.com/cgi-bin/mailman/listinfo/pve-user'><span>Proxmox VE User List</span></a>
+<span>用户邮件列表：</span><a href='http://lists.proxmox.com/cgi-bin/mailman/listinfo/pve-user'><span>Proxmox VE用户列表</span></a></p></li></ul><p><span>Proxmox VE is fully open source and contributions are welcome! The primary communication channel for developers is the:</span>
+<span>Proxmox VE是完全开源的，欢迎贡献！开发人员的主要沟通渠道是：</span></p><ul><li><p><span>Mailing list for developers: </span><a href='http://lists.proxmox.com/cgi-bin/mailman/listinfo/pve-devel'><span>Proxmox VE development discussion</span></a>
+<span>开发者邮件列表：</span><a href='http://lists.proxmox.com/cgi-bin/mailman/listinfo/pve-devel'><span>Proxmox VE开发讨论</span></a></p></li></ul><h4 id='1104-commercial-support-1104-商业支持'><span>1.10.4. Commercial Support 1.10.4. 商业支持</span></h4><p><span>Proxmox Server Solutions GmbH also offers enterprise support available as </span><a href='https://proxmox.com/en/proxmox-virtual-environment/pricing'><span>Proxmox VE Subscription Service Plans</span></a><span>. All users with a subscription get access to the Proxmox VE </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#sysadmin_enterprise_repo'><span>Enterprise Repository</span></a><span>, and—with a Basic, Standard or Premium subscription—also to the Proxmox Customer Portal. The customer portal provides help and support with guaranteed response times from the Proxmox VE developers.</span>
+<span>Proxmox Server Solutions GmbH 还提供企业支持，可作为 </span><a href='https://proxmox.com/en/proxmox-virtual-environment/pricing'><span>Proxmox VE 订阅服务计划</span></a><span>提供。所有订阅的用户都可以访问 Proxmox VE </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#sysadmin_enterprise_repo'><span>Enterprise Repository</span></a><span>，并且（订阅 Basic、Standard 或 Premium）还可以访问 Proxmox 客户门户。客户门户提供帮助和支持，并保证 Proxmox VE 开发人员的响应时间。</span></p><p><span>For volume discounts, or more information in general, please contact </span><a href='mailto:sales@proxmox.com'><span>sales@proxmox.com</span></a><span>.</span>
+<span>如需批量折扣或更多信息，请联系 </span><a href='mailto:sales@proxmox.com'><span>sales@proxmox.com</span></a><span>。</span></p><h4 id='1105-bug-tracker-1105-bug跟踪器'><span>1.10.5. Bug Tracker 1.10.5. Bug跟踪器</span></h4><p><span>Proxmox runs a public bug tracker at </span><a href='https://bugzilla.proxmox.com/'><span>https://bugzilla.proxmox.com</span></a><span>. If an issue appears, file your report there. An issue can be a bug as well as a request for a new feature or enhancement. The bug tracker helps to keep track of the issue and will send a notification once it has been solved.</span>
+<span>Proxmox 在 </span><a href='https://bugzilla.proxmox.com/'><span>https://bugzilla.proxmox.com</span></a><span> 上运行一个公共错误跟踪器。如果出现问题，请在此处提交报告。问题可以是错误，也可以是对新功能或增强功能的请求。错误跟踪器有助于跟踪问题，并在问题解决后发送通知。</span></p><h3 id='111-project-history-111-项目历史'><span>1.11. Project History 1.11. 项目历史 </span></h3><p><span>The project started in 2007, followed by a first stable version in 2008. At the time we used OpenVZ for containers, and KVM for virtual machines. The clustering features were limited, and the user interface was simple (server generated web page).</span>
+<span>该项目于 2007 年启动，随后于 2008 年发布了第一个稳定版本。当时，我们将 OpenVZ 用于容器，将 KVM 用于虚拟机。群集功能有限，用户界面简单（服务器生成的网页）。</span></p><p><span>But we quickly developed new features using the </span><a href='https://corosync.github.io/corosync/'><span>Corosync</span></a><span> cluster stack, and the introduction of the new Proxmox cluster file system (pmxcfs) was a big step forward, because it completely hides the cluster complexity from the user. Managing a cluster of 16 nodes is as simple as managing a single node.</span>
+<span>但是，我们使用 </span><a href='https://corosync.github.io/corosync/'><span>Corosync</span></a><span> 集群堆栈快速开发了新功能，而引入新的 Proxmox 集群文件系统 （pmxcfs） 是向前迈出的一大步，因为它完全向用户隐藏了集群的复杂性。管理 16 个节点的集群就像管理单个节点一样简单。</span></p><p><span>We also introduced a new REST API, with a complete declarative specification written in JSON-Schema. This enabled other people to integrate Proxmox VE into their infrastructure, and made it easy to provide additional services.</span>
+<span>我们还引入了一个新的 REST API，其中包含用 JSON-Schema 编写的完整声明性规范。这使其他人能够将 Proxmox VE 集成到他们的基础设施中，并轻松提供附加服务。</span></p><p><span>Also, the new REST API made it possible to replace the original user interface with a modern HTML5 application using JavaScript. We also replaced the old Java based VNC console code with </span><a href='https://kanaka.github.io/noVNC/'><span>noVNC</span></a><span>. So you only need a web browser to manage your VMs.</span>
+<span>此外，新的 REST API 使得用使用 JavaScript 的现代 HTML5 应用程序替换原始用户界面成为可能。我们还用 </span><a href='https://kanaka.github.io/noVNC/'><span>noVNC</span></a><span> 替换了旧的基于 Java 的 VNC 控制台代码。因此，您只需要一个 Web 浏览器来管理您的 VM。</span></p><p><span>The support for various storage types is another big task. Notably, Proxmox VE was the first distribution to ship ZFS on Linux by default in 2014. Another milestone was the ability to run and manage </span><a href='https://ceph.com/'><span>Ceph</span></a><span> storage on the hypervisor nodes. Such setups are extremely cost effective.</span>
+<span>对各种存储类型的支持是另一项艰巨的任务。值得注意的是，Proxmox VE 是 2014 年第一个默认在 Linux 上发布 ZFS 的发行版。另一个里程碑是能够在虚拟机管理程序节点上运行和管理 </span><a href='https://ceph.com/'><span>Ceph</span></a><span> 存储。这种设置非常具有成本效益。</span></p><p><span>When we started we were among the first companies providing commercial support for KVM. The KVM project itself continuously evolved, and is now a widely used hypervisor. New features arrive with each release. We developed the KVM live backup feature, which makes it possible to create snapshot backups on any storage type.</span>
+<span>当我们开始的时候，我们是最早为KVM提供商业支持的公司之一。KVM 项目本身不断发展，现在是一个广泛使用的虚拟机管理程序。每个版本都会带来新功能。我们开发了 KVM 实时备份功能，可以在任何存储类型上创建快照备份。</span></p><p><span>The most notable change with version 4.0 was the move from OpenVZ to </span><a href='https://linuxcontainers.org/'><span>LXC</span></a><span>. Containers are now deeply integrated, and they can use the same storage and network features as virtual machines.</span>
+<span>版本 4.0 最显着的变化是从 OpenVZ 迁移到 </span><a href='https://linuxcontainers.org/'><span>LXC</span></a><span>。容器现在已经深度集成，它们可以使用与虚拟机相同的存储和网络功能。</span></p><h3 id='112-improving-the-proxmox-ve-documentation-112-改进-proxmox-ve-文档'><span>1.12. Improving the Proxmox VE Documentation 1.12. 改进 Proxmox VE 文档 </span></h3><p><span>Contributions and improvements to the Proxmox VE documentation are always welcome. There are several ways to contribute.</span>
+<span>我们随时欢迎对Proxmox VE文档的贡献和改进。有几种方法可以做出贡献。</span></p><p><span>If you find errors or other room for improvement in this documentation, please file a bug at the </span><a href='https://bugzilla.proxmox.com/'><span>Proxmox bug tracker</span></a><span> to propose a correction.</span>
+<span>如果您在本文档中发现错误或其他改进空间，请在 </span><a href='https://bugzilla.proxmox.com/'><span>Proxmox 错误跟踪器</span></a><span>上提交错误以提出更正建议。</span></p><p><span>If you want to propose new content, choose one of the following options:</span>
+<span>如果要提出新内容，请选择以下选项之一：</span></p><ul><li><p><span>The wiki: For specific setups, how-to guides, or tutorials the wiki is the right option to contribute.</span>
+<span>wiki：对于特定的设置、操作指南或教程，wiki 是贡献的正确选择。</span></p></li><li><p><span>The reference documentation: For general content that will be helpful to all users please propose your contribution for the reference documentation. This includes all information about how to install, configure, use, and troubleshoot Proxmox VE features. The reference documentation is written in the </span><a href='https://en.wikipedia.org/wiki/AsciiDoc'><span>asciidoc format</span></a><span>. To edit the documentation you need to clone the git repository at git://git.proxmox.com/git/pve-docs.git; then follow the </span><a href='https://git.proxmox.com/?p=pve-docs.git;a=blob_plain;f=README.adoc;hb=HEAD'><span>README.adoc</span></a><span> document.</span>
+<span>参考文档：对于对所有用户都有帮助的一般内容，请提出您对参考文档的贡献。这包括有关如何安装、配置、使用和排除 Proxmox VE 功能故障的所有信息。参考文档以 </span><a href='https://en.wikipedia.org/wiki/AsciiDoc'><span>asciidoc 格式</span></a><span>编写。要编辑文档，您需要在 git://git.proxmox.com/git/pve-docs.git 处克隆 git 存储库;然后按照 </span><a href='https://git.proxmox.com/?p=pve-docs.git;a=blob_plain;f=README.adoc;hb=HEAD'><span>README.adoc</span></a><span> 文档进行操作。</span></p></li></ul><figure class='table-figure'><table><thead><tr><th><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"></th><th><span>If you are interested in working on the Proxmox VE codebase, the </span><a href='https://pve.proxmox.com/wiki/Developer_Documentation'><span>Developer Documentation</span></a><span> wiki article will show you where to start. 如果您对使用 Proxmox VE 代码库感兴趣，</span><a href='https://pve.proxmox.com/wiki/Developer_Documentation'><span>开发人员文档</span></a><span> wiki 文章将向您展示从哪里开始。</span></th></tr></thead><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><h3 id='113-translating-proxmox-ve-113-翻译proxmox-ve'><span>1.13. Translating Proxmox VE 1.13. 翻译Proxmox VE </span></h3><p><span>The Proxmox VE user interface is in English by default. However, thanks to the contributions of the community, translations to other languages are also available. We welcome any support in adding new languages, translating the latest features, and improving incomplete or inconsistent translations.</span>
+<span>默认情况下，Proxmox VE 用户界面为英文。但是，由于社区的贡献，也可以获得其他语言的翻译。我们欢迎在添加新语言、翻译最新功能以及改进不完整或不一致的翻译方面提供任何支持。</span></p><p><span>We use </span><a href='https://www.gnu.org/software/gettext/'><span>gettext</span></a><span> for the management of the translation files. Tools like </span><a href='https://poedit.net/'><span>Poedit</span></a><span> offer a nice user interface to edit the translation files, but you can use whatever editor you’re comfortable with. No programming knowledge is required for translating.</span>
+<span>我们使用 </span><a href='https://www.gnu.org/software/gettext/'><span>gettext</span></a><span> 来管理翻译文件。</span><a href='https://poedit.net/'><span>像 Poedit</span></a><span> 这样的工具提供了一个漂亮的用户界面来编辑翻译文件，但您可以使用任何您熟悉的编辑器。翻译不需要任何编程知识。</span></p><h4 id='1131-translating-with-git-1131-使用-git-翻译'><span>1.13.1. Translating with git 1.13.1. 使用 git 翻译</span></h4><p><span>The language files are available as a </span><a href='https://git.proxmox.com/?p=proxmox-i18n.git'><span>git repository</span></a><span>. If you are familiar with git, please contribute according to our </span><a href='https://pve.proxmox.com/wiki/Developer_Documentation'><span>Developer Documentation</span></a><span>.</span>
+<span>语言文件以 </span><a href='https://git.proxmox.com/?p=proxmox-i18n.git'><span>git 存储库</span></a><span>的形式提供。如果您熟悉 git，请根据我们的</span><a href='https://pve.proxmox.com/wiki/Developer_Documentation'><span>开发者文档</span></a><span>做出贡献。</span></p><p><span>You can create a new translation by doing the following (replace </span><LANG><span> with the language ID):</span>
+<span>您可以通过执行以下操作来创建新翻译（替换为语言 ID）：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># git clone git://git.proxmox.com/git/proxmox-i18n.git</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># cd proxmox-i18n</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># make init-&lt;LANG&gt;.po</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 78px;"></div><div class="CodeMirror-gutters" style="display: none; height: 78px;"></div></div></div></pre><p><span>Or you can edit an existing translation, using the editor of your choice:</span>
+<span>或者，您可以使用您选择的编辑器编辑现有翻译：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># poedit &lt;LANG&gt;.po</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><h4 id='1132-translating-without-git-1132-不使用-git-进行翻译'><span>1.13.2. Translating without git 1.13.2. 不使用 git 进行翻译</span></h4><p><span>Even if you are not familiar with git, you can help translate Proxmox VE. To start, you can download the language files </span><a href='https://git.proxmox.com/?p=proxmox-i18n.git;a=tree'><span>here</span></a><span>. Find the language you want to improve, then right click on the &quot;raw&quot; link of this language file and select </span><em><span>Save Link As…</span></em><span>. Make your changes to the file, and then send your final translation directly to office(at)proxmox.com, together with a signed </span><a href='https://pve.proxmox.com/wiki/Developer_Documentation#Software_License_and_Copyright'><span>contributor license agreement</span></a><span>.</span>
+<span>即使你不熟悉 git，你也可以帮助翻译 Proxmox VE。首先，您可以</span><a href='https://git.proxmox.com/?p=proxmox-i18n.git;a=tree'><span>在此处</span></a><span>下载语言文件。找到您想要改进的语言，然后右键单击此语言文件的“原始”链接，然后选择“</span><em><span>链接另存为...</span></em><span>”。对文件进行更改，然后将最终翻译直接发送到 office（at）proxmox.com，并附上已签署</span><a href='https://pve.proxmox.com/wiki/Developer_Documentation#Software_License_and_Copyright'><span>的贡献者许可协议</span></a><span>。</span></p><h4 id='1133-testing-the-translation-1133-测试翻译'><span>1.13.3. Testing the Translation 1.13.3. 测试翻译</span></h4><p><span>In order for the translation to be used in Proxmox VE, you must first translate the .po file into a .js file. You can do this by invoking the following script, which is located in the same repository:</span>
+<span>为了在Proxmox VE中使用翻译，您必须首先将.po文件转换为.js文件。您可以通过调用以下脚本来执行此操作，该脚本位于同一存储库中：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># ./po2js.pl -t pve xx.po &gt;pve-lang-xx.js</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><span>The resulting file pve-lang-xx.js can then be copied to the directory /usr/share/pve-i18n, on your proxmox server, in order to test it out.</span>
+<span>然后，可以将生成的文件pve-lang-xx.js复制到 proxmox 服务器上的目录 /usr/share/pve-i18n，以便对其进行测试。</span></p><p><span>Alternatively, you can build a deb package by running the following command from the root of the repository:</span>
+<span>或者，您可以通过从存储库的根目录运行以下命令来构建 deb 包：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># make deb</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><figure class='table-figure'><table><thead><tr><th><img src="data:image/png;base64,%0A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%0AEQn3XQAAAABJRU5ErkJggg==" referrerpolicy="no-referrer" alt="Important"></th><th><span>For either of these methods to work, you need to have the following perl packages installed on your system. For Debian/Ubuntu: 要使这两种方法中的任何一种起作用，您需要在系统上安装以下 perl 包。对于 Debian/Ubuntu：</span></th></tr></thead><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># apt-get install perl liblocale-po-perl libjson-perl</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><h4 id='1134-sending-the-translation-1134-发送翻译'><span>1.13.4. Sending the Translation 1.13.4. 发送翻译</span></h4><p><span>You can send the finished translation (.po file) to the Proxmox team at the address office(at)proxmox.com, along with a signed contributor license agreement. Alternatively, if you have some developer experience, you can send it as a patch to the Proxmox VE development mailing list. See </span><a href='https://pve.proxmox.com/wiki/Developer_Documentation'><span>Developer Documentation</span></a><span>.</span>
+<span>您可以将完成的翻译（.po 文件）连同已签署的贡献者许可协议一起发送给地址为 office（at）proxmox.com 的 Proxmox 团队。或者，如果您有一些开发人员经验，您可以将其作为补丁发送到 Proxmox VE 开发邮件列表。请参阅</span><a href='https://pve.proxmox.com/wiki/Developer_Documentation'><span>开发人员文档</span></a><span>。</span></p></div></div>
+</body>
+</html>
