@@ -30,7 +30,7 @@
   - [3.主机系统管理](doc/3.HostSystemAdministration.html)
   - [4.图形用户界面](doc/4.GraphicalUserInterface.html)
   - [5.集群管理器](doc/5.ClusterManager.html)
-  - [6.Proxmox集群文件系统pmxcfs](doc/6.ProxmoxClusterFileSystem(pmxcfs).html)
+  - [6.Proxmox集群文件系统pmxcfs](doc/6.ProxmoxClusterFileSystem-pmxcfs.html)
   - [7.ProxmoxVE存储](doc/7.ProxmoxVEStorage.html)
   - [8.部署超融合Ceph集群](doc/8.DeployHyper-ConvergedCephCluster.html)
   - [9.存储复制](doc/9.StorageReplication.html)
