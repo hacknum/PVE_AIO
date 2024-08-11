@@ -1,0 +1,1596 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+/* try fix https://github.com/typora/typora-issues/issues/5253 */
+.file-node-expanded>.file-node-children {
+    display: grid;
+  }
+
+.md-alert-text-note {
+    color: rgb(47, 129, 247);
+}
+.md-alert-text-important {
+    color: rgb(163, 113, 247);
+}
+.md-alert-text-warning {
+    color:  rgb(210, 153, 34);
+}
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title></title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h2 id='4-graphical-user-interface-4-图形用户界面'><span>4. Graphical User Interface 4. 图形用户界面</span></h2><p><span>Proxmox VE is simple. There is no need to install a separate management tool, and everything can be done through your web browser (Latest Firefox or Google Chrome is preferred). A built-in HTML5 console is used to access the guest console. As an alternative, </span><a href='https://www.spice-space.org/'><span>SPICE</span></a><span> can be used.</span>
+<span>Proxmox VE很简单。无需安装单独的管理工具，所有操作都可以通过您的网络浏览器完成（首选最新的Firefox或Google Chrome）。内置的 HTML5 控制台用于访问访客控制台。作为替代方案，可以使用</span><a href='https://www.spice-space.org/'><span>SPICE</span></a><span>。</span></p><p><span>Because we use the Proxmox cluster file system (pmxcfs), you can connect to any node to manage the entire cluster. Each node can manage the entire cluster. There is no need for a dedicated manager node.</span>
+<span>因为我们使用 Proxmox 集群文件系统 （pmxcfs），所以您可以连接到任何节点来管理整个集群。每个节点都可以管理整个集群。无需专用的管理器节点。</span></p><p><span>You can use the web-based administration interface with any modern browser. When Proxmox VE detects that you are connecting from a mobile device, you are redirected to a simpler, touch-based user interface.</span>
+<span>您可以将基于 Web 的管理界面与任何现代浏览器一起使用。当 Proxmox VE 检测到您正在从移动设备连接时，您将被重定向到更简单的、基于触摸的用户界面。</span></p><p><span>The web interface can be reached via </span><a href='https://youripaddress:8006/'><span>https://youripaddress:8006</span></a><span> (default login is: </span><em><span>root</span></em><span>, and the password is specified during the installation process).</span>
+<span>可以通过 </span><a href='https://youripaddress:8006/'><span>https://youripaddress:8006</span></a><span> 访问Web界面（默认登录为：</span><em><span>root</span></em><span>，并在安装过程中指定密码）。</span></p><h3 id='41-features-41-特性'><span>4.1. Features 4.1. 特性 </span></h3><ul><li><p><span>Seamless integration and management of Proxmox VE clusters</span>
+<span>Proxmox VE 集群的无缝集成和管理</span></p></li><li><p><span>AJAX technologies for dynamic updates of resources</span>
+<span>用于动态更新资源的 AJAX 技术</span></p></li><li><p><span>Secure access to all Virtual Machines and Containers via SSL encryption (https)</span>
+<span>通过 SSL 加密 （https） 安全访问所有虚拟机和容器</span></p></li><li><p><span>Fast search-driven interface, capable of handling hundreds and probably thousands of VMs</span>
+<span>快速搜索驱动的界面，能够处理数百甚至数千个虚拟机</span></p></li><li><p><span>Secure HTML5 console or SPICE</span>
+<span>安全的 HTML5 控制台或 SPICE</span></p></li><li><p><span>Role based permission management for all objects (VMs, storages, nodes, etc.)</span>
+<span>对所有对象（虚拟机、存储、节点等）进行基于角色的权限管理</span></p></li><li><p><span>Support for multiple authentication sources (e.g. local, MS ADS, LDAP, …)</span>
+<span>支持多个身份验证源（例如本地、MS ADS、LDAP 等）</span></p></li><li><p><span>Two-Factor Authentication (OATH, Yubikey)</span>
+<span>双因素身份验证（OATH、Yubikey）</span></p></li><li><p><span>Based on ExtJS 7.x JavaScript framework</span>
+<span>基于 ExtJS 7.x JavaScript 框架</span></p></li></ul><h3 id='42-login-42-登录'><span>4.2. Login 4.2. 登录 </span></h3><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-login-window.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-login-window.png" referrerpolicy="no-referrer" alt="screenshot/gui-login-window.png"></a></p><p><span>When you connect to the server, you will first see the login window. Proxmox VE supports various authentication backends (</span><em><span>Realm</span></em><span>), and you can select the language here. The GUI is translated to more than 20 languages.</span>
+<span>当您连接到服务器时，您将首先看到登录窗口。Proxmox VE支持各种身份验证后端（</span><em><span>Realm</span></em><span>），您可以在此处选择语言。GUI 被翻译成 20 多种语言。</span></p><figure class='table-figure'><table><thead><tr><th><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"></th><th><span>You can save the user name on the client side by selecting the checkbox at the bottom. This saves some typing when you login next time. 您可以通过选中底部的复选框在客户端保存用户名。这样可以在您下次登录时节省一些输入时间。</span></th></tr></thead><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><h3 id='43-gui-overview-43-gui概述'><span>4.3. GUI Overview 4.3. GUI概述 </span></h3><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-datacenter-summary.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-datacenter-summary.png" referrerpolicy="no-referrer" alt="screenshot/gui-datacenter-summary.png"></a></p><p><span>The Proxmox VE user interface consists of four regions.</span>
+<span>Proxmox VE用户界面由四个区域组成。</span></p><figure class='table-figure'><table><thead><tr><th><span>Header 页眉 </span></th><th><span>On top. Shows status information and contains buttons for most important actions. 在顶部。显示状态信息并包含最重要操作的按钮。</span></th></tr></thead><tbody><tr><td><span>Resource Tree 资源树 </span></td><td><span>At the left side. A navigation tree where you can select specific objects. 在左侧。一个导航树，您可以在其中选择特定对象。</span></td></tr><tr><td><span>Content Panel 内容面板 </span></td><td><span>Center region. Selected objects display configuration options and status here. 中心区域。所选对象在此处显示配置选项和状态。</span></td></tr><tr><td><span>Log Panel 日志面板 </span></td><td><span>At the bottom. Displays log entries for recent tasks. You can double-click on those log entries to get more details, or to abort a running task. 在底部。显示最近任务的日志条目。您可以双击这些日志条目以获取更多详细信息，或中止正在运行的任务。</span></td></tr></tbody></table></figure><figure class='table-figure'><table><thead><tr><th><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"></th><th><span>You can shrink and expand the size of the resource tree and log panel, or completely hide the log panel. This can be helpful when you work on small displays and want more space to view other content. 您可以缩小和扩展资源树和日志面板的大小，也可以完全隐藏日志面板。当您在小型显示器上工作并希望有更多空间来查看其他内容时，这会很有帮助。</span></th></tr></thead><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><h4 id='431-header-431-标题'><span>4.3.1. Header 4.3.1. 标题</span></h4><p><span>On the top left side, the first thing you see is the Proxmox logo. Next to it is the current running version of Proxmox VE. In the search bar nearside you can search for specific objects (VMs, containers, nodes, …). This is sometimes faster than selecting an object in the resource tree.</span>
+<span>在左上角，您首先看到的是Proxmox徽标。旁边是Proxmox VE的当前运行版本。在附近的搜索栏中，您可以搜索特定对象（虚拟机、容器、节点等）。这有时比在资源树中选择对象要快。</span></p><p><span>The right part of the header contains four buttons:</span>
+<span>标题的右侧部分包含四个按钮：</span></p><figure class='table-figure'><table><thead><tr><th><span>Documentation 文档 </span></th><th><span>Opens a new browser window showing the reference documentation. 打开一个新的浏览器窗口，显示参考文档。</span></th></tr></thead><tbody><tr><td><span>Create VM 创建 VMCreate VM </span></td><td><span>Opens the virtual machine creation wizard. 打开虚拟机创建向导。</span></td></tr><tr><td><span>Create CT 创建 CT </span></td><td><span>Open the container creation wizard. 打开容器创建向导。</span></td></tr><tr><td><span>User Menu 用户菜单 </span></td><td><span>Displays the identity of the user you’re currently logged in with, and clicking it opens a menu with user-specific options. 显示您当前登录时使用的用户的身份，单击该标识将打开一个包含用户特定选项的菜单。In the user menu, you’ll find the </span><em><span>My Settings</span></em><span> dialog, which provides local UI settings. Below that, there are shortcuts for </span><em><span>TFA</span></em><span> (Two-Factor Authentication) and </span><em><span>Password</span></em><span> self-service. You’ll also find options to change the </span><em><span>Language</span></em><span> and the </span><em><span>Color Theme.</span></em><span> Finally, at the bottom of the menu is the </span><em><span>Logout</span></em><span> option. 在用户菜单中，您将找到“</span><em><span>我的设置</span></em><span>”对话框，该对话框提供本地 UI 设置。在此之下，还有</span><em><span>TFA</span></em><span>（双因素身份验证）和</span><em><span>密码</span></em><span>自助服务的快捷方式。您还可以找到更改</span><em><span>语言</span></em><span>和</span><em><span>颜色主题</span></em><span>的选项。最后，在菜单的底部是 </span><em><span>注销</span></em><span> 选项。</span></td></tr></tbody></table></figure><h4 id='432-my-settings-432-我的设置'><span>4.3.2. My Settings 4.3.2. 我的设置</span></h4><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-my-settings.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-my-settings.png" referrerpolicy="no-referrer" alt="screenshot/gui-my-settings.png"></a></p><p><span>The </span><em><span>My Settings</span></em><span> window allows you to set locally stored settings. These include the </span><em><span>Dashboard Storages</span></em><span> which allow you to enable or disable specific storages to be counted towards the total amount visible in the datacenter summary. If no storage is checked the total is the sum of all storages, same as enabling every single one.</span>
+<span>通过“</span><em><span>我的设置</span></em><span>”窗口，您可以设置本地存储的设置。其中包括</span><em><span>仪表板存储，</span></em><span>它允许您启用或禁用特定存储以计入数据中心摘要中可见的总量。如果未检查任何存储，则总数是所有存储的总和，与启用每个存储相同。</span></p><p><span>Below the dashboard settings you find the stored user name and a button to clear it as well as a button to reset every layout in the GUI to its default.</span>
+<span>在仪表板设置下方，您可以找到存储的用户名和一个用于清除它的按钮，以及一个用于将 GUI 中的每个布局重置为默认值的按钮。</span></p><p><span>On the right side there are </span><em><span>xterm.js Settings</span></em><span>. These contain the following options:</span>
+<span>在右侧有</span><em><span>xterm.js设置</span></em><span>。这些选项包含以下选项：</span></p><figure class='table-figure'><table><thead><tr><th><span>Font-Family 字体家族 </span></th><th><span>The font to be used in xterm.js (e.g. Arial). 要在 xterm.js中使用的字体（例如 Arial）。</span></th></tr></thead><tbody><tr><td><span>Font-Size 字体大小 </span></td><td><span>The preferred font size to be used. 要使用的首选字体大小。</span></td></tr><tr><td><span>Letter Spacing 字母间距 </span></td><td><span>Increases or decreases spacing between letters in text. 增加或减少文本中字母之间的间距。</span></td></tr><tr><td><span>Line Height 行高 </span></td><td><span>Specify the absolute height of a line. 指定线的绝对高度。</span></td></tr></tbody></table></figure><h4 id='433-resource-tree-433-资源树'><span>4.3.3. Resource Tree 4.3.3. 资源树</span></h4><p><span>This is the main navigation tree. On top of the tree you can select some predefined views, which change the structure of the tree below. The default view is the </span><strong><span>Server View</span></strong><span>, and it shows the following object types:</span>
+<span>这是主导航树。在树的顶部，您可以选择一些预定义的视图，这些视图会更改下面树的结构。默认视图是</span><strong><span>“服务器视图</span></strong><span>”，它显示以下对象类型：</span></p><figure class='table-figure'><table><thead><tr><th><span>Datacenter 数据中心 </span></th><th><span>Contains cluster-wide settings (relevant for all nodes). 包含群集范围的设置（与所有节点相关）。</span></th></tr></thead><tbody><tr><td><span>Node 节点 </span></td><td><span>Represents the hosts inside a cluster, where the guests run. 表示集群内的主机，客户机在其中运行。</span></td></tr><tr><td><span>Guest 客人 </span></td><td><span>VMs, containers and templates. 虚拟机、容器和模板。</span></td></tr><tr><td><span>Storage 存储 </span></td><td><span>Data Storage. 数据存储。</span></td></tr><tr><td><span>Pool 池 </span></td><td><span>It is possible to group guests using a pool to simplify management. 可以使用游泳池对客人进行分组，以简化管理。</span></td></tr></tbody></table></figure><p><span>The following view types are available:</span>
+<span>以下视图类型可用：</span></p><figure class='table-figure'><table><thead><tr><th><span>Server View 服务器视图 </span></th><th><span>Shows all kinds of objects, grouped by nodes. 显示按节点分组的各种对象。</span></th></tr></thead><tbody><tr><td><span>Folder View 文件夹视图 </span></td><td><span>Shows all kinds of objects, grouped by object type. 显示按对象类型分组的所有类型的对象。</span></td></tr><tr><td><span>Pool View 池景房 （Pool View） </span></td><td><span>Show VMs and containers, grouped by pool. 显示按池分组的 VM 和容器。</span></td></tr></tbody></table></figure><h4 id='434-log-panel-434-日志面板'><span>4.3.4. Log Panel 4.3.4. 日志面板</span></h4><p><span>The main purpose of the log panel is to show you what is currently going on in your cluster. Actions like creating an new VM are executed in the background, and we call such a background job a </span><em><span>task</span></em><span>.</span>
+<span>日志面板的主要用途是向您显示集群中当前发生的情况。创建新 VM 等操作在后台执行，我们将此类后台作业称为</span><em><span>任务</span></em><span>。</span></p><p><span>Any output from such a task is saved into a separate log file. You can view that log by simply double-click a task log entry. It is also possible to abort a running task there.</span>
+<span>此类任务的任何输出都将保存到单独的日志文件中。您只需双击任务日志条目即可查看该日志。也可以在那里中止正在运行的任务。</span></p><p><span>Please note that we display the most recent tasks from all cluster nodes here. So you can see when somebody else is working on another cluster node in real-time.</span>
+<span>请注意，我们在此处显示所有集群节点的最新任务。因此，您可以实时看到其他人何时在另一个集群节点上工作。</span></p><figure class='table-figure'><table><thead><tr><th><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"></th><th><span>We remove older and finished task from the log panel to keep that list short. But you can still find those tasks within the node panel in the </span><em><span>Task History</span></em><span>. 我们从日志面板中删除较旧的和已完成的任务，以保持该列表简短。但是，您仍然可以在</span><em><span>“任务历史记录”</span></em><span>的节点面板中找到这些任务。</span></th></tr></thead><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><p><span>Some short-running actions simply send logs to all cluster members. You can see those messages in the </span><em><span>Cluster log</span></em><span> panel.</span>
+<span>一些短期运行的操作只是将日志发送到所有集群成员。您可以在</span><em><span>集群日志</span></em><span>面板中查看这些消息。</span></p><h3 id='44-content-panels-44-内容面板'><span>4.4. Content Panels 4.4. 内容面板 </span></h3><p><span>When you select an item from the resource tree, the corresponding object displays configuration and status information in the content panel. The following sections provide a brief overview of this functionality. Please refer to the corresponding chapters in the reference documentation to get more detailed information.</span>
+<span>当您从资源树中选择一个项目时，相应的对象会在内容面板中显示配置和状态信息。以下各节简要概述了此功能。请参阅参考文档中的相应章节以获取更详细的信息。</span></p><h4 id='441-datacenter-441-数据中心'><span>4.4.1. Datacenter 4.4.1. 数据中心</span></h4><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-datacenter-search.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-datacenter-search.png" referrerpolicy="no-referrer" alt="screenshot/gui-datacenter-search.png"></a></p><p><span>On the datacenter level, you can access cluster-wide settings and information.</span>
+<span>在数据中心级别，您可以访问集群范围的设置和信息。</span></p><ul><li><p><strong><span>Search:</span></strong><span> perform a cluster-wide search for nodes, VMs, containers, storage devices, and pools.</span>
+<strong><span>搜索：</span></strong><span>对节点、虚拟机、容器、存储设备和池执行集群范围的搜索。</span></p></li><li><p><strong><span>Summary:</span></strong><span> gives a brief overview of the cluster’s health and resource usage.</span>
+<strong><span>摘要：</span></strong><span>简要概述了集群的运行状况和资源使用情况。</span></p></li><li><p><strong><span>Cluster:</span></strong><span> provides the functionality and information necessary to create or join a cluster.</span>
+<strong><span>集群：</span></strong><span>提供创建或加入集群所需的功能和信息。</span></p></li><li><p><strong><span>Options:</span></strong><span> view and manage cluster-wide default settings.</span>
+<strong><span>选项：</span></strong><span>查看和管理集群范围的默认设置。</span></p></li><li><p><strong><span>Storage:</span></strong><span> provides an interface for managing cluster storage.</span>
+<strong><span>存储：</span></strong><span>提供用于管理集群存储的界面。</span></p></li><li><p><strong><span>Backup:</span></strong><span> schedule backup jobs. This operates cluster wide, so it doesn’t matter where the VMs/containers are on your cluster when scheduling.</span>
+<strong><span>备份：</span></strong><span>计划备份作业。这将在集群范围内运行，因此在计划时，虚拟机/容器在集群上的位置无关紧要。</span></p></li><li><p><strong><span>Replication:</span></strong><span> view and manage replication jobs.</span>
+<strong><span>复制：</span></strong><span>查看和管理复制作业。</span></p></li><li><p><strong><span>Permissions:</span></strong><span> manage user, group, and API token permissions, and LDAP, MS-AD and Two-Factor authentication.</span>
+<strong><span>权限：</span></strong><span>管理用户、组和 API 令牌权限，以及 LDAP、MS-AD 和双因素身份验证。</span></p></li><li><p><strong><span>HA:</span></strong><span> manage Proxmox VE High Availability.</span>
+<strong><span>HA：</span></strong><span>管理 Proxmox VE 高可用性。</span></p></li><li><p><strong><span>ACME:</span></strong><span> set up ACME (Let’s Encrypt) certificates for server nodes.</span>
+<strong><span>ACME：</span></strong><span>为服务器节点设置 ACME （Let&#39;s Encrypt） 证书。</span></p></li><li><p><strong><span>Firewall:</span></strong><span> configure and make templates for the Proxmox Firewall cluster wide.</span>
+<strong><span>防火墙：</span></strong><span>为Proxmox防火墙集群范围配置和制作模板。</span></p></li><li><p><strong><span>Metric Server:</span></strong><span> define external metric servers for Proxmox VE.</span>
+<strong><span>指标服务器：</span></strong><span>为 Proxmox VE 定义外部指标服务器。</span></p></li><li><p><strong><span>Notifications:</span></strong><span> configurate notification behavior and targets for Proxmox VE.</span>
+<strong><span>通知：</span></strong><span>配置 Proxmox VE 的通知行为和目标。</span></p></li><li><p><strong><span>Support:</span></strong><span> display information about your support subscription.</span>
+<strong><span>支持：</span></strong><span>显示有关支持订阅的信息。</span></p></li></ul><h4 id='442-nodes-442-节点'><span>4.4.2. Nodes 4.4.2. 节点</span></h4><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-node-summary.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-node-summary.png" referrerpolicy="no-referrer" alt="screenshot/gui-node-summary.png"></a></p><p><span>Nodes in your cluster can be managed individually at this level.</span>
+<span>集群中的节点可以在此级别单独管理。</span></p><p><span>The top header has useful buttons such as </span><em><span>Reboot</span></em><span>, </span><em><span>Shutdown</span></em><span>, </span><em><span>Shell</span></em><span>, </span><em><span>Bulk Actions</span></em><span> and </span><em><span>Help</span></em><span>. </span><em><span>Shell</span></em><span> has the options </span><em><span>noVNC</span></em><span>, </span><em><span>SPICE</span></em><span> and </span><em><span>xterm.js</span></em><span>. </span><em><span>Bulk Actions</span></em><span> has the options </span><em><span>Bulk Start</span></em><span>, </span><em><span>Bulk Shutdown</span></em><span> and </span><em><span>Bulk Migrate</span></em><span>.</span>
+<span>顶部标题具有有用的按钮，例如 </span><em><span>Reboot</span></em><span>、</span><em><span>Shutdown</span></em><span>、</span><em><span>Shell</span></em><span>、</span><em><span>Bulk Actions</span></em><span> 和 </span><em><span>Help</span></em><span>。</span><em><span>Shell</span></em><span> 有 </span><em><span>noVNC</span></em><span>、</span><em><span>SPICE</span></em><span> 和 </span><em><span>xterm.js</span></em><span> 选项。</span><em><span>“批量操作</span></em><span>”具有“</span><em><span>批量启动</span></em><span>”、“</span><em><span>批量关闭</span></em><span>”和“</span><em><span>批量迁移</span></em><span>”选项。</span></p><ul><li><p><strong><span>Search:</span></strong><span> search a node for VMs, containers, storage devices, and pools.</span>
+<strong><span>搜索：</span></strong><span>在节点上搜索虚拟机、容器、存储设备和池。</span></p></li><li><p><strong><span>Summary:</span></strong><span> display a brief overview of the node’s resource usage.</span>
+<strong><span>摘要：</span></strong><span>显示节点资源使用情况的简要概述。</span></p></li><li><p><strong><span>Notes:</span></strong><span> write custom comments in </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#markdown_basics'><span>Markdown syntax</span></a><span>.</span>
+<strong><span>注意：</span></strong><span>用 </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#markdown_basics'><span>Markdown 语法</span></a><span>编写自定义注释。</span></p></li><li><p><strong><span>Shell:</span></strong><span> access to a shell interface for the node.</span>
+<strong><span>Shell：</span></strong><span>访问节点的 shell 接口。</span></p></li><li><p><strong><span>System:</span></strong><span> configure network, DNS and time settings, and access the syslog.</span>
+<strong><span>系统：</span></strong><span>配置网络、DNS和时间设置，并访问syslog。</span></p></li><li><p><strong><span>Updates:</span></strong><span> upgrade the system and see the available new packages.</span>
+<strong><span>更新：</span></strong><span>升级系统并查看可用的新软件包。</span></p></li><li><p><strong><span>Firewall:</span></strong><span> manage the Proxmox Firewall for a specific node.</span>
+<strong><span>防火墙：</span></strong><span>管理特定节点的 Proxmox 防火墙。</span></p></li><li><p><strong><span>Disks:</span></strong><span> get an overview of the attached disks, and manage how they are used.</span>
+<strong><span>磁盘：</span></strong><span>获取连接磁盘的概览，并管理它们的使用方式。</span></p></li><li><p><strong><span>Ceph:</span></strong><span> is only used if you have installed a Ceph server on your host. In this case, you can manage your Ceph cluster and see the status of it here.</span>
+<strong><span>Ceph：</span></strong><span>仅在主机上安装了 Ceph 服务器时使用。在这种情况下，您可以在此处管理 Ceph 集群并查看其状态。</span></p></li><li><p><strong><span>Replication:</span></strong><span> view and manage replication jobs.</span>
+<strong><span>复制：</span></strong><span>查看和管理复制作业。</span></p></li><li><p><strong><span>Task History:</span></strong><span> see a list of past tasks.</span>
+<strong><span>任务历史记录：</span></strong><span>查看过去任务的列表。</span></p></li><li><p><strong><span>Subscription:</span></strong><span> upload a subscription key, and generate a system report for use in support cases.</span>
+<strong><span>订阅：</span></strong><span>上传订阅密钥，并生成系统报告以供支持案例使用。</span></p></li></ul><h4 id='443-guests-443-访客'><span>4.4.3. Guests 4.4.3. 访客</span></h4><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-qemu-summary.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-qemu-summary.png" referrerpolicy="no-referrer" alt="screenshot/gui-qemu-summary.png"></a></p><p><span>There are two different kinds of guests and both can be converted to a template. One of them is a Kernel-based Virtual Machine (KVM) and the other is a Linux Container (LXC). Navigation for these are mostly the same; only some options are different.</span>
+<span>有两种不同类型的来宾，两者都可以转换为模板。其中一个是基于内核的虚拟机 （KVM），另一个是 Linux 容器 （LXC）。这些的导航大多相同;只有一些选项是不同的。</span></p><p><span>To access the various guest management interfaces, select a VM or container from the menu on the left.</span>
+<span>要访问各种来宾管理界面，请从左侧菜单中选择虚拟机或容器。</span></p><p><span>The header contains commands for items such as power management, migration, console access and type, cloning, HA, and help. Some of these buttons contain drop-down menus, for example, </span><em><span>Shutdown</span></em><span> also contains other power options, and </span><em><span>Console</span></em><span> contains the different console types: </span><em><span>SPICE</span></em><span>, </span><em><span>noVNC</span></em><span> and </span><em><span>xterm.js</span></em><span>.</span>
+<span>标头包含用于电源管理、迁移、控制台访问和类型、克隆、HA 和帮助等项的命令。其中一些按钮包含下拉菜单，例如，“</span><em><span>关机</span></em><span>”还包含其他电源选项，“</span><em><span>控制台</span></em><span>”包含不同的控制台类型：</span><em><span>SPICE、**noVNC</span></em><span> 和 </span><em><span>xterm.js</span></em><span>。</span></p><p><span>The panel on the right contains an interface for whatever item is selected from the menu on the left.</span>
+<span>右侧的面板包含从左侧菜单中选择的任何项目的界面。</span></p><p><span>The available interfaces are as follows.</span>
+<span>可用的接口如下。</span></p><ul><li><p><strong><span>Summary:</span></strong><span> provides a brief overview of the VM’s activity and a Notes field for </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#markdown_basics'><span>Markdown syntax</span></a><span> comments.</span>
+<strong><span>摘要：</span></strong><span>提供 VM 活动的简要概述和 </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#markdown_basics'><span>Markdown 语法</span></a><span>注释的 Notes 字段。</span></p></li><li><p><strong><span>Console:</span></strong><span> access to an interactive console for the VM/container.</span>
+<strong><span>控制台：</span></strong><span>访问 VM/容器的交互式控制台。</span></p></li><li><p><strong><span>(KVM)Hardware:</span></strong><span> define the hardware available to the KVM VM.</span>
+<strong><span>（KVM）硬件：</span></strong><span>定义KVM VM可用的硬件。</span></p></li><li><p><strong><span>(LXC)Resources:</span></strong><span> define the system resources available to the LXC.</span>
+<strong><span>（LXC）资源：</span></strong><span>定义 LXC 可用的系统资源。</span></p></li><li><p><strong><span>(LXC)Network:</span></strong><span> configure a container’s network settings.</span>
+<strong><span>（LXC）Network：</span></strong><span>配置容器的网络设置。</span></p></li><li><p><strong><span>(LXC)DNS:</span></strong><span> configure a container’s DNS settings.</span>
+<strong><span>（LXC）DNS：</span></strong><span>配置容器的DNS设置。</span></p></li><li><p><strong><span>Options:</span></strong><span> manage guest options.</span>
+<strong><span>选项：</span></strong><span>管理访客选项。</span></p></li><li><p><strong><span>Task History:</span></strong><span> view all previous tasks related to the selected guest.</span>
+<strong><span>任务历史记录：</span></strong><span>查看与所选访客相关的所有先前任务。</span></p></li><li><p><strong><span>(KVM) Monitor:</span></strong><span> an interactive communication interface to the KVM process.</span>
+<strong><span>（KVM） 监视器：</span></strong><span>KVM 进程的交互式通信接口。</span></p></li><li><p><strong><span>Backup:</span></strong><span> create and restore system backups.</span>
+<strong><span>备份：</span></strong><span>创建和恢复系统备份。</span></p></li><li><p><strong><span>Replication:</span></strong><span> view and manage the replication jobs for the selected guest.</span>
+<strong><span>复制：</span></strong><span>查看和管理所选客户机的复制作业。</span></p></li><li><p><strong><span>Snapshots:</span></strong><span> create and restore VM snapshots.</span>
+<strong><span>快照：</span></strong><span>创建和恢复虚拟机快照。</span></p></li><li><p><strong><span>Firewall:</span></strong><span> configure the firewall on the VM level.</span>
+<strong><span>防火墙：</span></strong><span>在虚拟机级别配置防火墙。</span></p></li><li><p><strong><span>Permissions:</span></strong><span> manage permissions for the selected guest.</span>
+<strong><span>权限：</span></strong><span>管理所选访客的权限。</span></p></li></ul><h4 id='444-storage-444-存储'><span>4.4.4. Storage 4.4.4. 存储</span></h4><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-storage-summary-local.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-storage-summary-local.png" referrerpolicy="no-referrer" alt="screenshot/gui-storage-summary-local.png"></a></p><p><span>As with the guest interface, the interface for storage consists of a menu on the left for certain storage elements and an interface on the right to manage these elements.</span>
+<span>与客户机界面一样，存储界面由左侧用于某些存储元素的菜单和右侧用于管理这些元素的界面组成。</span></p><p><span>In this view we have a two partition split-view. On the left side we have the storage options and on the right side the content of the selected option will be shown.</span>
+<span>在此视图中，我们有一个双分区拆分视图。在左侧，我们有存储选项，在右侧，将显示所选选项的内容。</span></p><ul><li><p><strong><span>Summary:</span></strong><span> shows important information about the storage, such as the type, usage, and content which it stores.</span>
+<strong><span>摘要：</span></strong><span>显示有关存储的重要信息，例如存储的类型、使用情况和内容。</span></p></li><li><p><strong><span>Content:</span></strong><span> a menu item for each content type which the storage stores, for example, Backups, ISO Images, CT Templates.</span>
+<strong><span>内容：</span></strong><span>存储存储的每种内容类型的菜单项，例如备份、ISO 映像、CT 模板。</span></p></li><li><p><strong><span>Permissions:</span></strong><span> manage permissions for the storage.</span>
+<strong><span>权限：</span></strong><span>管理存储的权限。</span></p></li></ul><h4 id='445-pools-445-矿池'><span>4.4.5. Pools 4.4.5. 矿池</span></h4><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-pool-summary-development.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-pool-summary-development.png" referrerpolicy="no-referrer" alt="screenshot/gui-pool-summary-development.png"></a></p><p><span>Again, the pools view comprises two partitions: a menu on the left, and the corresponding interfaces for each menu item on the right.</span>
+<span>同样，池视图由两个分区组成：左侧是菜单，右侧是每个菜单项的相应接口。</span></p><ul><li><p><strong><span>Summary:</span></strong><span> shows a description of the pool.</span>
+<strong><span>摘要：</span></strong><span>显示池的描述。</span></p></li><li><p><strong><span>Members:</span></strong><span> display and manage pool members (guests and storage).</span>
+<strong><span>成员：</span></strong><span>显示和管理池成员（来宾和存储）。</span></p></li><li><p><strong><span>Permissions:</span></strong><span> manage the permissions for the pool.</span>
+<strong><span>权限：</span></strong><span>管理池的权限。</span></p></li></ul><h3 id='45-tags-45-标签'><span>4.5. Tags 4.5. 标签 </span></h3><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-qemu-summary-tags-edit.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-qemu-summary-tags-edit.png" referrerpolicy="no-referrer" alt="screenshot/gui-qemu-summary-tags-edit.png"></a></p><p><span>For organizational purposes, it is possible to set tags for guests. Currently, these only provide informational value to users. Tags are displayed in two places in the web interface: in the Resource Tree and in the status line when a guest is selected.</span>
+<span>出于组织目的，可以为访客设置标签。目前，这些仅为用户提供信息价值。标记显示在 Web 界面中的两个位置：在资源树中，以及在选择来宾时的状态行中。</span></p><p><span>Tags can be added, edited, and removed in the status line of the guest by clicking on the pencil icon. You can add multiple tags by pressing the + button and remove them by pressing the - button. To save or cancel the changes, you can use the ✓ and x button respectively.</span>
+<span>通过单击铅笔图标，可以在访客的状态行中添加、编辑和删除标签。您可以通过按 + 按钮添加多个标签，并通过按 - 按钮删除它们。要保存或取消更改，您可以分别使用 ✓ 和 x 按钮。</span></p><p><span>Tags can also be set via the CLI, where multiple tags are separated by semicolons. For example:</span>
+<span>也可以通过 CLI 设置标签，其中多个标签用分号分隔。例如：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># qm set ID --tags myfirsttag;mysecondtag</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><h4 id='451-style-configuration-451-样式配置'><span>4.5.1. Style Configuration 4.5.1. 样式配置</span></h4><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-datacenter-tag-style.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-datacenter-tag-style.png" referrerpolicy="no-referrer" alt="screenshot/gui-datacenter-tag-style.png"></a></p><p><span>By default, the tag colors are derived from their text in a deterministic way. The color, shape in the resource tree, and case-sensitivity, as well as how tags are sorted, can be customized. This can be done via the web interface under </span><em><span>Datacenter → Options → Tag Style Override</span></em><span>. Alternatively, this can be done via the CLI. For example:</span>
+<span>默认情况下，标签颜色以确定性方式从其文本派生。可以自定义资源树中的颜色、形状和区分大小写，以及标签的排序方式。这可以通过 Web 界面在“</span><em><span>数据中心→选项”→“标记样式覆盖</span></em><span>”下完成。或者，这可以通过 CLI 完成。例如：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"># pvesh set /cluster/options --tag-style color-map=example:000000:FFFFFF</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 52px;"></div><div class="CodeMirror-gutters" style="display: none; height: 52px;"></div></div></div></pre><p><span>sets the background color of the tag example to black (#000000) and the text color to white (#FFFFFF).</span>
+<span>将标签示例的背景颜色设置为黑色 （#000000），将文本颜色设置为白色 （#FFFFFF）。</span></p><h4 id='452-permissions-452-权限'><span>4.5.2. Permissions 4.5.2. 权限</span></h4><p><a href='https://pve.proxmox.com/pve-docs/images/screenshot/gui-datacenter-options.png'><img src="https://pve.proxmox.com/pve-docs/images/screenshot/gui-datacenter-options.png" referrerpolicy="no-referrer" alt="screenshot/gui-datacenter-options.png"></a></p><p><span>By default, users with the privilege VM.Config.Options on a guest (/vms/ID) can set any tags they want (see </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#pveum_permission_management'><span>Permission Management</span></a><span>). If you want to restrict this behavior, appropriate permissions can be set under </span><em><span>Datacenter → Options → User Tag Access</span></em><span>:</span>
+<span>默认情况下，对客户机 （/vms/ID） 具有 VM.Config.Options 权限的用户可以设置所需的任何标签（请参阅</span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#pveum_permission_management'><span>权限管理</span></a><span>）。如果要限制此行为，可以在“</span><em><span>数据中心→选项”下设置适当的权限→“用户标记访问</span></em><span>”：</span></p><ul><li><p><span>free: users are not restricted in setting tags (Default)</span>
+<span>free：用户在设置标签时不受限制（默认）</span></p></li><li><p><span>list: users can set tags based on a predefined list of tags</span>
+<span>列表：用户可以根据预定义的标签列表设置标签</span></p></li><li><p><span>existing: like list but users can also use already existing tags</span>
+<span>现有：喜欢列表，但用户也可以使用已存在的标签</span></p></li><li><p><span>none: users are restricted from using tags</span>
+<span>无：限制用户使用标签</span></p></li></ul><p><span>The same can also be done via the CLI.</span>
+<span>也可以通过 CLI 完成相同的操作。</span></p><p><span>Note that a user with the Sys.Modify privileges on / is always able to set or delete any tags, regardless of the settings here. Additionally, there is a configurable list of registered tags which can only be added and removed by users with the privilege Sys.Modify on /. The list of registered tags can be edited under </span><em><span>Datacenter → Options → Registered Tags</span></em><span> or via the CLI.</span>
+<span>请注意，无论此处的设置如何，具有 Sys.Modify 权限的 / 用户始终能够设置或删除任何标记。此外，还有一个可配置的已注册标签列表，该列表只能由具有 Sys.Modify 权限的用户在 / 上添加和删除。可以在</span><em><span>“已注册标记”→“的”数据中心→选项</span></em><span>“下编辑已注册的标记列表，也可以通过 CLI 进行编辑。</span></p><p><span>For more details on the exact options and how to invoke them in the CLI, see </span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#datacenter_configuration_file'><span>Datacenter Configuration</span></a><span>.</span>
+<span>有关确切选项以及如何在 CLI 中调用它们的更多详细信息，请参阅</span><a href='https://pve.proxmox.com/pve-docs/pve-admin-guide.html#datacenter_configuration_file'><span>数据中心配置</span></a><span>。</span></p></div></div>
+</body>
+</html>
