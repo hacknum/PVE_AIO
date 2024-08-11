@@ -24,5 +24,19 @@
  
 ## 文档 <a id="doc"></a>
 
-- [官方原版汉化版]
-  - [Proxmox VE 管理指南](doc/pve-admin-guide.md)
+- [ProxmoxVE管理指南]
+  - [1.引言](doc/1.Introduction.html)
+  - [2.安装ProxmoxVE](doc/2.InstallingProxmoxVE.html)
+  - [3.主机系统管理](doc/3.HostSystemAdministration.html)
+ 
+
+
+
+
+
+
+
+
+
+
+
