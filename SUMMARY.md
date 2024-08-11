@@ -25,6 +25,6 @@
 ## 文档 <a id="doc"></a>
 
 - [官方英文版]
-  - [Proxmox VE Administration Guide](https://pve.proxmox.com/pve-docs)
+  - [ProxmoxVEAdministrationGuide](https://pve.proxmox.com/pve-docs/pve-admin-guide.html)
 - [汉化中文版]
   - [待添加](aio/intel/0.md)
