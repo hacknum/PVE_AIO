@@ -57,7 +57,7 @@
  
 - [ProxmoxVE手册-命令行]
   - [1.高可用性](doc/ha-manager.1.html)
-  - [2.Proxmox容器工具包](doc/doc/pct.1.html)
+  - [2.Proxmox容器工具包](doc/pct.1.html)
   - [3.容器镜像](doc/pveam.1.html)
   - [4.部署超融合Ceph集群](doc/pveceph.1.html)
   - [5.集群管理器](doc/pvecm.1.html)
