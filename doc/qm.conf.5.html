@@ -1,0 +1,1514 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+/* try fix https://github.com/typora/typora-issues/issues/5253 */
+.file-node-expanded>.file-node-children {
+    display: grid;
+  }
+
+.md-alert-text-note {
+    color: rgb(47, 129, 247);
+}
+.md-alert-text-important {
+    color: rgb(163, 113, 247);
+}
+.md-alert-text-warning {
+    color:  rgb(210, 153, 34);
+}
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title></title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='qmconf5-qmconf5）'><span>qm.conf(5) qm.conf（5）</span></h1><p><strong><span>Proxmox Server Solutions GmbH</span>
+<span>Proxmox 服务器解决方案有限公司</span></strong>
+<a href='mailto:[support@proxmox.com](mailto:support@proxmox.com)' target='_blank' class='url'>[support@proxmox.com](mailto:support@proxmox.com)</a>
+<span>version 8.2.3, Wed Jul 31 16:58:41 CEST 2024</span>
+<span>版本 8.2.3， 星期三 Jul 31 16：58：41 CEST 2024</span></p><h2 id='name-名字'><span>NAME 名字</span></h2><p><span>qm.conf - Proxmox VE Virtual Machine Configuration</span>
+<span>qm.conf - Proxmox VE虚拟机配置</span></p><h2 id='synopsis-概要'><span>SYNOPSIS 概要</span></h2><p><em><span>/etc/pve/qemu-server/</span><VMID><span>.conf</span></em></p><h2 id='description-描述'><span>DESCRIPTION 描述</span></h2><p><span>The /etc/pve/qemu-server/</span><VMID><span>.conf files stores VM configuration, where &quot;VMID&quot; is the numeric ID of the given VM.</span>
+<span>/etc/pve/qemu-server/</span><VMID><span>.conf 文件存储 VM 配置，其中“VMID”是给定 VM 的数字 ID。</span></p><figure class='table-figure'><table><thead><tr><th><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"></th><th><span>IDs &lt; 100 are reserved for internal purposes. &lt; 100 的 ID 保留用于内部用途。</span></th></tr></thead><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><h2 id='file-format-文件格式'><span>File Format 文件格式</span></h2><p><span>The file uses a simple colon separated key/value format. Each line has the following format:</span>
+<span>该文件使用简单的冒号分隔键/值格式。每行都有以下格式：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">OPTION: value</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><span>Blank lines in the file are ignored, and lines starting with a # character are treated as comments and are also ignored.</span>
+<span>文件中的空行将被忽略，以 # 字符开头的行将被视为注释，并且也会被忽略。</span></p><p><span>One can use the qm command to generate and modify those files.</span>
+<span>可以使用 qm 命令来生成和修改这些文件。</span></p><h2 id='options-选项'><span>Options 选项</span></h2><ul><li><p><span>acpi: </span><boolean><span> (</span><em><span>default =</span></em><span> 1) acpi： </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>Enable/disable ACPI. 启用/禁用 ACPI。</span></p></li><li><p><span>affinity: </span><string><span> 亲和力： </span><string></p><p><span>List of host cores used to execute guest processes, for example: 0,5,8-11 用于执行客户机进程的主机核心列表，例如：0,5,8-11</span></p></li><li><p><span>agent: [enabled=]&lt;1|0&gt; [,freeze-fs-on-backup=&lt;1|0&gt;] [,fstrim_cloned_disks=&lt;1|0&gt;] [,type=&lt;virtio|isa&gt;] 代理：[enabled=]&lt;1|0&gt; [，freeze-fs-on-backup=&lt;1|0&gt;] [，fstrim_cloned_disks=&lt;1|0&gt;] [，type=&lt;virtio|isa&gt;]</span></p><p><span>Enable/disable communication with the QEMU Guest Agent and its properties. 启用/禁用与 QEMU Guest Agent 及其属性的通信。enabled=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) enabled=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Enable/disable communication with a QEMU Guest Agent (QGA) running in the VM. 启用/禁用与 VM 中运行的 QEMU 客户机代理 （QGA） 的通信。freeze-fs-on-backup=</span><boolean><span> (</span><em><span>default =</span></em><span> 1) freeze-fs-on-backup=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）Freeze/thaw guest filesystems on backup for consistency. 在备份上冻结/解冻客户机文件系统以确保一致性。fstrim_cloned_disks=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) fstrim_cloned_disks=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Run fstrim after moving a disk or migrating the VM. 移动磁盘或迁移 VM 后运行 fstrim。type=&lt;isa | virtio&gt; (</span><em><span>default =</span></em><span> virtio) type=&lt;isa | virtio&gt; （</span><em><span>默认值 =</span></em><span> virtio）Select the agent type 选择代理类型</span></p></li><li><p><span>arch: &lt;aarch64 | x86_64&gt; 拱： &lt;aarch64 | x86_64&gt;</span></p><p><span>Virtual processor architecture. Defaults to the host. 虚拟处理器体系结构。默认为主机。</span></p></li><li><p><span>args: </span><string><span> 参数： </span><string></p><p><span>Arbitrary arguments passed to kvm, for example: 传递给 kvm 的任意参数，例如：args: -no-reboot -smbios </span><em><span>type=0,vendor=FOO</span></em><span> 参数：-no-reboot -smbios </span><em><span>type=0，vendor=FOO</span></em><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"><span>this option is for experts only. 此选项仅适用于专家。</span></p></li><li><p><span>audio0: device=&lt;ich9-intel-hda|intel-hda|AC97&gt; [,driver=&lt;spice|none&gt;] audio0： device=&lt;ich9-intel-had|intel-had|AC97&gt; [，驱动程序=&lt;spice|none&gt;]</span></p><p><span>Configure a audio device, useful in combination with QXL/Spice. 配置音频设备，与 QXL/Spice 结合使用很有用。device=&lt;AC97 | ich9-intel-hda | intel-hda&gt; device=&lt;AC97 | ich9-intel-had | intel-had&gt;Configure an audio device. 配置音频设备。driver=&lt;none | spice&gt; (</span><em><span>default =</span></em><span> spice) driver=&lt;none | spice&gt;（</span><em><span>默认值 =</span></em><span> spice）Driver backend for the audio device. 音频设备的驱动程序后端。</span></p></li><li><p><span>autostart: </span><boolean><span> (</span><em><span>default =</span></em><span> 0) autostart： </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Automatic restart after crash (currently ignored). 崩溃后自动重启（当前忽略）。</span></p></li><li><p><span>balloon: </span><integer><span> (0 - N) 气球： </span><integer><span> （0 - N）</span></p><p><span>Amount of target RAM for the VM in MiB. Using zero disables the ballon driver. VM 的目标 RAM 量（以 MiB 为单位）。使用零将禁用气球驱动器。</span></p></li><li><p><span>bios: &lt;ovmf | seabios&gt; (</span><em><span>default =</span></em><span> seabios) bios： &lt;ovmf | seabios&gt; （</span><em><span>默认值 =</span></em><span> seabios）</span></p><p><span>Select BIOS implementation. 选择 BIOS 实现。</span></p></li><li><p><span>boot: [[legacy=]&lt;[acdn]{1,4}&gt;] [,order=&lt;device[;device...]&gt;] boot： [[legacy=]&lt;[acdn]{1,4}&gt;] [，order=&lt;device[;设备...]&gt;]</span></p><p><span>Specify guest boot order. Use the </span><em><span>order=</span></em><span> sub-property as usage with no key or </span><em><span>legacy=</span></em><span> is deprecated. 指定客户机启动顺序。使用 </span><em><span>order=</span></em><span> 子属性，因为不带键或 </span><em><span>legacy=</span></em><span> 的用法已弃用。legacy=&lt;[acdn]{1,4}&gt; (</span><em><span>default =</span></em><span> cdn) legacy=&lt;[acdn]{1,4}&gt; （</span><em><span>默认值 =</span></em><span> cdn）Boot on floppy (a), hard disk (c), CD-ROM (d), or network (n). Deprecated, use </span><em><span>order=</span></em><span> instead. 在软盘 （a）、硬盘 （c）、CD-ROM （d） 或网络 （n） 上启动。已弃用，请改用 </span><em><span>order=</span></em><span>。order=&lt;device[;device...]&gt; 订单=&lt;device[;设备...]&gt;The guest will attempt to boot from devices in the order they appear here. 客户机将尝试按照设备在此处显示的顺序从设备启动。Disks, optical drives and passed-through storage USB devices will be directly booted from, NICs will load PXE, and PCIe devices will either behave like disks (e.g. NVMe) or load an option ROM (e.g. RAID controller, hardware NIC). 磁盘、光驱和直通存储 USB 设备将直接从中启动，NIC 将加载 PXE，而 PCIe 设备将表现得像磁盘（例如 NVMe）或加载选项 ROM（例如 RAID 控制器、硬件 NIC）。Note that only devices in this list will be marked as bootable and thus loaded by the guest firmware (BIOS/UEFI). If you require multiple disks for booting (e.g. software-raid), you need to specify all of them here. 请注意，只有此列表中的设备才会被标记为可启动，从而由客户机固件 （BIOS/UEFI） 加载。如果需要多个磁盘进行启动（例如 software-raid），则需要在此处指定所有磁盘。Overrides the deprecated *legacy=[acdn]** value when given. 在给定时覆盖已弃用的 *Legacy=[acdn]** 值。</span></p></li><li><p><span>bootdisk: (ide|sata|scsi|virtio)\d+ 启动盘：（IDE|SATA|SCSI|virtio）\d+</span></p><p><span>Enable booting from specified disk. Deprecated: Use </span><em><span>boot: order=foo;bar</span></em><span> instead. 启用从指定磁盘启动。已弃用：使用 </span><em><span>boot： order=foo;条</span></em><span>形图。</span></p></li><li><p><span>cdrom: </span><volume><span> cdrom： &lt;卷&gt;</span></p><p><span>This is an alias for option -ide2 这是选项 -ide2 的别名</span></p></li><li><p><span>cicustom: [meta=</span><volume><span>] [,network=</span><volume><span>] [,user=</span><volume><span>] [,vendor=</span><volume><span>] cicustom： [meta=</span><volume><span>] [，network=</span><volume><span>] [，user=</span><volume><span>] [，vendor=</span><volume><span>]</span></p><p><span>cloud-init: Specify custom files to replace the automatically generated ones at start. cloud-init：指定自定义文件以替换开始时自动生成的文件。meta=</span><volume><span> 元=&lt;体积&gt;Specify a custom file containing all meta data passed to the VM via&quot; .&quot; cloud-init. This is provider specific meaning configdrive2 and nocloud differ. 指定一个自定义文件，其中包含通过“ .” cloud-init传递到VM的所有元数据。这是特定于提供商的，这意味着 configdrive2 和 nocloud 不同。network=</span><volume><span> 网络=&lt;卷&gt;To pass a custom file containing all network data to the VM via cloud-init. 通过 cloud-init 将包含所有网络数据的自定义文件传递给 VM。user=</span><volume><span> 用户=&lt;音量&gt;To pass a custom file containing all user data to the VM via cloud-init. 通过 cloud-init 将包含所有用户数据的自定义文件传递给 VM。vendor=</span><volume><span>To pass a custom file containing all vendor data to the VM via cloud-init. 通过 cloud-init 将包含所有供应商数据的自定义文件传递给 VM。</span></p></li><li><p><span>cipassword: </span><string><span> cipassword： </span><string></p><p><span>cloud-init: Password to assign the user. Using this is generally not recommended. Use ssh keys instead. Also note that older cloud-init versions do not support hashed passwords. cloud-init：用于分配用户的密码。通常不建议使用此工具。请改用 ssh 密钥。另请注意，较旧的 cloud-init 版本不支持哈希密码。</span></p></li><li><p><span>citype: &lt;configdrive2 | nocloud | opennebula&gt; citype： &lt;configdrive2 | nocloud | opennebula&gt;</span></p><p><span>Specifies the cloud-init configuration format. The default depends on the configured operating system type (ostype. We use the nocloud format for Linux, and configdrive2 for windows. 指定 cloud-init 配置格式。默认值取决于配置的操作系统类型 （ostype.我们对 Linux 使用 nocloud 格式，对 Windows 使用 configdrive2 格式。</span></p></li><li><p><span>ciupgrade: </span><boolean><span> (</span><em><span>default =</span></em><span> 1) ciupgrade： </span><boolean><span> （</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>cloud-init: do an automatic package upgrade after the first boot. cloud-init：首次启动后自动升级包。</span></p></li><li><p><span>ciuser: </span><string><span> ciuser： </span><string></p><p><span>cloud-init: User name to change ssh keys and password for instead of the image’s configured default user. cloud-init：用于更改 ssh 密钥和密码的用户名，而不是镜像配置的默认用户。</span></p></li><li><p><span>cores: </span><integer><span> (1 - N) (</span><em><span>default =</span></em><span> 1) 核心数： </span><integer><span> （1 - N） （</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>The number of cores per socket. 每个插槽的核心数。</span></p></li><li><p><span>cpu: [[cputype=]</span><string><span>] [,flags=&lt;+FLAG[;-FLAG...]&gt;] [,hidden=&lt;1|0&gt;] [,hv-vendor-id=</span><vendor-id><span>] [,phys-bits=&lt;8-64|host&gt;] [,reported-model=</span><enum><span>] 中央处理器： [[cputype=]</span><string><span>] [，flags=&lt;+FLAG[;-FLAG...]&gt;] [，hidden=&lt;1|0&gt;] [，hv-vendor-id=</span><vendor-id><span>] [，phys-bits=&lt;8-64|host&gt;] [，reported-model=</span><enum><span>]</span></p><p><span>Emulated CPU type. 模拟 CPU 类型。cputype=</span><string><span> (</span><em><span>default =</span></em><span> kvm64) cputype=</span><string><span>（</span><em><span>默认值 =</span></em><span> kvm64）Emulated CPU type. Can be default or custom name (custom model names must be prefixed with </span><em><span>custom-</span></em><span>). 模拟 CPU 类型。可以是默认名称或自定义名称（自定义模型名称必须以 </span><em><span>custom-</span></em><span> 为前缀）。flags=&lt;+FLAG[;-FLAG...]&gt;List of additional CPU flags separated by </span><em><span>;</span></em><span>. Use </span><em><span>+FLAG</span></em><span> to enable, </span><em><span>-FLAG</span></em><span> to disable a flag. Custom CPU models can specify any flag supported by QEMU/KVM, VM-specific flags must be from the following set for security reasons: pcid, spec-ctrl, ibpb, ssbd, virt-ssbd, amd-ssbd, amd-no-ssb, pdpe1gb, md-clear, hv-tlbflush, hv-evmcs, aes 用 </span><em><span>;</span></em><span>分隔的其他 CPU 标志列表。使用 </span><em><span>+FLAG</span></em><span> 启用，使用 </span><em><span>-FLAG</span></em><span> 禁用标志。自定义 CPU 模型可以指定 QEMU/KVM 支持的任何标志，出于安全原因，特定于 VM 的标志必须来自以下集：pcid、spec-ctrl、ibpb、ssbd、virt-ssbd、amd-ssbd、amd-no-ssb、pdpe1gb、md-clear、hv-tlbflush、hv-evmcs、aeshidden=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) hidden=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Do not identify as a KVM virtual machine. 不要标识为 KVM 虚拟机。hv-vendor-id=</span><vendor-id><span> hv-供应商-id=&lt;供应商-id&gt;The Hyper-V vendor ID. Some drivers or programs inside Windows guests need a specific ID. Hyper-V 供应商 ID。Windows 客户机中的某些驱动程序或程序需要特定的 ID。phys-bits=&lt;8-64|host&gt;The physical memory address bits that are reported to the guest OS. Should be smaller or equal to the host’s. Set to </span><em><span>host</span></em><span> to use value from host CPU, but note that doing so will break live migration to CPUs with other values. 报告给客户机操作系统的物理内存地址位。应小于或等于主机的地址。将设置为 </span><em><span>host</span></em><span> 以使用主机 CPU 中的值，但请注意，这样做会中断到具有其他值的 CPU 的实时迁移。reported-model=&lt;486 | Broadwell | Broadwell-IBRS | Broadwell-noTSX | Broadwell-noTSX-IBRS | Cascadelake-Server | Cascadelake-Server-noTSX | Cascadelake-Server-v2 | Cascadelake-Server-v4 | Cascadelake-Server-v5 | Conroe | Cooperlake | Cooperlake-v2 | EPYC | EPYC-Genoa | EPYC-IBPB | EPYC-Milan | EPYC-Milan-v2 | EPYC-Rome | EPYC-Rome-v2 | EPYC-Rome-v3 | EPYC-Rome-v4 | EPYC-v3 | EPYC-v4 | GraniteRapids | Haswell | Haswell-IBRS | Haswell-noTSX | Haswell-noTSX-IBRS | Icelake-Client | Icelake-Client-noTSX | Icelake-Server | Icelake-Server-noTSX | Icelake-Server-v3 | Icelake-Server-v4 | Icelake-Server-v5 | Icelake-Server-v6 | IvyBridge | IvyBridge-IBRS | KnightsMill | Nehalem | Nehalem-IBRS | Opteron_G1 | Opteron_G2 | Opteron_G3 | Opteron_G4 | Opteron_G5 | Penryn | SandyBridge | SandyBridge-IBRS | SapphireRapids | SapphireRapids-v2 | Skylake-Client | Skylake-Client-IBRS | Skylake-Client-noTSX-IBRS | Skylake-Client-v4 | Skylake-Server | Skylake-Server-IBRS | Skylake-Server-noTSX-IBRS | Skylake-Server-v4 | Skylake-Server-v5 | Westmere | Westmere-IBRS | athlon | core2duo | coreduo | host | kvm32 | kvm64 | max | pentium | pentium2 | pentium3 | phenom | qemu32 | qemu64&gt; (</span><em><span>default =</span></em><span> kvm64) reported-model=&lt;486 | Broadwell | Broadwell-IBRS | Broadwell-noTSX | Broadwell-noTSX-IBRS | Cascadelake-Server | Cascadelake-Server-noTSX | Cascadelake-Server-v2 | Cascadelake-Server-v4 | Cascadelake-Server-v5 | Conroe | Cooperlake | Cooperlake-v2 | EPYC | EPYC-Genoa | EPYC-IBPB | EPYC-Milan | EPYC-Milan-v2 | EPYC-Rome | EPYC-Rome-v2 | EPYC-Rome-v3 | EPYC-Rome-v4 | EPYC-v3 | EPYC-v4 | GraniteRapids | Haswell | Haswell-IBRS | Haswell-noTSX | Haswell-noTSX-IBRS | Icelake-Client | Icelake-Client-noTSX | Icelake-Server | Icelake-Server-noTSX | Icelake-Server-v3 | Icelake-Server-v4 | Icelake-Server-v5 | Icelake-Server-v6 | IvyBridge | IvyBridge-IBRS | KnightsMill | Nehalem | Nehalem-IBRS | Opteron_G1 | Opteron_G2 | Opteron_G3 | Opteron_G4 | Opteron_G5 | Penryn | SandyBridge | SandyBridge-IBRS | SapphireRapids | SapphireRapids-v2 | Skylake-Client | Skylake-Client-IBRS | Skylake-Client-noTSX-IBRS | Skylake-Client-v4 | Skylake-Server | Skylake-Server-IBRS | Skylake-Server-noTSX-IBRS | Skylake-Server-v4 | Skylake-Server-v5 | Westmere | Westmere-IBRS | athlon | core2duo | coreduo | host | kvm32 | kvm64 | max | pentium | pentium2 | pentium3 | phenom | qemu32 | qemu64&gt;（</span><em><span>默认值 =</span></em><span> kvm64）CPU model and vendor to report to the guest. Must be a QEMU/KVM supported model. Only valid for custom CPU model definitions, default models will always report themselves to the guest OS. 要向客户机报告的 CPU 型号和供应商。必须是 QEMU/KVM 支持的型号。默认模型仅对自定义 CPU 模型定义有效，将始终向客户机操作系统报告自身。</span></p></li><li><p><span>cpulimit: </span><number><span> (0 - 128) (</span><em><span>default =</span></em><span> 0) cpulimit： </span><number><span> （0 - 128） （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Limit of CPU usage. CPU 使用率限制。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"><span>If the computer has 2 CPUs, it has total of </span><em><span>2</span></em><span> CPU time. Value </span><em><span>0</span></em><span> indicates no CPU limit. 如果计算机有 2 个 CPU，则总共有 </span><em><span>2</span></em><span> 个 CPU 时间。值 </span><em><span>0</span></em><span> 表示没有 CPU 限制。</span></p></li><li><p><span>cpuunits: </span><integer><span> (1 - 262144) (</span><em><span>default =</span></em><span> cgroup v1: 1024, cgroup v2: 100) cpuunits： </span><integer><span> （1 - 262144） （</span><em><span>默认值 =</span></em><span> cgroup v1： 1024， cgroup v2： 100）</span></p><p><span>CPU weight for a VM. Argument is used in the kernel fair scheduler. The larger the number is, the more CPU time this VM gets. Number is relative to weights of all the other running VMs. VM 的 CPU 权重。参数在内核公平调度器中使用。数字越大，此 VM 获得的 CPU 时间就越多。该数字与所有其他正在运行的 VM 的权重相关。</span></p></li><li><p><span>description: </span><string><span> 描述： </span><string></p><p><span>Description for the VM. Shown in the web-interface VM’s summary. This is saved as comment inside the configuration file. VM 的说明。显示在 Web 界面 VM 的摘要中。这将在配置文件中另存为注释。</span></p></li><li><p><span>efidisk0: [file=]</span><volume><span> [,efitype=&lt;2m|4m&gt;] [,format=</span><enum><span>] [,pre-enrolled-keys=&lt;1|0&gt;] [,size=</span><DiskSize><span>] efidisk0： [file=]</span><volume><span> [，efitype=&lt;2m|4m&gt;] [，format=</span><enum><span>] [，pre-enrolled-keys=&lt;1|0&gt;] [，size=</span><DiskSize><span>]</span></p><p><span>Configure a disk for storing EFI vars. 配置用于存储 EFI var 的磁盘。efitype=&lt;2m | 4m&gt; (</span><em><span>default =</span></em><span> 2m) efitype=&lt;2m | 4m&gt;（</span><em><span>默认值 =</span></em><span> 2m）Size and type of the OVMF EFI vars. </span><em><span>4m</span></em><span> is newer and recommended, and required for Secure Boot. For backwards compatibility, </span><em><span>2m</span></em><span> is used if not otherwise specified. Ignored for VMs with arch=aarch64 (ARM). OVMF EFI vars. 的大小和类型。 </span><em><span>4m</span></em><span> 是较新的，推荐使用，并且是安全启动所必需的。为了向后兼容，如果没有另行指定，则使用 </span><em><span>2m</span></em><span>。对于具有 arch=aarch64 （ARM） 的 VM，忽略此项。file=</span><volume><span> 文件=&lt;卷&gt;The drive’s backing volume. 驱动器的后备卷。format=&lt;cloop | cow | qcow | qcow2 | qed | raw | vmdk&gt;The drive’s backing file’s data format. 驱动器的备份文件的数据格式。pre-enrolled-keys=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) pre-enrolled-keys=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Use am EFI vars template with distribution-specific and Microsoft Standard keys enrolled, if used with </span><em><span>efitype=4m</span></em><span>. Note that this will enable Secure Boot by default, though it can still be turned off from within the VM. 如果与 </span><em><span>efitype=4m</span></em><span> 一起使用，请使用 am EFI vars 模板，并注册特定于分发的密钥和 Microsoft Standard 密钥。请注意，默认情况下，这将启用安全启动，但仍可以从 VM 内部关闭它。size=</span><DiskSize><span> 大小=</span><iskSize><span>Disk size. This is purely informational and has no effect. 磁盘大小。这纯粹是信息性的，没有任何效果。</span></p></li><li><p><span>freeze: </span><boolean><span> 冻结： </span><boolean></p><p><span>Freeze CPU at startup (use </span><em><span>c</span></em><span> monitor command to start execution). 启动时冻结 CPU（使用 </span><em><span>c</span></em><span> monitor 命令开始执行）。</span></p></li><li><p><span>hookscript: </span><string><span> hookscript： </span><string></p><p><span>Script that will be executed during various steps in the vms lifetime. 将在 vms 生命周期的各个步骤中执行的脚本。</span></p></li><li><p><span>hostpci[n]: [[host=]&lt;HOSTPCIID[;HOSTPCIID2...]&gt;] [,device-id=</span><hex id><span>] [,legacy-igd=&lt;1|0&gt;] [,mapping=</span><mapping-id><span>] [,mdev=</span><string><span>] [,pcie=&lt;1|0&gt;] [,rombar=&lt;1|0&gt;] [,romfile=</span><string><span>] [,sub-device-id=</span><hex id><span>] [,sub-vendor-id=</span><hex id><span>] [,vendor-id=</span><hex id><span>] [,x-vga=&lt;1|0&gt;] hostpci[n]： [[主机=]&lt;HOSTPCIID[;HOSTPCIID2...]&gt;] [，device-id=</span><hex id><span>] [，legacy-igd=&lt;1|0&gt;] [，mapping=</span><mapping-id><span>] [，mdev=</span><string><span>] [，pcie=&lt;1|0&gt;] [，rombar=&lt;1|0&gt;] [，romfile=</span><string><span>] [，sub-device-id=</span><hex id><span>] [，sub-vendor-id=</span><hex id><span>] [，vendor-id=</span><hex id><span>] [，x-vga=&lt;1|0&gt;]</span></p><p><span>Map host PCI devices into guest. 将主机 PCI 设备映射到客户机。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"><span>This option allows direct access to host hardware. So it is no longer possible to migrate such machines - use with special care. 此选项允许直接访问主机硬件。因此，无法再迁移此类机器 - 请特别小心使用。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Caution"><span>Experimental! User reported problems with this option. 实验的！用户报告了使用此选项的问题。device-id=</span><hex id><span> 设备 id=</span><hex id><span>Override PCI device ID visible to guest 覆盖客户机可见的 PCI 设备 IDhost=&lt;HOSTPCIID[;HOSTPCIID2...]&gt; 主机=&lt;HOSTPCIID[;HOSTPCIID2...]&gt;Host PCI device pass through. The PCI ID of a host’s PCI device or a list of PCI virtual functions of the host. HOSTPCIID syntax is: 主机 PCI 设备直通。主机的 PCI 设备的 PCI ID 或主机的 PCI 虚拟功能列表。HOSTPCIID 语法为：</span><em><span>bus:dev.func</span></em><span> (hexadecimal numbers) </span><em><span>bus：dev.func</span></em><span> （十六进制数）You can us the </span><em><span>lspci</span></em><span> command to list existing PCI devices. 您可以使用 </span><em><span>lspci</span></em><span> 命令来列出现有的 PCI 设备。Either this or the </span><em><span>mapping</span></em><span> key must be set. 必须设置此键或</span><em><span>映射</span></em><span>键。legacy-igd=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) legacy-igd=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Pass this device in legacy IGD mode, making it the primary and exclusive graphics device in the VM. Requires </span><em><span>pc-i440fx</span></em><span> machine type and VGA set to </span><em><span>none</span></em><span>. 在传统 IGD 模式下传递此设备，使其成为 VM 中的主要和独占图形设备。需要 </span><em><span>pc-i440fx</span></em><span> 机器类型且 VGA 设置为</span><em><span>无</span></em><span>。mapping=</span><mapping-id><span> 映射=&lt;映射-id&gt;The ID of a cluster wide mapping. Either this or the default-key </span><em><span>host</span></em><span> must be set. 集群范围映射的 ID。必须设置此主机或默认键</span><em><span>主机</span></em><span>。mdev=</span><string><span>The type of mediated device to use. An instance of this type will be created on startup of the VM and will be cleaned up when the VM stops. 要使用的中介设备的类型。此类型的实例将在 VM 启动时创建，并在 VM 停止时进行清理。pcie=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) pcie=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Choose the PCI-express bus (needs the </span><em><span>q35</span></em><span> machine model). 选择 PCI-express 总线（需要 </span><em><span>q35</span></em><span> 机器型号）。rombar=</span><boolean><span> (</span><em><span>default =</span></em><span> 1) rombar=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）Specify whether or not the device’s ROM will be visible in the guest’s memory map. 指定设备的 ROM 是否在客户机的内存映射中可见。romfile=</span><string><span>Custom pci device rom filename (must be located in /usr/share/kvm/). 自定义 pci 设备 rom 文件名（必须位于 /usr/share/kvm/ 中）。sub-device-id=</span><hex id><span> 子设备 id=</span><hex id><span>Override PCI subsystem device ID visible to guest 覆盖客户机可见的 PCI 子系统设备 IDsub-vendor-id=</span><hex id><span> 子供应商 id=</span><hex id><span>Override PCI subsystem vendor ID visible to guest 覆盖客户机可见的 PCI 子系统供应商 IDvendor-id=</span><hex id><span>Override PCI vendor ID visible to guest 覆盖对客户机可见的 PCI 供应商 IDx-vga=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) x-vga=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Enable vfio-vga device support. 启用 vfio-vga 设备支持。</span></p></li><li><p><span>hotplug: </span><string><span> (</span><em><span>default =</span></em><span> network,disk,usb) 热插拔： </span><string><span> （</span><em><span>默认 =</span></em><span> 网络，磁盘，USB）</span></p><p><span>Selectively enable hotplug features. This is a comma separated list of hotplug features: </span><em><span>network</span></em><span>, </span><em><span>disk</span></em><span>, </span><em><span>cpu</span></em><span>, </span><em><span>memory</span></em><span>, </span><em><span>usb</span></em><span> and </span><em><span>cloudinit</span></em><span>. Use </span><em><span>0</span></em><span> to disable hotplug completely. Using </span><em><span>1</span></em><span> as value is an alias for the default network,disk,usb. USB hotplugging is possible for guests with machine version &gt;= 7.1 and ostype l26 or windows &gt; 7. 有选择地启用热插拔功能。这是一个以逗号分隔的热插拔功能列表：</span><em><span>网络</span></em><span>、</span><em><span>磁盘</span></em><span>、</span><em><span>CPU</span></em><span>、</span><em><span>内存</span></em><span>、</span><em><span>USB</span></em><span> 和 </span><em><span>cloudinit</span></em><span>。使用 </span><em><span>0</span></em><span> 完全禁用热插拔。使用 </span><em><span>1</span></em><span> 作为值是默认网络、磁盘、USB 的别名。对于计算机版本 &gt;= 7.1 和 ostype l26 或 Windows &gt; 7 的乘客，可以使用 USB 热插拔。</span></p></li><li><p><span>hugepages: &lt;1024 | 2 | any&gt; hugepages： &lt;1024 | 2 | any&gt;</span></p><p><span>Enable/disable hugepages memory. 启用/禁用 hugepages 内存。</span></p></li><li><p><span>ide[n]: [file=]</span><volume><span> [,aio=&lt;native|threads|io_uring&gt;] [,backup=&lt;1|0&gt;] [,bps=</span><bps><span>] [,bps_max_length=</span><seconds><span>] [,bps_rd=</span><bps><span>] [,bps_rd_max_length=</span><seconds><span>] [,bps_wr=</span><bps><span>] [,bps_wr_max_length=</span><seconds><span>] [,cache=</span><enum><span>] [,cyls=</span><integer><span>] [,detect_zeroes=&lt;1|0&gt;] [,discard=&lt;ignore|on&gt;] [,format=</span><enum><span>] [,heads=</span><integer><span>] [,iops=</span><iops><span>] [,iops_max=</span><iops><span>] [,iops_max_length=</span><seconds><span>] [,iops_rd=</span><iops><span>] [,iops_rd_max=</span><iops><span>] [,iops_rd_max_length=</span><seconds><span>] [,iops_wr=</span><iops><span>] [,iops_wr_max=</span><iops><span>] [,iops_wr_max_length=</span><seconds><span>] [,mbps=</span><mbps><span>] [,mbps_max=</span><mbps><span>] [,mbps_rd=</span><mbps><span>] [,mbps_rd_max=</span><mbps><span>] [,mbps_wr=</span><mbps><span>] [,mbps_wr_max=</span><mbps><span>] [,media=&lt;cdrom|disk&gt;] [,model=</span><model><span>] [,replicate=&lt;1|0&gt;] [,rerror=&lt;ignore|report|stop&gt;] [,secs=</span><integer><span>] [,serial=</span><serial><span>] [,shared=&lt;1|0&gt;] [,size=</span><DiskSize><span>] [,snapshot=&lt;1|0&gt;] [,ssd=&lt;1|0&gt;] [,trans=&lt;none|lba|auto&gt;] [,werror=</span><enum><span>] [,wwn=</span><wwn><span>] IDE[n]： [文件=] [，aio=] [，备份=&lt;1 |0&gt;] [，bps=] [，bps_max_length=] [，bps_rd=] [，bps_rd_max_length=] [，bps_wr=] [，bps_wr_max_length=] [，cache=] [，cyls=] [，detect_zeroes=&lt;1 |0&gt;] [，discard=] [，format=] [，heads=] [，iops=] [，iops_max=] [，iops_max_length=] [，iops_rd=] [，iops_rd_max=] [，iops_rd_max_length=] [，iops_wr=] [，iops_wr_max=] [，iops_wr_max_length=] [，mbps=] [，mbps_max=] [，mbps_rd=] [，mbps_rd_max=] [，mbps_wr=] [，mbps_wr_max=] [，media=] [，model=] [，replicate&lt;1 |0&gt;=] [，rerror=] [，secs=] [，serial=] [，shared=&lt;1 |0&gt;] [，size=] [，snapshot=&lt;1 |0&gt;] [，ssd=&lt;1 |0&gt;] [，trans=] [，werror=] [，wwn=]</span></p><p><span>Use volume as IDE hard disk or CD-ROM (n is 0 to 3). 使用卷作为 IDE 硬盘或 CD-ROM（n 为 0 到 3）。aio=&lt;io_uring | native | threads&gt; aio=&lt;io_uring | 本机 | 线程&gt;AIO type to use. 要使用的 AIO 类型。backup=</span><boolean><span> 备份=</span><boolean><span>Whether the drive should be included when making backups. 进行备份时是否应包含驱动器。bps=</span><bps><span>Maximum r/w speed in bytes per second. 最大 r/w 速度（以字节/秒为单位）。bps_max_length=</span><seconds><span> bps_max_length=&lt;秒&gt;Maximum length of I/O bursts in seconds. I/O 突发的最大长度（以秒为单位）。bps_rd=</span><bps><span>Maximum read speed in bytes per second. 最大读取速度（以字节/秒为单位）。bps_rd_max_length=</span><seconds><span> bps_rd_max_length=&lt;秒&gt;Maximum length of read I/O bursts in seconds. 读取 I/O 突发的最大长度（以秒为单位）。bps_wr=</span><bps><span>Maximum write speed in bytes per second. 最大写入速度（以字节/秒为单位）。bps_wr_max_length=</span><seconds><span> bps_wr_max_length=&lt;秒&gt;Maximum length of write I/O bursts in seconds. 写入 I/O 突发的最大长度（以秒为单位）。cache=&lt;directsync | none | unsafe | writeback | writethrough&gt; cache=&lt;directsync | none | 不安全 | writeback | writethrough&gt;The drive’s cache mode 驱动器的缓存模式cyls=</span><integer><span>Force the drive’s physical geometry to have a specific cylinder count. 强制驱动器的物理几何形状具有特定的柱面计数。detect_zeroes=</span><boolean><span>Controls whether to detect and try to optimize writes of zeroes. 控制是否检测和尝试优化零的写入。discard=&lt;ignore | on&gt;Controls whether to pass discard/trim requests to the underlying storage. 控制是否将丢弃/修剪请求传递到底层存储。file=</span><volume><span> 文件=&lt;卷&gt;The drive’s backing volume. 驱动器的后备卷。format=&lt;cloop | cow | qcow | qcow2 | qed | raw | vmdk&gt;The drive’s backing file’s data format. 驱动器的备份文件的数据格式。heads=</span><integer><span>Force the drive’s physical geometry to have a specific head count. 强制驱动器的物理几何形状具有特定的磁头数。iops=</span><iops><span>Maximum r/w I/O in operations per second. 每秒操作中的最大 r/w I/O。iops_max=</span><iops><span>Maximum unthrottled r/w I/O pool in operations per second. 每秒操作中最大未受限制的 r/w I/O 池。iops_max_length=</span><seconds><span> iops_max_length=&lt;秒&gt;Maximum length of I/O bursts in seconds. I/O 突发的最大长度（以秒为单位）。iops_rd=</span><iops><span>Maximum read I/O in operations per second. 每秒操作中的最大读取 I/O。iops_rd_max=</span><iops><span>Maximum unthrottled read I/O pool in operations per second. 每秒操作中的最大不受限制的读取 I/O 池。iops_rd_max_length=</span><seconds><span> iops_rd_max_length=&lt;秒&gt;Maximum length of read I/O bursts in seconds. 读取 I/O 突发的最大长度（以秒为单位）。iops_wr=</span><iops><span>Maximum write I/O in operations per second. 每秒操作中的最大写入 I/O。iops_wr_max=</span><iops><span>Maximum unthrottled write I/O pool in operations per second. 每秒操作中的最大未限制写入 I/O 池。iops_wr_max_length=</span><seconds><span> iops_wr_max_length=&lt;秒&gt;Maximum length of write I/O bursts in seconds. 写入 I/O 突发的最大长度（以秒为单位）。mbps=</span><mbps><span>Maximum r/w speed in megabytes per second. 最大 r/w 速度（以兆字节/秒为单位）。mbps_max=</span><mbps><span>Maximum unthrottled r/w pool in megabytes per second. 最大未限制的 r/w 池（以兆字节/秒为单位）。mbps_rd=</span><mbps><span>Maximum read speed in megabytes per second. 最大读取速度（以兆字节/秒为单位）。mbps_rd_max=</span><mbps><span>Maximum unthrottled read pool in megabytes per second. 最大未限制读取池（以兆字节/秒为单位）。mbps_wr=</span><mbps><span>Maximum write speed in megabytes per second. 最大写入速度（以兆字节/秒为单位）。mbps_wr_max=</span><mbps><span>Maximum unthrottled write pool in megabytes per second. 最大未限制写入池（以兆字节/秒为单位）。media=&lt;cdrom | disk&gt; (</span><em><span>default =</span></em><span> disk) media=&lt;cdrom | disk&gt;（</span><em><span>默认值 =</span></em><span> 磁盘）The drive’s media type. 驱动器的介质类型。model=</span><model><span> 模型=&lt;模型&gt;The drive’s reported model name, url-encoded, up to 40 bytes long. 驱动器报告的型号名称，URL 编码，最长 40 个字节。replicate=</span><boolean><span> (</span><em><span>default =</span></em><span> 1) replicate=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）Whether the drive should considered for replication jobs. 是否应考虑将驱动器用于复制作业。rerror=&lt;ignore | report | stop&gt; rerror=&lt;ignore | 报告 | stop&gt;Read error action. 读取错误操作。secs=</span><integer><span> 秒=</span><integer><span>Force the drive’s physical geometry to have a specific sector count. 强制驱动器的物理几何图形具有特定的扇区计数。serial=</span><serial><span> 序列号=&lt;序列号&gt;The drive’s reported serial number, url-encoded, up to 20 bytes long. 驱动器报告的序列号，URL 编码，最长 20 个字节。shared=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) shared=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Mark this locally-managed volume as available on all nodes. 将此本地管理的卷标记为在所有节点上都可用。</span><img src="data:image/png;base64,%0A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%0A/F/lgJiyQFHragAAAABJRU5ErkJggg==" referrerpolicy="no-referrer" alt="Warning"><span>This option does not share the volume automatically, it assumes it is shared already! 此选项不会自动共享卷，而是假定它已经共享！size=</span><DiskSize><span> 大小=</span><iskSize><span>Disk size. This is purely informational and has no effect. 磁盘大小。这纯粹是信息性的，没有任何效果。snapshot=</span><boolean><span> 快照=</span><boolean><span>Controls qemu’s snapshot mode feature. If activated, changes made to the disk are temporary and will be discarded when the VM is shutdown. 控制 qemu 的快照模式功能。如果激活，对磁盘所做的更改是临时的，并且在 VM 关闭时将被丢弃。ssd=</span><boolean><span>Whether to expose this drive as an SSD, rather than a rotational hard disk. 是否将此驱动器公开为 SSD，而不是旋转硬盘。trans=&lt;auto | lba | none&gt;Force disk geometry bios translation mode. 强制磁盘几何 bios 转换模式。werror=&lt;enospc | ignore | report | stop&gt; werror=&lt;enospc | 忽略 | 报告 | stop&gt;Write error action. 写入错误操作。wwn=</span><wwn><span>The drive’s worldwide name, encoded as 16 bytes hex string, prefixed by </span><em><span>0x</span></em><span>. 驱动器的全球名称，编码为 16 字节十六进制字符串，以 </span><em><span>0x</span></em><span> 为前缀。</span></p></li><li><p><span>ipconfig[n]: [gw=</span><GatewayIPv4><span>] [,gw6=</span><GatewayIPv6><span>] [,ip=&lt;IPv4Format/CIDR&gt;] [,ip6=&lt;IPv6Format/CIDR&gt;] ipconfig[n]： [gw=</span><GatewayIPv4><span>] [，gw6=</span><GatewayIPv6><span>] [，ip=&lt;IPv4Format/CIDR&gt;] [，ip6=&lt;IPv6Format/CIDR&gt;]</span></p><p><span>cloud-init: Specify IP addresses and gateways for the corresponding interface. cloud-init：指定对应接口的IP地址和网关。IP addresses use CIDR notation, gateways are optional but need an IP of the same type specified. IP 地址使用 CIDR 表示法，网关是可选的，但需要指定的相同类型的 IP。The special string </span><em><span>dhcp</span></em><span> can be used for IP addresses to use DHCP, in which case no explicit gateway should be provided. For IPv6 the special string </span><em><span>auto</span></em><span> can be used to use stateless autoconfiguration. This requires cloud-init 19.4 or newer. 特殊字符串 </span><em><span>dhcp</span></em><span> 可用于 IP 地址以使用 DHCP，在这种情况下，不应提供显式网关。对于 IPv6，可以使用特殊字符串 </span><em><span>auto</span></em><span> 来使用无状态自动配置。这需要 cloud-init 19.4 或更高版本。If cloud-init is enabled and neither an IPv4 nor an IPv6 address is specified, it defaults to using dhcp on IPv4. 如果启用了 cloud-init，且未指定 IPv4 和 IPv6 地址，则默认在 IPv4 上使用 dhcp。gw=</span><GatewayIPv4><span>Default gateway for IPv4 traffic. IPv4 流量的默认网关。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"><span>Requires option(s): ip 需要选项： ipgw6=</span><GatewayIPv6><span>Default gateway for IPv6 traffic. IPv6 流量的默认网关。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"><span>Requires option(s): ip6 需要选项： ip6ip=&lt;IPv4Format/CIDR&gt; (</span><em><span>default =</span></em><span> dhcp) ip=&lt;IPv4Format/CIDR&gt;（</span><em><span>默认值 =</span></em><span> dhcp）IPv4 address in CIDR format. CIDR 格式的 IPv4 地址。ip6=&lt;IPv6Format/CIDR&gt; (</span><em><span>default =</span></em><span> dhcp) ip6=&lt;IPv6Format/CIDR&gt;（</span><em><span>默认 =</span></em><span> dhcp）IPv6 address in CIDR format. CIDR 格式的 IPv6 地址。</span></p></li><li><p><span>ivshmem: size=</span><integer><span> [,name=</span><string><span>] ivshmem： 大小=</span><integer><span> [，名称=</span><string><span>]</span></p><p><span>Inter-VM shared memory. Useful for direct communication between VMs, or to the host. 虚拟机间共享内存。对于虚拟机之间的直接通信或与主机的直接通信非常有用。name=</span><string><span> 名称=</span><string><span>The name of the file. Will be prefixed with </span><em><span>pve-shm-</span></em><span>. Default is the VMID. Will be deleted when the VM is stopped. 文件的名称。将以 </span><em><span>pve-shm-</span></em><span> 为前缀。默认值为 VMID。当 VM 停止时，将删除该 VM。size=</span><integer><span> (1 - N) 大小=</span><integer><span> （1 - N）The size of the file in MB. 文件大小（以 MB 为单位）。</span></p></li><li><p><span>keephugepages: </span><boolean><span> (</span><em><span>default =</span></em><span> 0) keephugepages： </span><boolean><span> （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Use together with hugepages. If enabled, hugepages will not not be deleted after VM shutdown and can be used for subsequent starts. 与 hugepages 一起使用。如果启用，则 Hugepages 在 VM 关闭后不会被删除，并且可用于后续启动。</span></p></li><li><p><span>keyboard: &lt;da | de | de-ch | en-gb | en-us | es | fi | fr | fr-be | fr-ca | fr-ch | hu | is | it | ja | lt | mk | nl | no | pl | pt | pt-br | sl | sv | tr&gt; 键盘： &lt;da | de | de-ch | en-gb | en-us | es | fi | fr | fr-be | fr-ca | fr-ch | 胡 | 是 | it | ja | lt | mk | nl | no | pl | pt | pt-br | sl | sv | tr&gt;</span></p><p><span>Keyboard layout for VNC server. This option is generally not required and is often better handled from within the guest OS. VNC 服务器的键盘布局。此选项通常不是必需的，通常最好在客户机操作系统中处理。</span></p></li><li><p><span>kvm: </span><boolean><span> (</span><em><span>default =</span></em><span> 1) kvm： </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>Enable/disable KVM hardware virtualization. 启用/禁用 KVM 硬件虚拟化。</span></p></li><li><p><span>localtime: </span><boolean><span> 本地时间： </span><boolean></p><p><span>Set the real time clock (RTC) to local time. This is enabled by default if the ostype indicates a Microsoft Windows OS. 将实时时钟 （RTC） 设置为本地时间。如果 ostype 指示 Microsoft Windows 操作系统，则默认情况下启用此功能。</span></p></li><li><p><span>lock: &lt;backup | clone | create | migrate | rollback | snapshot | snapshot-delete | suspended | suspending&gt; 锁定： &lt;备份 | 克隆 | 创建 | 迁移 | 回滚 | 快照 | 快照删除 | 已挂起 | 挂起&gt;</span></p><p><span>Lock/unlock the VM. 锁定/解锁 VM。</span></p></li><li><p><span>machine: [[type=]</span><machine type><span>] [,viommu=&lt;intel|virtio&gt;] 机器：[[type=]</span><machine type><span>] [，viommu=&lt;intel|virtio&gt;]</span></p><p><span>Specify the QEMU machine. 指定 QEMU 机器。type=</span><machine type><span> 类型=&lt;机器类型&gt;Specifies the QEMU machine type. 指定 QEMU 机器类型。viommu=&lt;intel | virtio&gt;Enable and set guest vIOMMU variant (Intel vIOMMU needs q35 to be set as machine type). 启用并设置客户机 vIOMMU 变体（Intel vIOMMU 需要将 q35 设置为机器类型）。</span></p></li><li><p><span>memory: [current=]</span><integer><span> 内存：[current=]</span><integer></p><p><span>Memory properties. 内存属性。current=</span><integer><span> (16 - N) (</span><em><span>default =</span></em><span> 512) current=</span><integer><span> （16 - N） （</span><em><span>默认值 =</span></em><span> 512）Current amount of online RAM for the VM in MiB. This is the maximum available memory when you use the balloon device. VM 的当前联机 RAM 量（以 MiB 为单位）。这是使用气球设备时的最大可用内存。</span></p></li><li><p><span>migrate_downtime: </span><number><span> (0 - N) (</span><em><span>default =</span></em><span> 0.1) migrate_downtime： </span><number><span> （0 - N） （</span><em><span>默认值 =</span></em><span> 0.1）</span></p><p><span>Set maximum tolerated downtime (in seconds) for migrations. Should the migration not be able to converge in the very end, because too much newly dirtied RAM needs to be transferred, the limit will be increased automatically step-by-step until migration can converge. 为迁移设置允许的最大停机时间（以秒为单位）。如果迁移最终无法收敛，因为需要传输太多新污染的 RAM，则限制将自动逐步增加，直到迁移可以收敛。</span></p></li><li><p><span>migrate_speed: </span><integer><span> (0 - N) (</span><em><span>default =</span></em><span> 0) migrate_speed： </span><integer><span>（0 - N） （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Set maximum speed (in MB/s) for migrations. Value 0 is no limit. 设置迁移的最大速度（以 MB/s 为单位）。值 0 没有限制。</span></p></li><li><p><span>name: </span><string><span> 名称： </span><string></p><p><span>Set a name for the VM. Only used on the configuration web interface. 为 VM 设置名称。仅在配置 Web 界面上使用。</span></p></li><li><p><span>nameserver: </span><string><span> 名称服务器： </span><string></p><p><span>cloud-init: Sets DNS server IP address for a container. Create will automatically use the setting from the host if neither searchdomain nor nameserver are set. cloud-init：设置容器的DNS服务器IP地址。如果 searchdomain 和 nameserver 均未设置，Create 将自动使用主机的设置。</span></p></li><li><p><span>net[n]: [model=]</span><enum><span> [,bridge=</span><bridge><span>] [,firewall=&lt;1|0&gt;] [,link_down=&lt;1|0&gt;] [,macaddr=</span><a href='XX:XX:XX:XX:XX:XX' target='_blank' class='url'>XX:XX:XX:XX:XX:XX</a><span>] [,mtu=</span><integer><span>] [,queues=</span><integer><span>] [,rate=</span><number><span>] [,tag=</span><integer><span>] [,trunks=&lt;vlanid[;vlanid...]&gt;] [,</span><model><span>=</span><macaddr><span>] net[n]： [model=]</span><enum><span> [，bridge=</span><bridge><span>] [，firewall=&lt;1|0&gt;] [，link_down=&lt;1|0&gt;] [，macaddr=&lt;XX：XX：XX：XX：XX：XX&gt;] [，mtu=</span><integer><span>] [，queues=</span><integer><span>] [，rate=</span><number><span>] [，tag=</span><integer><span>] [，trunks=&lt;vlanid[;弗拉尼德...]&gt;] [，</span><model><span>=</span><macaddr><span>]</span></p><p><span>Specify network devices. 指定网络设备。bridge=</span><bridge><span> 桥=&lt;桥&gt;Bridge to attach the network device to. The Proxmox VE standard bridge is called </span><em><span>vmbr0</span></em><span>. 用于连接网络设备的桥接器。Proxmox VE 标准网桥称为 </span><em><span>vmbr0</span></em><span>。If you do not specify a bridge, we create a kvm user (NATed) network device, which provides DHCP and DNS services. The following addresses are used: 如果您不指定网桥，我们将创建一个 kvm 用户 （NATed） 网络设备，该设备提供 DHCP 和 DNS 服务。使用以下地址：</span><code>10.0.2.2   Gateway 10.0.2.3   DNS Server 10.0.2.4   SMB Server</code><span>The DHCP server assign addresses to the guest starting from 10.0.2.15. DHCP 服务器从 10.0.2.15 开始为客户机分配地址。firewall=</span><boolean><span> 防火墙=</span><boolean><span>Whether this interface should be protected by the firewall. 此接口是否应受防火墙保护。link_down=</span><boolean><span>Whether this interface should be disconnected (like pulling the plug). 是否应断开此接口（如拔插头）。macaddr=</span><a href='XX:XX:XX:XX:XX:XX' target='_blank' class='url'>XX:XX:XX:XX:XX:XX</a><span> macaddr=&lt;XX：XX：XX：XX：XX：XX&gt;A common MAC address with the I/G (Individual/Group) bit not set. 未设置 I/G（个人/组）位的公共 MAC 地址。model=&lt;e1000 | e1000-82540em | e1000-82544gc | e1000-82545em | e1000e | i82551 | i82557b | i82559er | ne2k_isa | ne2k_pci | pcnet | rtl8139 | virtio | vmxnet3&gt;Network Card Model. The </span><em><span>virtio</span></em><span> model provides the best performance with very low CPU overhead. If your guest does not support this driver, it is usually best to use </span><em><span>e1000</span></em><span>. 网卡型号。</span><em><span>virtio</span></em><span> 模型以非常低的 CPU 开销提供最佳性能。如果您的客人不支持此驱动程序，通常最好使用 </span><em><span>e1000</span></em><span>。mtu=</span><integer><span> (1 - 65520) mtu=</span><integer><span> （1 - 65520）Force MTU, for VirtIO only. Set to </span><em><span>1</span></em><span> to use the bridge MTU 强制 MTU，仅适用于 VirtIO。设置为 </span><em><span>1</span></em><span> 以使用桥接器 MTUqueues=</span><integer><span> (0 - 64) queues=</span><integer><span> （0 - 64）Number of packet queues to be used on the device. 要在设备上使用的数据包队列数。rate=</span><number><span> (0 - N) 率 =&lt;数字&gt; （0 - N）Rate limit in mbps (megabytes per second) as floating point number. 速率限制，以 mbps（兆字节/秒）为单位，作为浮点数。tag=</span><integer><span> (1 - 4094) 标签=</span><integer><span> （1 - 4094）VLAN tag to apply to packets on this interface. 要应用于此接口上的数据包的 VLAN 标记。trunks=&lt;vlanid[;vlanid...]&gt; trunks=&lt;vlanid[;弗拉尼德...]&gt;VLAN trunks to pass through this interface. 通过此接口的 VLAN 中继。</span></p></li><li><p><span>numa: </span><boolean><span> (</span><em><span>default =</span></em><span> 0) numa： </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Enable/disable NUMA. 启用/禁用 NUMA。</span></p></li><li><p><span>numa[n]: cpus=&lt;id[-id];...&gt; [,hostnodes=&lt;id[-id];...&gt;] [,memory=</span><number><span>] [,policy=&lt;preferred|bind|interleave&gt;] numa[n]： cpus=&lt;id[-id];...&gt; [，hostnodes=&lt;id[-id];...&gt;] [，memory=</span><number><span>] [，policy=&lt;preferred|bind|interleave&gt;]</span></p><p><span>NUMA topology. NUMA 拓扑。cpus=&lt;id[-id];...&gt;CPUs accessing this NUMA node. 访问此 NUMA 节点的 CPU。hostnodes=&lt;id[-id];...&gt;Host NUMA nodes to use. 要使用的主机 NUMA 节点。memory=</span><number><span> 内存=&lt;数字&gt;Amount of memory this NUMA node provides. 此 NUMA 节点提供的内存量。policy=&lt;bind | interleave | preferred&gt;NUMA allocation policy. NUMA 分配策略。</span></p></li><li><p><span>onboot: </span><boolean><span> (</span><em><span>default =</span></em><span> 0) onboot： </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Specifies whether a VM will be started during system bootup. 指定在系统启动期间是否启动 VM。</span></p></li><li><p><span>ostype: &lt;l24 | l26 | other | solaris | w2k | w2k3 | w2k8 | win10 | win11 | win7 | win8 | wvista | wxp&gt; ostype： &lt;l24 | l26 | 其他 | solaris | w2k | w2k3 | w2k8 | win10 | win11 | win7 | win8 | wvista | wxp&gt;</span></p><p><span>Specify guest operating system. This is used to enable special optimization/features for specific operating systems: 指定客户机操作系统。这用于为特定操作系统启用特殊优化/功能：other 其他 unspecified OS 未指定的操作系统wxp 西xp Microsoft Windows XP Microsoft Windows XP的w2k W2K的 Microsoft Windows 2000w2k3 Microsoft Windows 2003w2k8 W2K8的 Microsoft Windows 2008wvista WVISTA公司 Microsoft Windows Vistawin7 Win7的 Microsoft Windows 7win8 win8的 Microsoft Windows 8/2012/2012r2win10 Win10的 Microsoft Windows 10/2016/2019win11 Win11的 Microsoft Windows 11/2022/2025l24 Linux 2.4 Kernel Linux 2.4 内核l26 Linux 2.6 - 6.X Kernel Linux 2.6 - 6.X 内核solaris 索拉里斯 Solaris/OpenSolaris/OpenIndiania kernel Solaris/OpenSolaris/OpenIndiania 内核</span></p></li><li><p><span>parallel[n]: /dev/parport\d+|/dev/usb/lp\d+ 并行[N]： /dev/parport\d+|/dev/usb/lp\d+</span></p><p><span>Map host parallel devices (n is 0 to 2). 映射主机并行设备（n 为 0 到 2）。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"><span>This option allows direct access to host hardware. So it is no longer possible to migrate such machines - use with special care. 此选项允许直接访问主机硬件。因此，无法再迁移此类机器 - 请特别小心使用。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Caution"><span>Experimental! User reported problems with this option. 实验的！用户报告了使用此选项的问题。</span></p></li><li><p><span>protection: </span><boolean><span> (</span><em><span>default =</span></em><span> 0) 保护： </span><boolean><span> （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Sets the protection flag of the VM. This will disable the remove VM and remove disk operations. 设置 VM 的保护标志。这将禁用删除 VM 和删除磁盘操作。</span></p></li><li><p><span>reboot: </span><boolean><span> (</span><em><span>default =</span></em><span> 1) 重新启动： </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>Allow reboot. If set to </span><em><span>0</span></em><span> the VM exit on reboot. 允许重新启动。如果设置为 </span><em><span>0</span></em><span>，则 VM 将在重新启动时退出。</span></p></li><li><p><span>rng0: [source=]&lt;/dev/urandom|/dev/random|/dev/hwrng&gt; [,max_bytes=</span><integer><span>] [,period=</span><integer><span>] rng0： [source=]&lt;/dev/urandom|/dev/random|/dev/hwrng&gt; [，max_bytes=</span><integer><span>] [，period=</span><integer><span>]</span></p><p><span>Configure a VirtIO-based Random Number Generator. 配置基于 VirtIO 的随机数生成器。max_bytes=</span><integer><span> (</span><em><span>default =</span></em><span> 1024) max_bytes=</span><integer><span>（</span><em><span>默认值 =</span></em><span> 1024）Maximum bytes of entropy allowed to get injected into the guest every </span><em><span>period</span></em><span> milliseconds. Prefer a lower value when using </span><em><span>/dev/random</span></em><span> as source. Use 0 to disable limiting (potentially dangerous!). 每个</span><em><span>周期</span></em><span>毫秒允许注入客户机的最大熵字节数。使用 </span><em><span>/dev/random</span></em><span> 作为源时，首选较低的值。使用 0 禁用限制（潜在危险！period=</span><integer><span> (</span><em><span>default =</span></em><span> 1000) period=</span><integer><span>（</span><em><span>默认值 =</span></em><span> 1000）Every </span><em><span>period</span></em><span> milliseconds the entropy-injection quota is reset, allowing the guest to retrieve another </span><em><span>max_bytes</span></em><span> of entropy. 每</span><em><span>周期</span></em><span>毫秒，熵注入配额就会重置，从而允许来宾检索另一个</span><em><span>熵max_bytes</span></em><span>。source=&lt;/dev/hwrng | /dev/random | /dev/urandom&gt;The file on the host to gather entropy from. In most cases </span><em><span>/dev/urandom</span></em><span> should be preferred over </span><em><span>/dev/random</span></em><span> to avoid entropy-starvation issues on the host. Using urandom does </span><strong><span>not</span></strong><span> decrease security in any meaningful way, as it’s still seeded from real entropy, and the bytes provided will most likely be mixed with real entropy on the guest as well. </span><em><span>/dev/hwrng</span></em><span> can be used to pass through a hardware RNG from the host. 主机上要从中收集熵的文件。在大多数情况下，</span><em><span>/dev/urandom</span></em><span> 应该优先于 </span><em><span>/dev/random</span></em><span>，以避免主机上的熵饥饿问题。使用 urandom </span><strong><span>不会</span></strong><span>以任何有意义的方式降低安全性，因为它仍然是从真实熵中播种的，并且提供的字节很可能也会与客户机上的真实熵混合在一起。</span><em><span>/dev/hwrng</span></em><span> 可用于从主机传递硬件 RNG。</span></p></li><li><p><span>sata[n]: [file=]</span><volume><span> [,aio=&lt;native|threads|io_uring&gt;] [,backup=&lt;1|0&gt;] [,bps=</span><bps><span>] [,bps_max_length=</span><seconds><span>] [,bps_rd=</span><bps><span>] [,bps_rd_max_length=</span><seconds><span>] [,bps_wr=</span><bps><span>] [,bps_wr_max_length=</span><seconds><span>] [,cache=</span><enum><span>] [,cyls=</span><integer><span>] [,detect_zeroes=&lt;1|0&gt;] [,discard=&lt;ignore|on&gt;] [,format=</span><enum><span>] [,heads=</span><integer><span>] [,iops=</span><iops><span>] [,iops_max=</span><iops><span>] [,iops_max_length=</span><seconds><span>] [,iops_rd=</span><iops><span>] [,iops_rd_max=</span><iops><span>] [,iops_rd_max_length=</span><seconds><span>] [,iops_wr=</span><iops><span>] [,iops_wr_max=</span><iops><span>] [,iops_wr_max_length=</span><seconds><span>] [,mbps=</span><mbps><span>] [,mbps_max=</span><mbps><span>] [,mbps_rd=</span><mbps><span>] [,mbps_rd_max=</span><mbps><span>] [,mbps_wr=</span><mbps><span>] [,mbps_wr_max=</span><mbps><span>] [,media=&lt;cdrom|disk&gt;] [,replicate=&lt;1|0&gt;] [,rerror=&lt;ignore|report|stop&gt;] [,secs=</span><integer><span>] [,serial=</span><serial><span>] [,shared=&lt;1|0&gt;] [,size=</span><DiskSize><span>] [,snapshot=&lt;1|0&gt;] [,ssd=&lt;1|0&gt;] [,trans=&lt;none|lba|auto&gt;] [,werror=</span><enum><span>] [,wwn=</span><wwn><span>] SATA[n]： [文件=] [，aio=] [，备份=&lt;1 |0&gt;] [，bps=] [，bps_max_length=] [，bps_rd=] [，bps_rd_max_length=] [，bps_wr=] [，bps_wr_max_length=] [，cache=] [，cyls=] [，detect_zeroes=&lt;1 |0&gt;] [，discard=] [，format=] [，heads=] [，iops=] [，iops_max=] [，iops_max_length=] [，iops_rd=] [，iops_rd_max=] [，iops_rd_max_length=] </span>[<span>，iops_wr=</span>][，iops_wr_max=]<span> [，iops_wr_max_length=] [，mbps=] [，mbps_max=] [，mbps_rd=] [，mbps_rd_max=] [，mbps_wr=] [，mbps_wr_max=] [，media=] [，replicate=&lt;1 |0&gt;] [，rerror=] [，secs=] [，serial=] [，shared=&lt;1 |0&gt;] [，size=] [，snapshot=&lt;1 |0&gt;] [，ssd&lt;1 |0&gt;=] [，trans=] [，werror=] [，wwn=]</span></p><p><span>Use volume as SATA hard disk or CD-ROM (n is 0 to 5). 使用卷作为 SATA 硬盘或 CD-ROM（n 为 0 到 5）。aio=&lt;io_uring | native | threads&gt; aio=&lt;io_uring | 本机 | 线程&gt;AIO type to use. 要使用的 AIO 类型。backup=</span><boolean><span> 备份=</span><boolean><span>Whether the drive should be included when making backups. 进行备份时是否应包含驱动器。bps=</span><bps><span>Maximum r/w speed in bytes per second. 最大 r/w 速度（以字节/秒为单位）。bps_max_length=</span><seconds><span> bps_max_length=&lt;秒&gt;Maximum length of I/O bursts in seconds. I/O 突发的最大长度（以秒为单位）。bps_rd=</span><bps><span>Maximum read speed in bytes per second. 最大读取速度（以字节/秒为单位）。bps_rd_max_length=</span><seconds><span> bps_rd_max_length=&lt;秒&gt;Maximum length of read I/O bursts in seconds. 读取 I/O 突发的最大长度（以秒为单位）。bps_wr=</span><bps><span>Maximum write speed in bytes per second. 最大写入速度（以字节/秒为单位）。bps_wr_max_length=</span><seconds><span> bps_wr_max_length=&lt;秒&gt;Maximum length of write I/O bursts in seconds. 写入 I/O 突发的最大长度（以秒为单位）。cache=&lt;directsync | none | unsafe | writeback | writethrough&gt; cache=&lt;directsync | none | 不安全 | writeback | writethrough&gt;The drive’s cache mode 驱动器的缓存模式cyls=</span><integer><span>Force the drive’s physical geometry to have a specific cylinder count. 强制驱动器的物理几何形状具有特定的柱面计数。detect_zeroes=</span><boolean><span>Controls whether to detect and try to optimize writes of zeroes. 控制是否检测和尝试优化零的写入。discard=&lt;ignore | on&gt;Controls whether to pass discard/trim requests to the underlying storage. 控制是否将丢弃/修剪请求传递到底层存储。file=</span><volume><span> 文件=&lt;卷&gt;The drive’s backing volume. 驱动器的后备卷。format=&lt;cloop | cow | qcow | qcow2 | qed | raw | vmdk&gt;The drive’s backing file’s data format. 驱动器的备份文件的数据格式。heads=</span><integer><span>Force the drive’s physical geometry to have a specific head count. 强制驱动器的物理几何形状具有特定的磁头数。iops=</span><iops><span>Maximum r/w I/O in operations per second. 每秒操作中的最大 r/w I/O。iops_max=</span><iops><span>Maximum unthrottled r/w I/O pool in operations per second. 每秒操作中最大未受限制的 r/w I/O 池。iops_max_length=</span><seconds><span> iops_max_length=&lt;秒&gt;Maximum length of I/O bursts in seconds. I/O 突发的最大长度（以秒为单位）。iops_rd=</span><iops><span>Maximum read I/O in operations per second. 每秒操作中的最大读取 I/O。iops_rd_max=</span><iops><span>Maximum unthrottled read I/O pool in operations per second. 每秒操作中的最大不受限制的读取 I/O 池。iops_rd_max_length=</span><seconds><span> iops_rd_max_length=&lt;秒&gt;Maximum length of read I/O bursts in seconds. 读取 I/O 突发的最大长度（以秒为单位）。iops_wr=</span><iops><span>Maximum write I/O in operations per second. 每秒操作中的最大写入 I/O。iops_wr_max=</span><iops><span>Maximum unthrottled write I/O pool in operations per second. 每秒操作中的最大未限制写入 I/O 池。iops_wr_max_length=</span><seconds><span> iops_wr_max_length=&lt;秒&gt;Maximum length of write I/O bursts in seconds. 写入 I/O 突发的最大长度（以秒为单位）。mbps=</span><mbps><span>Maximum r/w speed in megabytes per second. 最大 r/w 速度（以兆字节/秒为单位）。mbps_max=</span><mbps><span>Maximum unthrottled r/w pool in megabytes per second. 最大未限制的 r/w 池（以兆字节/秒为单位）。mbps_rd=</span><mbps><span>Maximum read speed in megabytes per second. 最大读取速度（以兆字节/秒为单位）。mbps_rd_max=</span><mbps><span>Maximum unthrottled read pool in megabytes per second. 最大未限制读取池（以兆字节/秒为单位）。mbps_wr=</span><mbps><span>Maximum write speed in megabytes per second. 最大写入速度（以兆字节/秒为单位）。mbps_wr_max=</span><mbps><span>Maximum unthrottled write pool in megabytes per second. 最大未限制写入池（以兆字节/秒为单位）。media=&lt;cdrom | disk&gt; (</span><em><span>default =</span></em><span> disk) media=&lt;cdrom | disk&gt;（</span><em><span>默认值 =</span></em><span> 磁盘）The drive’s media type. 驱动器的介质类型。replicate=</span><boolean><span> (</span><em><span>default =</span></em><span> 1) replicate=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）Whether the drive should considered for replication jobs. 是否应考虑将驱动器用于复制作业。rerror=&lt;ignore | report | stop&gt; rerror=&lt;ignore | 报告 | stop&gt;Read error action. 读取错误操作。secs=</span><integer><span> 秒=</span><integer><span>Force the drive’s physical geometry to have a specific sector count. 强制驱动器的物理几何图形具有特定的扇区计数。serial=</span><serial><span> 序列号=&lt;序列号&gt;The drive’s reported serial number, url-encoded, up to 20 bytes long. 驱动器报告的序列号，URL 编码，最长 20 个字节。shared=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) shared=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Mark this locally-managed volume as available on all nodes. 将此本地管理的卷标记为在所有节点上都可用。</span><img src="data:image/png;base64,%0A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%0A/F/lgJiyQFHragAAAABJRU5ErkJggg==" referrerpolicy="no-referrer" alt="Warning"><span>This option does not share the volume automatically, it assumes it is shared already! 此选项不会自动共享卷，而是假定它已经共享！size=</span><DiskSize><span> 大小=</span><iskSize><span>Disk size. This is purely informational and has no effect. 磁盘大小。这纯粹是信息性的，没有任何效果。snapshot=</span><boolean><span> 快照=</span><boolean><span>Controls qemu’s snapshot mode feature. If activated, changes made to the disk are temporary and will be discarded when the VM is shutdown. 控制 qemu 的快照模式功能。如果激活，对磁盘所做的更改是临时的，并且在 VM 关闭时将被丢弃。ssd=</span><boolean><span>Whether to expose this drive as an SSD, rather than a rotational hard disk. 是否将此驱动器公开为 SSD，而不是旋转硬盘。trans=&lt;auto | lba | none&gt;Force disk geometry bios translation mode. 强制磁盘几何 bios 转换模式。werror=&lt;enospc | ignore | report | stop&gt; werror=&lt;enospc | 忽略 | 报告 | stop&gt;Write error action. 写入错误操作。wwn=</span><wwn><span>The drive’s worldwide name, encoded as 16 bytes hex string, prefixed by </span><em><span>0x</span></em><span>. 驱动器的全球名称，编码为 16 字节十六进制字符串，以 </span><em><span>0x</span></em><span> 为前缀。</span></p></li><li><p><span>scsi[n]: [file=]</span><volume><span> [,aio=&lt;native|threads|io_uring&gt;] [,backup=&lt;1|0&gt;] [,bps=</span><bps><span>] [,bps_max_length=</span><seconds><span>] [,bps_rd=</span><bps><span>] [,bps_rd_max_length=</span><seconds><span>] [,bps_wr=</span><bps><span>] [,bps_wr_max_length=</span><seconds><span>] [,cache=</span><enum><span>] [,cyls=</span><integer><span>] [,detect_zeroes=&lt;1|0&gt;] [,discard=&lt;ignore|on&gt;] [,format=</span><enum><span>] [,heads=</span><integer><span>] [,iops=</span><iops><span>] [,iops_max=</span><iops><span>] [,iops_max_length=</span><seconds><span>] [,iops_rd=</span><iops><span>] [,iops_rd_max=</span><iops><span>] [,iops_rd_max_length=</span><seconds><span>] [,iops_wr=</span><iops><span>] [,iops_wr_max=</span><iops><span>] [,iops_wr_max_length=</span><seconds><span>] [,iothread=&lt;1|0&gt;] [,mbps=</span><mbps><span>] [,mbps_max=</span><mbps><span>] [,mbps_rd=</span><mbps><span>] [,mbps_rd_max=</span><mbps><span>] [,mbps_wr=</span><mbps><span>] [,mbps_wr_max=</span><mbps><span>] [,media=&lt;cdrom|disk&gt;] [,product=</span><product><span>] [,queues=</span><integer><span>] [,replicate=&lt;1|0&gt;] [,rerror=&lt;ignore|report|stop&gt;] [,ro=&lt;1|0&gt;] [,scsiblock=&lt;1|0&gt;] [,secs=</span><integer><span>] [,serial=</span><serial><span>] [,shared=&lt;1|0&gt;] [,size=</span><DiskSize><span>] [,snapshot=&lt;1|0&gt;] [,ssd=&lt;1|0&gt;] [,trans=&lt;none|lba|auto&gt;] [,vendor=</span><vendor><span>] [,werror=</span><enum><span>] [,wwn=</span><wwn><span>] SCSI[n]： [文件=] [，aio=] [，备份=&lt;1 |0&gt;] [，bps=] [，bps_max_length=] [，bps_rd=] [，bps_rd_max_length=] [，bps_wr=] [，bps_wr_max_length=] [，cache=] [，cyls=] [，detect_zeroes=&lt;1 |0&gt;] [，discard=] [，format=] [，heads=] [，iops=] [，iops_max=] [，iops_max_length=] [，iops_rd=] [，iops_rd_max=] [，iops_rd_max_length=] </span>[<span>，iops_wr=</span>][，iops_wr_max=]<span> [，iops_wr_max_length=] [，iothread=&lt;1 |0&gt;] [，mbps=] [，mbps_max=] [，mbps_rd=] [，mbps_rd_max=] [，mbps_wr=] [，mbps_wr_max=] [，media=] [，product=] [，queues=] [，replicate&lt;1 |0&gt;=] [，rerror=] [，ro=&lt;1 |0&gt;] [，scsiblock=&lt;1 |0&gt;] [，secs=] [，serial=] [，shared=&lt;1 |0&gt;] [，size=] [，snapshot=&lt;1 |0&gt;] [，ssd=&lt;1 |0&gt;] [，trans=] [，vendor=] [，werror=] [，wwn=]</span></p><p><span>Use volume as SCSI hard disk or CD-ROM (n is 0 to 30). 使用卷作为 SCSI 硬盘或 CD-ROM（n 为 0 到 30）。aio=&lt;io_uring | native | threads&gt; aio=&lt;io_uring | 本机 | 线程&gt;AIO type to use. 要使用的 AIO 类型。backup=</span><boolean><span> 备份=</span><boolean><span>Whether the drive should be included when making backups. 进行备份时是否应包含驱动器。bps=</span><bps><span>Maximum r/w speed in bytes per second. 最大 r/w 速度（以字节/秒为单位）。bps_max_length=</span><seconds><span> bps_max_length=&lt;秒&gt;Maximum length of I/O bursts in seconds. I/O 突发的最大长度（以秒为单位）。bps_rd=</span><bps><span>Maximum read speed in bytes per second. 最大读取速度（以字节/秒为单位）。bps_rd_max_length=</span><seconds><span> bps_rd_max_length=&lt;秒&gt;Maximum length of read I/O bursts in seconds. 读取 I/O 突发的最大长度（以秒为单位）。bps_wr=</span><bps><span>Maximum write speed in bytes per second. 最大写入速度（以字节/秒为单位）。bps_wr_max_length=</span><seconds><span> bps_wr_max_length=&lt;秒&gt;Maximum length of write I/O bursts in seconds. 写入 I/O 突发的最大长度（以秒为单位）。cache=&lt;directsync | none | unsafe | writeback | writethrough&gt; cache=&lt;directsync | none | 不安全 | writeback | writethrough&gt;The drive’s cache mode 驱动器的缓存模式cyls=</span><integer><span>Force the drive’s physical geometry to have a specific cylinder count. 强制驱动器的物理几何形状具有特定的柱面计数。detect_zeroes=</span><boolean><span>Controls whether to detect and try to optimize writes of zeroes. 控制是否检测和尝试优化零的写入。discard=&lt;ignore | on&gt;Controls whether to pass discard/trim requests to the underlying storage. 控制是否将丢弃/修剪请求传递到底层存储。file=</span><volume><span> 文件=&lt;卷&gt;The drive’s backing volume. 驱动器的后备卷。format=&lt;cloop | cow | qcow | qcow2 | qed | raw | vmdk&gt;The drive’s backing file’s data format. 驱动器的备份文件的数据格式。heads=</span><integer><span>Force the drive’s physical geometry to have a specific head count. 强制驱动器的物理几何形状具有特定的磁头数。iops=</span><iops><span>Maximum r/w I/O in operations per second. 每秒操作中的最大 r/w I/O。iops_max=</span><iops><span>Maximum unthrottled r/w I/O pool in operations per second. 每秒操作中最大未受限制的 r/w I/O 池。iops_max_length=</span><seconds><span> iops_max_length=&lt;秒&gt;Maximum length of I/O bursts in seconds. I/O 突发的最大长度（以秒为单位）。iops_rd=</span><iops><span>Maximum read I/O in operations per second. 每秒操作中的最大读取 I/O。iops_rd_max=</span><iops><span>Maximum unthrottled read I/O pool in operations per second. 每秒操作中的最大不受限制的读取 I/O 池。iops_rd_max_length=</span><seconds><span> iops_rd_max_length=&lt;秒&gt;Maximum length of read I/O bursts in seconds. 读取 I/O 突发的最大长度（以秒为单位）。iops_wr=</span><iops><span>Maximum write I/O in operations per second. 每秒操作中的最大写入 I/O。iops_wr_max=</span><iops><span>Maximum unthrottled write I/O pool in operations per second. 每秒操作中的最大未限制写入 I/O 池。iops_wr_max_length=</span><seconds><span> iops_wr_max_length=&lt;秒&gt;Maximum length of write I/O bursts in seconds. 写入 I/O 突发的最大长度（以秒为单位）。iothread=</span><boolean><span>Whether to use iothreads for this drive 是否对此驱动器使用 iothreadsmbps=</span><mbps><span>Maximum r/w speed in megabytes per second. 最大 r/w 速度（以兆字节/秒为单位）。mbps_max=</span><mbps><span>Maximum unthrottled r/w pool in megabytes per second. 最大未限制的 r/w 池（以兆字节/秒为单位）。mbps_rd=</span><mbps><span>Maximum read speed in megabytes per second. 最大读取速度（以兆字节/秒为单位）。mbps_rd_max=</span><mbps><span>Maximum unthrottled read pool in megabytes per second. 最大未限制读取池（以兆字节/秒为单位）。mbps_wr=</span><mbps><span>Maximum write speed in megabytes per second. 最大写入速度（以兆字节/秒为单位）。mbps_wr_max=</span><mbps><span>Maximum unthrottled write pool in megabytes per second. 最大未限制写入池（以兆字节/秒为单位）。media=&lt;cdrom | disk&gt; (</span><em><span>default =</span></em><span> disk) media=&lt;cdrom | disk&gt;（</span><em><span>默认值 =</span></em><span> 磁盘）The drive’s media type. 驱动器的介质类型。product=</span><product><span> 产品=&lt;产品&gt;The drive’s product name, up to 16 bytes long. 驱动器的产品名称，长度不超过 16 个字节。queues=</span><integer><span> (2 - N) queues=</span><integer><span> （2 - N）Number of queues. 队列数。replicate=</span><boolean><span> (</span><em><span>default =</span></em><span> 1) replicate=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）Whether the drive should considered for replication jobs. 是否应考虑将驱动器用于复制作业。rerror=&lt;ignore | report | stop&gt; rerror=&lt;ignore | 报告 | stop&gt;Read error action. 读取错误操作。ro=</span><boolean><span>Whether the drive is read-only. 驱动器是否为只读。scsiblock=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) scsiblock=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）whether to use scsi-block for full passthrough of host block device 是否使用 SCSI-Block 对主机块设备进行完全直通</span><img src="data:image/png;base64,%0A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%0A/F/lgJiyQFHragAAAABJRU5ErkJggg==" referrerpolicy="no-referrer" alt="Warning"><span>can lead to I/O errors in combination with low memory or high memory fragmentation on host 可能导致 I/O 错误与主机上的内存不足或内存碎片不足相结合secs=</span><integer><span> 秒=</span><integer><span>Force the drive’s physical geometry to have a specific sector count. 强制驱动器的物理几何图形具有特定的扇区计数。serial=</span><serial><span> 序列号=&lt;序列号&gt;The drive’s reported serial number, url-encoded, up to 20 bytes long. 驱动器报告的序列号，URL 编码，最长 20 个字节。shared=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) shared=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Mark this locally-managed volume as available on all nodes. 将此本地管理的卷标记为在所有节点上都可用。</span><img src="data:image/png;base64,%0A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%0A/F/lgJiyQFHragAAAABJRU5ErkJggg==" referrerpolicy="no-referrer" alt="Warning"><span>This option does not share the volume automatically, it assumes it is shared already! 此选项不会自动共享卷，而是假定它已经共享！size=</span><DiskSize><span> 大小=</span><iskSize><span>Disk size. This is purely informational and has no effect. 磁盘大小。这纯粹是信息性的，没有任何效果。snapshot=</span><boolean><span> 快照=</span><boolean><span>Controls qemu’s snapshot mode feature. If activated, changes made to the disk are temporary and will be discarded when the VM is shutdown. 控制 qemu 的快照模式功能。如果激活，对磁盘所做的更改是临时的，并且在 VM 关闭时将被丢弃。ssd=</span><boolean><span>Whether to expose this drive as an SSD, rather than a rotational hard disk. 是否将此驱动器公开为 SSD，而不是旋转硬盘。trans=&lt;auto | lba | none&gt;Force disk geometry bios translation mode. 强制磁盘几何 bios 转换模式。vendor=</span><vendor><span> 供应商 = &lt;供应商&gt;The drive’s vendor name, up to 8 bytes long. 驱动器的供应商名称，长度不超过 8 个字节。werror=&lt;enospc | ignore | report | stop&gt; werror=&lt;enospc | 忽略 | 报告 | stop&gt;Write error action. 写入错误操作。wwn=</span><wwn><span>The drive’s worldwide name, encoded as 16 bytes hex string, prefixed by </span><em><span>0x</span></em><span>. 驱动器的全球名称，编码为 16 字节十六进制字符串，以 </span><em><span>0x</span></em><span> 为前缀。</span></p></li><li><p><span>scsihw: &lt;lsi | lsi53c810 | megasas | pvscsi | virtio-scsi-pci | virtio-scsi-single&gt; (</span><em><span>default =</span></em><span> lsi) scsihw： &lt;lsi | lsi53c810 | megasas | pvscsi | virtio-scsi-pci | virtio-scsi-single&gt;（</span><em><span>默认值 =</span></em><span> lsi）</span></p><p><span>SCSI controller model SCSI 控制器型号</span></p></li><li><p><span>searchdomain: </span><string><span> 搜索域： </span><string></p><p><span>cloud-init: Sets DNS search domains for a container. Create will automatically use the setting from the host if neither searchdomain nor nameserver are set. cloud-init：设置容器的DNS搜索域。如果 searchdomain 和 nameserver 均未设置，Create 将自动使用主机的设置。</span></p></li><li><p><span>serial[n]: (/dev/.+|socket) serial[n]： （/dev/.+|套接字）</span></p><p><span>Create a serial device inside the VM (n is 0 to 3), and pass through a host serial device (i.e. /dev/ttyS0), or create a unix socket on the host side (use </span><em><span>qm terminal</span></em><span> to open a terminal connection). 在虚拟机内部创建一个串口设备（n 为 0 到 3），并直通一个主机串口设备（即 /dev/ttyS0），或者在主机侧创建一个 unix 套接字（使用 </span><em><span>qm terminal</span></em><span> 打开一个终端连接）。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"><span>If you pass through a host serial device, it is no longer possible to migrate such machines - use with special care. 如果您通过主机串行设备，则无法再迁移此类计算机 - 请特别小心使用。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Caution"><span>Experimental! User reported problems with this option. 实验的！用户报告了使用此选项的问题。</span></p></li><li><p><span>shares: </span><integer><span> (0 - 50000) (</span><em><span>default =</span></em><span> 1000) shares： </span><integer><span> （0 - 50000） （</span><em><span>default =</span></em><span> 1000）</span></p><p><span>Amount of memory shares for auto-ballooning. The larger the number is, the more memory this VM gets. Number is relative to weights of all other running VMs. Using zero disables auto-ballooning. Auto-ballooning is done by pvestatd. 用于自动膨胀的内存份额量。数字越大，此 VM 获得的内存就越多。该数字与所有其他正在运行的 VM 的权重相关。使用零将禁用自动膨胀。自动气球是由 pvestatd 完成的。</span></p></li><li><p><span>smbios1: [base64=&lt;1|0&gt;] [,family=</span><Base64 encoded string><span>] [,manufacturer=</span><Base64 encoded string><span>] [,product=</span><Base64 encoded string><span>] [,serial=</span><Base64 encoded string><span>] [,sku=</span><Base64 encoded string><span>] [,uuid=</span><UUID><span>] [,version=</span><Base64 encoded string><span>] smbios1： [base64=&lt;1|0&gt;] [，family=&lt;Base64 编码字符串&gt;] [，manufacturer=&lt;Base64 编码字符串&gt;] [，product=&lt;Base64 编码字符串&gt;] [，serial=&lt;Base64 编码字符串&gt;] [，sku=&lt;Base64 编码字符串&gt;] [，uuid=</span><UUID><span>] [，version=&lt;Base64 编码字符串&gt;]</span></p><p><span>Specify SMBIOS type 1 fields. 指定 SMBIOS 类型 1 字段。base64=</span><boolean><span>Flag to indicate that the SMBIOS values are base64 encoded 指示 SMBIOS 值是 base64 编码的标志family=</span><Base64 encoded string><span> family=&lt;Base64 编码字符串&gt;Set SMBIOS1 family string. 设置SMBIOS1系列字符串。manufacturer=</span><Base64 encoded string><span> manufacturer=&lt;Base64 编码字符串&gt;Set SMBIOS1 manufacturer. 设置SMBIOS1制造商。product=</span><Base64 encoded string><span> product=&lt;Base64 编码字符串&gt;Set SMBIOS1 product ID. 设置SMBIOS1产品 ID。serial=</span><Base64 encoded string><span> serial=&lt;Base64 编码字符串&gt;Set SMBIOS1 serial number. 设置SMBIOS1序列号。sku=</span><Base64 encoded string><span> sku=&lt;Base64 编码字符串&gt;Set SMBIOS1 SKU string. 设置SMBIOS1 SKU 字符串。uuid=</span><UUID><span>Set SMBIOS1 UUID. 设置SMBIOS1 UUID。version=</span><Base64 encoded string><span> version=&lt;Base64 编码字符串&gt;Set SMBIOS1 version. 设置SMBIOS1版本。</span></p></li><li><p><span>smp: </span><integer><span> (1 - N) (</span><em><span>default =</span></em><span> 1) smp： </span><integer><span> （1 - N） （</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>The number of CPUs. Please use option -sockets instead. CPU 的数量。请改用选项 -sockets。</span></p></li><li><p><span>sockets: </span><integer><span> (1 - N) (</span><em><span>default =</span></em><span> 1) 套接字： </span><integer><span> （1 - N） （</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>The number of CPU sockets. CPU 插槽的数量。</span></p></li><li><p><span>spice_enhancements: [foldersharing=&lt;1|0&gt;] [,videostreaming=&lt;off|all|filter&gt;] spice_enhancements： [foldersharing=&lt;1|0&gt;] [，videostreaming=&lt;off|all|filter&gt;]</span></p><p><span>Configure additional enhancements for SPICE. 配置 SPICE 的其他增强功能。foldersharing=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) foldersharing=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Enable folder sharing via SPICE. Needs Spice-WebDAV daemon installed in the VM. 通过 SPICE 启用文件夹共享。需要在 VM 中安装 Spice-WebDAV 守护程序。videostreaming=&lt;all | filter | off&gt; (</span><em><span>default =</span></em><span> off) videostreaming=&lt;all | filter | off&gt;（</span><em><span>默认值 =</span></em><span> off）Enable video streaming. Uses compression for detected video streams. 启用视频流。对检测到的视频流使用压缩。</span></p></li><li><p><span>sshkeys: </span><string><span> sshkeys： </span><string></p><p><span>cloud-init: Setup public SSH keys (one key per line, OpenSSH format). cloud-init：设置公有 SSH 密钥（每行一个密钥，OpenSSH 格式）。</span></p></li><li><p><span>startdate: (now | YYYY-MM-DD | YYYY-MM-DDTHH:MM:SS) (</span><em><span>default =</span></em><span> now) 开始日期：（现在 |YYYY-MM-DD |YYYY-MM-DDTHH：MM：SS） </span><em><span>（默认值 =</span></em><span> 现在）</span></p><p><span>Set the initial date of the real time clock. Valid format for date are:&#39;now&#39; or </span><em><span>2006-06-17T16:01:21</span></em><span> or </span><em><span>2006-06-17</span></em><span>. 设置实时时钟的初始日期。日期的有效格式为：“现在”或 </span><em><span>2006-06-17T16：01：21</span></em><span> 或 </span><em><span>2006-06-17</span></em><span>。</span></p></li><li><p><span>startup: </span><code>[[order=]\d+] [,up=\d+] [,down=\d+]</code><span> 启动： &#39;[[order=]\d+] [，up=\d+] [，down=\d+] &#39;</span></p><p><span>Startup and shutdown behavior. Order is a non-negative number defining the general startup order. Shutdown in done with reverse ordering. Additionally you can set the </span><em><span>up</span></em><span> or </span><em><span>down</span></em><span> delay in seconds, which specifies a delay to wait before the next VM is started or stopped. 启动和关闭行为。Order 是一个非负数，用于定义一般启动顺序。通过反向排序完成关机。此外，还可以设置</span><em><span>启动</span></em><span>或</span><em><span>关闭</span></em><span>延迟（以秒为单位），这指定了在启动或停止下一个 VM 之前要等待的延迟。</span></p></li><li><p><span>tablet: </span><boolean><span> (</span><em><span>default =</span></em><span> 1) tablet： </span><boolean><span> （</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>Enable/disable the USB tablet device. This device is usually needed to allow absolute mouse positioning with VNC. Else the mouse runs out of sync with normal VNC clients. If you’re running lots of console-only guests on one host, you may consider disabling this to save some context switches. This is turned off by default if you use spice (qm set </span><vmid><span> --vga qxl). 启用/禁用 USB 平板电脑设备。通常需要此设备来允许使用 VNC 对鼠标进行绝对定位。否则，鼠标将与正常的 VNC 客户端不同步。如果您在一台主机上运行大量仅限控制台的来宾，则可以考虑禁用此功能以节省一些上下文切换。如果您使用 spice （qm set </span><vmid><span> --vga qxl），则默认情况下会关闭此功能。</span></p></li><li><p><span>tags: </span><string><span> 标签： </span><string></p><p><span>Tags of the VM. This is only meta information. VM 的标记。这只是元信息。</span></p></li><li><p><span>tdf: </span><boolean><span> (</span><em><span>default =</span></em><span> 0) tdf： </span><boolean><span> （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Enable/disable time drift fix. 启用/禁用时间漂移修复。</span></p></li><li><p><span>template: </span><boolean><span> (</span><em><span>default =</span></em><span> 0) 模板： </span><boolean><span> （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Enable/disable Template. 启用/禁用模板。</span></p></li><li><p><span>tpmstate0: [file=]</span><volume><span> [,size=</span><DiskSize><span>] [,version=&lt;v1.2|v2.0&gt;] tpmstate0： [file=]</span><volume><span> [，size=</span><DiskSize><span>] [，version=&lt;v1.2|v2.0&gt;]</span></p><p><span>Configure a Disk for storing TPM state. The format is fixed to </span><em><span>raw</span></em><span>. 配置用于存储 TPM 状态的磁盘。格式固定为</span><em><span>原始</span></em><span>格式。file=</span><volume><span> 文件=&lt;卷&gt;The drive’s backing volume. 驱动器的后备卷。size=</span><DiskSize><span> 大小=</span><iskSize><span>Disk size. This is purely informational and has no effect. 磁盘大小。这纯粹是信息性的，没有任何效果。version=&lt;v1.2 | v2.0&gt; (</span><em><span>default =</span></em><span> v1.2) version=&lt;v1.2 | v2.0&gt;（</span><em><span>默认值 =</span></em><span> v1.2）The TPM interface version. v2.0 is newer and should be preferred. Note that this cannot be changed later on. TPM 接口版本。v2.0 较新，应优先使用。请注意，以后无法更改此设置。</span></p></li><li><p><span>unused[n]: [file=]</span><volume><span> 未使用[n]： [文件=]&lt;体积&gt;</span></p><p><span>Reference to unused volumes. This is used internally, and should not be modified manually. 对未使用卷的引用。这是在内部使用的，不应手动修改。file=</span><volume><span> 文件=&lt;卷&gt;The drive’s backing volume. 驱动器的后备卷。</span></p></li><li><p><span>usb[n]: [[host=]&lt;HOSTUSBDEVICE|spice&gt;] [,mapping=</span><mapping-id><span>] [,usb3=&lt;1|0&gt;] usb[n]： [[host=]&lt;HOSTUSBDEVICE|spice&gt;] [，mapping=</span><mapping-id><span>] [，usb3=&lt;1|0&gt;]</span></p><p><span>Configure an USB device (n is 0 to 4, for machine version &gt;= 7.1 and ostype l26 or windows &gt; 7, n can be up to 14). 配置 USB 设备（n 为 0 到 4，对于计算机版本 &gt;= 7.1 和 ostype l26 或 Windows &gt; 7，n 最多为 14）。host=&lt;HOSTUSBDEVICE|spice&gt;The Host USB device or port or the value </span><em><span>spice</span></em><span>. HOSTUSBDEVICE syntax is: 主机 USB 设备或端口或值 </span><em><span>spice</span></em><span>。HOSTUSBDEVICE 语法为：</span><code>&#39;bus-port(.port)*&#39; (decimal numbers) or &#39;vendor_id:product_id&#39; (hexadeciaml numbers) or &#39;spice&#39;</code><span>You can use the </span><em><span>lsusb -t</span></em><span> command to list existing usb devices. 您可以使用 </span><em><span>lsusb -t</span></em><span> 命令列出现有的 USB 设备。</span><img src="data:image/png;base64,%0A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" referrerpolicy="no-referrer" alt="Note"><span>This option allows direct access to host hardware. So it is no longer possible to migrate such machines - use with special care. 此选项允许直接访问主机硬件。因此，无法再迁移此类机器 - 请特别小心使用。The value </span><em><span>spice</span></em><span> can be used to add a usb redirection devices for spice. 值 </span><em><span>spice</span></em><span> 可用于为 spice 添加 usb 重定向设备。Either this or the </span><em><span>mapping</span></em><span> key must be set. 必须设置此键或</span><em><span>映射</span></em><span>键。mapping=</span><mapping-id><span> 映射=&lt;映射-id&gt;The ID of a cluster wide mapping. Either this or the default-key </span><em><span>host</span></em><span> must be set. 集群范围映射的 ID。必须设置此主机或默认键</span><em><span>主机</span></em><span>。usb3=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) usb3=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Specifies whether if given host option is a USB3 device or port. For modern guests (machine version &gt;= 7.1 and ostype l26 and windows &gt; 7), this flag is irrelevant (all devices are plugged into a xhci controller). 指定如果给定的主机选项是 USB3 设备还是端口。对于现代客户机 （计算机版本 &gt;= 7.1 和 ostype l26 和 Windows &gt; 7） ，此标志无关紧要 （所有设备都插入到 xhci 控制器） 。</span></p></li><li><p><span>vcpus: </span><integer><span> (1 - N) (</span><em><span>default =</span></em><span> 0) vcpus： </span><integer><span> （1 - N） （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Number of hotplugged vcpus. 热插拔的 vCPU 数量。</span></p></li><li><p><span>vga: [[type=]</span><enum><span>] [,clipboard=</span><vnc><span>] [,memory=</span><integer><span>] vga： [[type=]</span><enum><span>] [，clipboard=</span><vnc><span>] [，memory=</span><integer><span>]</span></p><p><span>Configure the VGA Hardware. If you want to use high resolution modes (&gt;= 1280x1024x16) you may need to increase the vga memory option. Since QEMU 2.9 the default VGA display type is </span><em><span>std</span></em><span> for all OS types besides some Windows versions (XP and older) which use </span><em><span>cirrus</span></em><span>. The </span><em><span>qxl</span></em><span> option enables the SPICE display server. For win* OS you can select how many independent displays you want, Linux guests can add displays them self. You can also run without any graphic card, using a serial device as terminal. 配置 VGA 硬件。如果要使用高分辨率模式 （&gt;= 1280x1024x16），则可能需要增加 vga 内存选项。从 QEMU 2.9 开始，除了一些使用 </span><em><span>cirrus</span></em><span> 的 Windows 版本（XP 及更早版本）外，所有操作系统类型的默认 VGA 显示类型都是 </span><em><span>std</span></em><span>。</span><em><span>qxl</span></em><span> 选项启用 SPICE 显示服务器。对于 win* 操作系统，您可以选择所需的独立显示器数量，Linux 客户可以自行添加显示器。您也可以在没有任何显卡的情况下运行，使用串行设备作为终端。clipboard=</span><vnc><span> 剪贴板=</span><vnc><span>Enable a specific clipboard. If not set, depending on the display type the SPICE one will be added. Migration with VNC clipboard is not yet supported! 启用特定剪贴板。如果未设置，根据显示类型，将添加 SPICE 一个。尚不支持使用 VNC 剪贴板进行迁移！memory=</span><integer><span> (4 - 512) 内存=</span><integer><span> （4 - 512）Sets the VGA memory (in MiB). Has no effect with serial display. 设置 VGA 内存（以 MiB 为单位）。对串行显示没有影响。type=&lt;cirrus | none | qxl | qxl2 | qxl3 | qxl4 | serial0 | serial1 | serial2 | serial3 | std | virtio | virtio-gl | vmware&gt; (</span><em><span>default =</span></em><span> std) type=&lt;cirrus | none | qxl | qxl2 | qxl3 | qxl4 | serial0 | serial1 | serial2 | serial3 | std | virtio | virtio-gl | vmware&gt;（</span><em><span>默认值 =</span></em><span> std）Select the VGA type. Using type </span><em><span>cirrus</span></em><span> is not recommended. 选择 VGA 类型。不建议使用</span><em><span>卷云</span></em><span>类型。</span></p></li><li><p><span>virtio[n]: [file=]</span><volume><span> [,aio=&lt;native|threads|io_uring&gt;] [,backup=&lt;1|0&gt;] [,bps=</span><bps><span>] [,bps_max_length=</span><seconds><span>] [,bps_rd=</span><bps><span>] [,bps_rd_max_length=</span><seconds><span>] [,bps_wr=</span><bps><span>] [,bps_wr_max_length=</span><seconds><span>] [,cache=</span><enum><span>] [,cyls=</span><integer><span>] [,detect_zeroes=&lt;1|0&gt;] [,discard=&lt;ignore|on&gt;] [,format=</span><enum><span>] [,heads=</span><integer><span>] [,iops=</span><iops><span>] [,iops_max=</span><iops><span>] [,iops_max_length=</span><seconds><span>] [,iops_rd=</span><iops><span>] [,iops_rd_max=</span><iops><span>] [,iops_rd_max_length=</span><seconds><span>] [,iops_wr=</span><iops><span>] [,iops_wr_max=</span><iops><span>] [,iops_wr_max_length=</span><seconds><span>] [,iothread=&lt;1|0&gt;] [,mbps=</span><mbps><span>] [,mbps_max=</span><mbps><span>] [,mbps_rd=</span><mbps><span>] [,mbps_rd_max=</span><mbps><span>] [,mbps_wr=</span><mbps><span>] [,mbps_wr_max=</span><mbps><span>] [,media=&lt;cdrom|disk&gt;] [,replicate=&lt;1|0&gt;] [,rerror=&lt;ignore|report|stop&gt;] [,ro=&lt;1|0&gt;] [,secs=</span><integer><span>] [,serial=</span><serial><span>] [,shared=&lt;1|0&gt;] [,size=</span><DiskSize><span>] [,snapshot=&lt;1|0&gt;] [,trans=&lt;none|lba|auto&gt;] [,werror=</span><enum><span>] virtio[n]： [file=] [，aio=] [，backup=&lt;1 |0&gt;] [，bps=] [，bps_max_length=] [，bps_rd=] [，bps_rd_max_length=] [，bps_wr=] [，bps_wr_max_length=] [，cache=] [，cyls=] [，detect_zeroes=&lt;1 |0&gt;] [，discard=] [，format=] [，heads=] [，iops=] [，iops_max=] [，iops_max_length=] [，iops_rd=] [，iops_rd_max=] [，iops_rd_max_length=] [，iops_wr=] [，iops_wr_max=] [，iops_wr_max_length=] [，iothread&lt;1 |0&gt;=] [，mbps=] [，mbps_max=] [，mbps_rd=] [，mbps_rd_max=] [，mbps_wr=] [，mbps_wr_max=] [，media=] [，replicate=&lt;1 |0&gt;] [，rerror=] [，ro=&lt;1 |0&gt;] [，secs=] [，serial=] [，shared=&lt;1 |0&gt;] [，size=] [，snapshot=&lt;1 |0&gt;] [，trans=] [，werror=]</span></p><p><span>Use volume as VIRTIO hard disk (n is 0 to 15). 使用卷作为 VIRTIO 硬盘（n 为 0 到 15）。aio=&lt;io_uring | native | threads&gt; aio=&lt;io_uring | 本机 | 线程&gt;AIO type to use. 要使用的 AIO 类型。backup=</span><boolean><span> 备份=</span><boolean><span>Whether the drive should be included when making backups. 进行备份时是否应包含驱动器。bps=</span><bps><span>Maximum r/w speed in bytes per second. 最大 r/w 速度（以字节/秒为单位）。bps_max_length=</span><seconds><span> bps_max_length=&lt;秒&gt;Maximum length of I/O bursts in seconds. I/O 突发的最大长度（以秒为单位）。bps_rd=</span><bps><span>Maximum read speed in bytes per second. 最大读取速度（以字节/秒为单位）。bps_rd_max_length=</span><seconds><span> bps_rd_max_length=&lt;秒&gt;Maximum length of read I/O bursts in seconds. 读取 I/O 突发的最大长度（以秒为单位）。bps_wr=</span><bps><span>Maximum write speed in bytes per second. 最大写入速度（以字节/秒为单位）。bps_wr_max_length=</span><seconds><span> bps_wr_max_length=&lt;秒&gt;Maximum length of write I/O bursts in seconds. 写入 I/O 突发的最大长度（以秒为单位）。cache=&lt;directsync | none | unsafe | writeback | writethrough&gt; cache=&lt;directsync | none | 不安全 | writeback | writethrough&gt;The drive’s cache mode 驱动器的缓存模式cyls=</span><integer><span>Force the drive’s physical geometry to have a specific cylinder count. 强制驱动器的物理几何形状具有特定的柱面计数。detect_zeroes=</span><boolean><span>Controls whether to detect and try to optimize writes of zeroes. 控制是否检测和尝试优化零的写入。discard=&lt;ignore | on&gt;Controls whether to pass discard/trim requests to the underlying storage. 控制是否将丢弃/修剪请求传递到底层存储。file=</span><volume><span> 文件=&lt;卷&gt;The drive’s backing volume. 驱动器的后备卷。format=&lt;cloop | cow | qcow | qcow2 | qed | raw | vmdk&gt;The drive’s backing file’s data format. 驱动器的备份文件的数据格式。heads=</span><integer><span>Force the drive’s physical geometry to have a specific head count. 强制驱动器的物理几何形状具有特定的磁头数。iops=</span><iops><span>Maximum r/w I/O in operations per second. 每秒操作中的最大 r/w I/O。iops_max=</span><iops><span>Maximum unthrottled r/w I/O pool in operations per second. 每秒操作中最大未受限制的 r/w I/O 池。iops_max_length=</span><seconds><span> iops_max_length=&lt;秒&gt;Maximum length of I/O bursts in seconds. I/O 突发的最大长度（以秒为单位）。iops_rd=</span><iops><span>Maximum read I/O in operations per second. 每秒操作中的最大读取 I/O。iops_rd_max=</span><iops><span>Maximum unthrottled read I/O pool in operations per second. 每秒操作中的最大不受限制的读取 I/O 池。iops_rd_max_length=</span><seconds><span> iops_rd_max_length=&lt;秒&gt;Maximum length of read I/O bursts in seconds. 读取 I/O 突发的最大长度（以秒为单位）。iops_wr=</span><iops><span>Maximum write I/O in operations per second. 每秒操作中的最大写入 I/O。iops_wr_max=</span><iops><span>Maximum unthrottled write I/O pool in operations per second. 每秒操作中的最大未限制写入 I/O 池。iops_wr_max_length=</span><seconds><span> iops_wr_max_length=&lt;秒&gt;Maximum length of write I/O bursts in seconds. 写入 I/O 突发的最大长度（以秒为单位）。iothread=</span><boolean><span>Whether to use iothreads for this drive 是否对此驱动器使用 iothreadsmbps=</span><mbps><span>Maximum r/w speed in megabytes per second. 最大 r/w 速度（以兆字节/秒为单位）。mbps_max=</span><mbps><span>Maximum unthrottled r/w pool in megabytes per second. 最大未限制的 r/w 池（以兆字节/秒为单位）。mbps_rd=</span><mbps><span>Maximum read speed in megabytes per second. 最大读取速度（以兆字节/秒为单位）。mbps_rd_max=</span><mbps><span>Maximum unthrottled read pool in megabytes per second. 最大未限制读取池（以兆字节/秒为单位）。mbps_wr=</span><mbps><span>Maximum write speed in megabytes per second. 最大写入速度（以兆字节/秒为单位）。mbps_wr_max=</span><mbps><span>Maximum unthrottled write pool in megabytes per second. 最大未限制写入池（以兆字节/秒为单位）。media=&lt;cdrom | disk&gt; (</span><em><span>default =</span></em><span> disk) media=&lt;cdrom | disk&gt;（</span><em><span>默认值 =</span></em><span> 磁盘）The drive’s media type. 驱动器的介质类型。replicate=</span><boolean><span> (</span><em><span>default =</span></em><span> 1) replicate=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）Whether the drive should considered for replication jobs. 是否应考虑将驱动器用于复制作业。rerror=&lt;ignore | report | stop&gt; rerror=&lt;ignore | 报告 | stop&gt;Read error action. 读取错误操作。ro=</span><boolean><span>Whether the drive is read-only. 驱动器是否为只读。secs=</span><integer><span> 秒=</span><integer><span>Force the drive’s physical geometry to have a specific sector count. 强制驱动器的物理几何图形具有特定的扇区计数。serial=</span><serial><span> 序列号=&lt;序列号&gt;The drive’s reported serial number, url-encoded, up to 20 bytes long. 驱动器报告的序列号，URL 编码，最长 20 个字节。shared=</span><boolean><span> (</span><em><span>default =</span></em><span> 0) shared=</span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）Mark this locally-managed volume as available on all nodes. 将此本地管理的卷标记为在所有节点上都可用。</span><img src="data:image/png;base64,%0A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%0A/F/lgJiyQFHragAAAABJRU5ErkJggg==" referrerpolicy="no-referrer" alt="Warning"><span>This option does not share the volume automatically, it assumes it is shared already! 此选项不会自动共享卷，而是假定它已经共享！size=</span><DiskSize><span> 大小=</span><iskSize><span>Disk size. This is purely informational and has no effect. 磁盘大小。这纯粹是信息性的，没有任何效果。snapshot=</span><boolean><span> 快照=</span><boolean><span>Controls qemu’s snapshot mode feature. If activated, changes made to the disk are temporary and will be discarded when the VM is shutdown. 控制 qemu 的快照模式功能。如果激活，对磁盘所做的更改是临时的，并且在 VM 关闭时将被丢弃。trans=&lt;auto | lba | none&gt;Force disk geometry bios translation mode. 强制磁盘几何 bios 转换模式。werror=&lt;enospc | ignore | report | stop&gt; werror=&lt;enospc | 忽略 | 报告 | stop&gt;Write error action. 写入错误操作。</span></p></li><li><p><span>vmgenid: </span><UUID><span> (</span><em><span>default =</span></em><span> 1 (autogenerated)) vmgens： </span><UUID><span>（</span><em><span>默认值 =</span></em><span> 1（自动生成））</span></p><p><span>The VM generation ID (vmgenid) device exposes a 128-bit integer value identifier to the guest OS. This allows to notify the guest operating system when the virtual machine is executed with a different configuration (e.g. snapshot execution or creation from a template). The guest operating system notices the change, and is then able to react as appropriate by marking its copies of distributed databases as dirty, re-initializing its random number generator, etc. Note that auto-creation only works when done through API/CLI create or update methods, but not when manually editing the config file. VM 生成 ID （vmgenid） 设备向客户机操作系统公开 128 位整数值标识符。这允许在使用不同的配置（例如，快照执行或从模板创建）执行虚拟机时通知客户机操作系统。客户机操作系统注意到了这一变化，然后能够根据适当的方式做出反应，将其分布式数据库的副本标记为脏的副本，重新初始化其随机数生成器等。请注意，自动创建仅在通过 API/CLI 创建或更新方法完成时有效，但在手动编辑配置文件时则无效。</span></p></li><li><p><span>vmstatestorage: </span><storage ID><span> vmstatestorage： &lt;存储 ID&gt;</span></p><p><span>Default storage for VM state volumes/files. VM 状态卷/文件的默认存储。</span></p></li><li><p><span>watchdog: [[model=]&lt;i6300esb|ib700&gt;] [,action=</span><enum><span>] 看门狗：[[model=]&lt;i6300esb|ib700&gt;] [，action=</span><enum><span>]</span></p><p><span>Create a virtual hardware watchdog device. Once enabled (by a guest action), the watchdog must be periodically polled by an agent inside the guest or else the watchdog will reset the guest (or execute the respective action specified) 创建虚拟硬件看门狗设备。一旦启用（通过客户机操作），客户机内的代理必须定期轮询看门狗，否则看门狗将重置客户机（或执行指定的相应操作）action=&lt;debug | none | pause | poweroff | reset | shutdown&gt; action=&lt;debug | none | 暂停 | poweroff | reset | shutdown&gt;The action to perform if after activation the guest fails to poll the watchdog in time. 如果激活后客户机未能及时轮询看门狗，则要执行的操作。model=&lt;i6300esb | ib700&gt; (</span><em><span>default =</span></em><span> i6300esb) model=&lt;i6300esb | ib700&gt; （</span><em><span>默认值 =</span></em><span> i6300esb）Watchdog type to emulate. 要模拟的看门狗类型。</span></p></li></ul><h2 id='copyright-and-disclaimer-版权及免责声明'><span>Copyright and Disclaimer 版权及免责声明</span></h2><p><span>Copyright © 2007-2022 Proxmox Server Solutions GmbH</span>
+<span>版权所有 © 2007-2022 Proxmox Server Solutions GmbH</span></p><p><span>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</span>
+<span>该程序是自由软件：您可以根据自由软件基金会发布的 GNU Affero 通用公共许可证的条款重新分发和/或修改它，该许可证的版本 3 或（由您选择）任何更高版本。</span></p><p><span>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.</span>
+<span>分发该程序是希望它有用，但没有任何保证;甚至没有对适销性或特定用途适用性的默示保证。有关更多详细信息，请参阅 GNU Affero 通用公共许可证。</span></p><p><span>You should have received a copy of the GNU Affero General Public License along with this program. If not, see </span><a href='https://www.gnu.org/licenses/' target='_blank' class='url'>https://www.gnu.org/licenses/</a>
+<span>您应该已经收到了 GNU Affero 通用公共许可证的副本以及此程序。如果没有，请参阅 </span><a href='https://www.gnu.org/licenses/' target='_blank' class='url'>https://www.gnu.org/licenses/</a></p><p><span>Version 8.2.3 版本 8.2.3</span>
+<span>Last updated Wed Jul 31 16:58:41 CEST 2024</span>
+<span>最后更新 星期三 Jul 31 16：58：41 CEST 2024</span></p></div></div>
+</body>
+</html>
