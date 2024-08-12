@@ -1,0 +1,1583 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+.CodeMirror { height: auto; }
+.CodeMirror.cm-s-inner { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-scroll { overflow: auto hidden; z-index: 3; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: rgb(255, 255, 255); }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; white-space: nowrap; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-property { color: rgb(0, 0, 0); }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: 700; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: red; }
+.cm-invalidchar { color: red; }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { height: 100%; outline: 0px; position: relative; box-sizing: content-box; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-gutter-filler, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-vscrollbar { position: absolute; z-index: 6; display: none; outline: 0px; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow: hidden; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow: auto hidden; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 10px; z-index: 3; overflow-y: hidden; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index: 4; border: none !important; background-position: 0px 0px !important; }
+.CodeMirror-gutter-background { position: absolute; top: 0px; bottom: 0px; z-index: 4; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-radius: 0px; border-width: 0px; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: 0px 0px; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; inset: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); }
+span.cm-underlined { text-decoration: underline; }
+span.cm-strikethrough { text-decoration: line-through; }
+.cm-tw-syntaxerror { color: rgb(255, 255, 255); background-color: rgb(153, 0, 0); }
+.cm-tw-deleted { text-decoration: line-through; }
+.cm-tw-header5 { font-weight: 700; }
+.cm-tw-listitem:first-child { padding-left: 10px; }
+.cm-tw-box { border-style: solid; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-color: inherit; border-top-width: 0px !important; }
+.cm-tw-underline { text-decoration: underline; }
+@media print {
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+
+
+:root {
+  --mermaid-theme: night;
+}
+
+[lang='mermaid'] .label {
+  color: #333;
+}
+
+/* CSS Document */
+
+/** code highlight */
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+/* CSS Document */
+
+/** markdown source **/
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}@import "";
+@import "";
+@import "";
+
+:root {
+    --bg-color:  #363B40;
+    --side-bar-bg-color: #2E3033;
+    --text-color: #b8bfc6;
+
+    --select-text-bg-color:#4a89dc;
+
+    --item-hover-bg-color: #0a0d16;
+    --control-text-color: #b7b7b7;
+    --control-text-hover-color: #eee;
+    --window-border: 1px solid #555;
+
+    --active-file-bg-color: rgb(34, 34, 34);
+    --active-file-border-color: #8d8df0;
+
+    --primary-color: #a3d5fe;
+
+    --active-file-text-color: white;
+    --item-hover-bg-color: #70717d;
+    --item-hover-text-color: white;
+    --primary-color: #6dc1e7;
+
+    --rawblock-edit-panel-bd: #333;
+
+    --search-select-bg-color: #428bca;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #363B40;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #b8bfc6;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #333;
+}
+
+.native-window #md-notification {
+    border: 1px solid #70717d;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #333;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Lucida Grande", "Corbel", sans-serif;
+    font-weight: normal;
+    clear: both;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    color: #DEDEDE
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* 36px */
+    line-height: 2.75rem;
+    /* 40px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-size: 1.63rem;
+    /* 24px */
+    line-height: 1.875rem;
+    /* 30px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.17rem;
+    /* 18px */
+    line-height: 1.5rem;
+    /* 24px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.12rem;
+    /* 16px */
+    line-height: 1.375rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    color: white;
+}
+
+h5 {
+    font-size: 0.97rem;
+    /* 16px */
+    line-height: 1.25rem;
+    /* 22px */
+    margin-bottom: 1.5rem;
+    /* 24px */
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 0.93rem;
+    /* 16px */
+    line-height: 1rem;
+    /* 16px */
+    margin-bottom: 0.75rem;
+    color: white;
+}
+
+@media (min-width: 980px) {
+    h3.md-focus:before,
+    h4.md-focus:before,
+    h5.md-focus:before,
+    h6.md-focus:before {
+        color: #ddd;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        position: absolute;
+        left: -1.642857143rem;
+        top: .357142857rem;
+        float: left;
+        font-size: 9px;
+        padding-left: 2px;
+        padding-right: 2px;
+        vertical-align: bottom;
+        font-weight: normal;
+        line-height: normal;
+    }
+
+    h3.md-focus:before {
+        content: 'h3';
+    }
+
+    h4.md-focus:before {
+        content: 'h4';
+    }
+
+    h5.md-focus:before {
+        content: 'h5';
+        top: 0px;
+    }
+
+    h6.md-focus:before {
+        content: 'h6';
+        top: 0px;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    outline: 0;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+sup.md-footnote {
+    background-color: #555;
+    color: #ddd;
+}
+
+p {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+p,
+ul,
+dd,
+ol,
+hr,
+address,
+pre,
+table,
+iframe,
+.wp-caption,
+.wp-audio-shortcode,
+.wp-video-shortcode {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    /* 24px */
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+::-moz-selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+*.in-text-selection,
+::selection {
+    background: #4a89dc;
+    color: #fff;
+    text-shadow: none;
+}
+
+ul,
+ol {
+    padding: 0 0 0 1.875rem;
+    /* 30px */
+}
+
+ul {
+    list-style: square;
+}
+
+ol {
+    list-style: decimal;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin: 0;
+}
+
+b,
+th,
+dt,
+strong {
+    font-weight: bold;
+}
+
+i,
+em,
+dfn,
+cite {
+    font-style: italic;
+}
+
+blockquote {
+    padding-left: 1.875rem;
+    margin: 0 0 1.875rem 1.875rem;
+    border-left: solid 2px #474d54;
+    padding-left: 30px;
+    margin-top: 35px;
+}
+
+pre,
+code,
+kbd,
+tt,
+var {
+    font-size: 0.875em;
+    font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+code,
+tt,
+var {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+kbd {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+}
+
+pre.md-fences {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 20px;
+    background: #333;
+}
+
+.CodeMirror-gutters {
+    background: #333;
+    border-right: 1px solid transparent;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -2.2em;
+    right: 4px;
+}
+
+code,
+kbd,
+tt,
+var {
+    padding: 2px 5px;
+}
+
+table {
+    max-width: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+a {
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+hr {
+    background: #474d54;
+    /* variable */
+}
+
+h1 {
+    margin-top: 2em;
+}
+
+a {
+    color: #e0e0e0;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #fff;
+}
+
+.md-inline-math script {
+    color: #81b1db;
+}
+
+b,
+th,
+dt,
+strong {
+    color: #DEDEDE;
+    /* variable */
+}
+
+mark {
+    background: #D3D40E;
+}
+
+blockquote {
+    color: #9DA2A6;
+}
+
+table a {
+    color: #DEDEDE;
+    /* variable */
+}
+
+th,
+td {
+    border: solid 1px #474d54;
+    /* variable */
+}
+
+.task-list {
+    padding-left: 0;
+}
+
+.md-task-list-item {
+    padding-left: 1.25rem;
+}
+
+.md-task-list-item > input {
+    top: auto;
+}
+
+.md-task-list-item > input:before {
+    content: "";
+    display: inline-block;
+    width: 0.875rem;
+    height: 0.875rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #b8bfc6;
+    background-color: #363B40;
+    margin-top: -0.4rem;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before {
+    content: '\221A';
+    /*◘*/
+    font-size: 0.625rem;
+    line-height: 0.625rem;
+    color: #DEDEDE;
+}
+
+/** quick open **/
+.auto-suggest-container {
+    border: 0px;
+    background-color: #525C65;
+}
+
+#typora-quick-open {
+    background-color: #525C65;
+}
+
+#typora-quick-open input{
+    background-color: #525C65;
+    border: 0;
+    border-bottom: 1px solid grey;
+}
+
+.typora-quick-open-item {
+    background-color: inherit;
+    color: inherit;
+}
+
+.typora-quick-open-item.active,
+.typora-quick-open-item:hover {
+    background-color: #4D8BDB;
+    color: white;
+}
+
+.typora-quick-open-item:hover {
+    background-color: rgba(77, 139, 219, 0.8);
+}
+
+.typora-search-spinner > div {
+  background-color: #fff;
+}
+
+#write pre.md-meta-block {
+    border-bottom: 1px dashed #ccc;
+    background: transparent;
+    padding-bottom: 0.6em;
+    line-height: 1.6em;
+}
+
+.btn,
+.btn .btn-default {
+    background: transparent;
+    color: #b8bfc6;
+}
+
+.ty-table-edit {
+    border-top: 1px solid gray;
+    background-color: #363B40;
+}
+
+.popover-title {
+    background: transparent;
+}
+
+.md-image>.md-meta {
+    color: #BBBBBB;
+    background: transparent;
+}
+
+.md-expand.md-image>.md-meta {
+    color: #DDD;
+}
+
+#write>h3:before,
+#write>h4:before,
+#write>h5:before,
+#write>h6:before {
+    border: none;
+    border-radius: 0px;
+    color: #888;
+    text-decoration: underline;
+    left: -1.4rem;
+    top: 0.2rem;
+}
+
+#write>h3.md-focus:before {
+    top: 2px;
+}
+
+#write>h4.md-focus:before {
+    top: 2px;
+}
+
+.md-toc-item {
+    color: #A8C2DC;
+}
+
+#write div.md-toc-tooltip {
+    background-color: #363B40;
+}
+
+.dropdown-menu .btn:hover,
+.dropdown-menu .btn:focus,
+.md-toc .btn:hover,
+.md-toc .btn:focus {
+    color: white;
+    background: black;
+}
+
+#toc-dropmenu {
+    background: rgba(50, 54, 59, 0.93);
+    border: 1px solid rgba(253, 253, 253, 0.15);
+}
+
+#toc-dropmenu .divider {
+    background-color: #9b9b9b;
+}
+
+.outline-expander:before {
+    top: 2px;
+}
+
+#typora-sidebar {
+    box-shadow: none;
+    border-right: 1px dashed;
+    border-right: none;
+}
+
+.sidebar-tabs {
+    border-bottom:0;
+}
+
+#typora-sidebar:hover .outline-title-wrapper {
+    border-left: 1px dashed;
+}
+
+.outline-title-wrapper .btn {
+    color: inherit;
+}
+
+.outline-item:hover {
+    border-color: #363B40;
+    background-color: #363B40;
+    color: white;
+}
+
+h1.md-focus .md-attr,
+h2.md-focus .md-attr,
+h3.md-focus .md-attr,
+h4.md-focus .md-attr,
+h5.md-focus .md-attr,
+h6.md-focus .md-attr,
+.md-header-span .md-attr {
+    color: #8C8E92;
+    display: inline;
+}
+
+.md-comment {
+    color: #5a95e3;
+    opacity: 0.8;
+}
+
+.md-inline-math svg {
+    color: #b8bfc6;
+}
+
+#math-inline-preview .md-arrow:after {
+    background: black;
+}
+
+.modal-content {
+    background: var(--bg-color);
+    border: 0;
+}
+
+.modal-title {
+    font-size: 1.5em;
+}
+
+.modal-content input {
+    background-color: rgba(26, 21, 21, 0.51);
+    color: white;
+}
+
+.modal-content .input-group-addon {
+    color: white;
+}
+
+.modal-backdrop {
+    background-color: rgba(174, 174, 174, 0.7);
+}
+
+.modal-content .btn-primary {
+    border-color: var(--primary-color);
+}
+
+.md-table-resize-popover {
+    background-color: #333;
+}
+
+.form-inline .input-group .input-group-addon {
+    color: white;
+}
+
+#md-searchpanel {
+    border-bottom: 1px dashed grey;
+}
+
+/** UI for electron */
+
+.context-menu,
+#spell-check-panel,
+#footer-word-count-info {
+    background-color: #42464A;
+}
+
+.context-menu.dropdown-menu .divider,
+.dropdown-menu .divider {
+    background-color: #777777;
+    opacity: 1;
+}
+
+footer {
+    color: inherit;
+}
+
+@media (max-width: 1000px) {
+    footer {
+        border-top: none;
+    }
+    footer:hover {
+        color: inherit;
+    }
+}
+
+#file-info-file-path .file-info-field-value:hover {
+    background-color: #555;
+    color: #dedede;
+}
+
+.megamenu-content,
+.megamenu-opened header {
+    background: var(--bg-color);
+}
+
+.megamenu-menu-panel h2,
+.megamenu-menu-panel h1,
+.long-btn {
+    color: inherit;
+}
+
+.megamenu-menu-panel input[type='text'] {
+    background: inherit;
+    border: 0;
+    border-bottom: 1px solid;
+}
+
+#recent-file-panel-action-btn {
+    background: inherit;
+    border: 1px grey solid;
+}
+
+.megamenu-menu-panel .dropdown-menu > li > a {
+    color: inherit;
+    background-color: #2F353A;
+    text-decoration: none;
+}
+
+.megamenu-menu-panel table td:nth-child(1) {
+    color: inherit;
+    font-weight: bold;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(1) {
+    color: white;
+}
+
+.modal-footer .btn-default, 
+.modal-footer .btn-primary,
+.modal-footer .btn-default:not(:hover) {
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.btn-primary {
+    color: white;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+    color: white;
+    border: 1px solid #ddd;
+    background-color: inherit;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+.modal-footer {
+    border-top: 0;
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: transparent !important;
+}
+
+.megamenu-menu-panel tbody tr:hover td:nth-child(2) {
+    color: inherit;
+}
+
+.megamenu-menu-panel .btn {
+    border: 1px solid #eee;
+    background: transparent;
+}
+
+.mouse-hover .toolbar-icon.btn:hover,
+#w-full.mouse-hover,
+#w-pin.mouse-hover {
+    background-color: inherit;
+}
+
+.typora-node::-webkit-scrollbar {
+    width: 5px;
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical {
+    background: rgba(250, 250, 250, 0.3);
+}
+
+.typora-node::-webkit-scrollbar-thumb:vertical:active {
+    background: rgba(250, 250, 250, 0.5);
+}
+
+#w-unpin {
+    background-color: #4182c4;
+}
+
+#top-titlebar, #top-titlebar * {
+    color: var(--item-hover-text-color);
+}
+
+.typora-sourceview-on #toggle-sourceview-btn,
+#footer-word-count:hover,
+.ty-show-word-count #footer-word-count {
+    background: #333333;
+}
+
+#toggle-sourceview-btn:hover {
+    color: #eee;
+    background: #333333;
+}
+
+/** focus mode */
+.on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-end-block:not(.md-focus) img,
+.on-focus-mode .md-task-list-item:not(.md-focus-container)>input {
+    opacity: #686868 !important;
+}
+
+.on-focus-mode li[cid]:not(.md-focus-container){
+    color: #686868;
+}
+
+.on-focus-mode .md-fences.md-focus .CodeMirror-code>*:not(.CodeMirror-activeline) *,
+.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
+    color: #686868 !important;
+}
+
+.on-focus-mode .md-focus,
+.on-focus-mode .md-focus-container {
+    color: #fff;
+}
+
+.on-focus-mode #typora-source .CodeMirror-code>*:not(.CodeMirror-activeline) * {
+    color: #686868 !important;
+}
+
+
+/*diagrams*/
+#write .md-focus .md-diagram-panel {
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    width: calc(100% + 2px);
+}
+
+/*diagrams*/
+#write .md-focus.md-fences-with-lineno .md-diagram-panel {
+    margin-left: auto;
+}
+
+.md-diagram-panel-error {
+    color: #f1908e;
+}
+
+.active-tab-files #info-panel-tab-file,
+.active-tab-files #info-panel-tab-file:hover,
+.active-tab-outline #info-panel-tab-outline,
+.active-tab-outline #info-panel-tab-outline:hover {
+    color: #eee;
+}
+
+.sidebar-footer-item:hover,
+.footer-item:hover {
+    background: inherit;
+    color: white;
+}
+
+.ty-side-sort-btn.active,
+.ty-side-sort-btn:hover,
+.selected-folder-menu-item a:after {
+    color: white;
+}
+
+#sidebar-files-menu {
+    border:solid 1px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
+    background-color: var(--bg-color);
+}
+
+.file-list-item {
+    border-bottom:none;
+}
+
+.file-list-item-summary {
+    opacity: 1;
+}
+
+.file-list-item.active:first-child {
+    border-top: none;
+}
+
+.file-node-background {
+    height: 32px;
+}
+
+.file-library-node.active>.file-node-content,
+.file-list-item.active {
+    color: white;
+    color: var(--active-file-text-color);
+}
+
+.file-library-node.active>.file-node-background{
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+.file-list-item.active {
+    background-color: rgb(34, 34, 34);
+    background-color: var(--active-file-bg-color);
+}
+
+#ty-tooltip {
+    background-color: black;
+    color: #eee;
+}
+
+.md-task-list-item>input {
+    margin-left: -1.3em;
+    margin-top: 0.3rem;
+    -webkit-appearance: none;
+}
+
+.md-mathjax-midline {
+    background-color: #57616b;
+    border-bottom: none;
+}
+
+footer.ty-footer {
+    border-color: #656565;
+}
+
+.ty-preferences .btn-default {
+    background: transparent;
+}
+.ty-preferences .btn-default:hover {
+    background: #57616b;
+}
+
+.ty-preferences select {
+    border: 1px solid #989698;
+    height: 21px;
+}
+
+.ty-preferences .nav-group-item.active,
+.export-item.active,
+.export-items-list-control,
+.export-detail {
+    background: var(--item-hover-bg-color);
+}
+
+.ty-preferences input[type="search"] {
+    border-color: #333;
+    background: #333;
+    line-height: 22px;
+    border-radius: 6px;
+    color: white;
+}
+
+.ty-preferences input[type="search"]:focus {
+    box-shadow: none;
+}
+
+[data-is-directory="true"] .file-node-content {
+    margin-bottom: 0;
+}
+
+.file-node-title {
+    line-height: 22px;
+}
+
+.html-for-mac .file-node-open-state, .html-for-mac .file-node-icon {
+    line-height: 26px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(230, 230, 230, 0.50);
+}
+
+#typora-sidebar:hover div.sidebar-content-content::-webkit-scrollbar-thumb:horizontal {
+    background: rgba(230, 230, 230, 0.30);
+}
+
+.nav-group-item:active {
+    background-color: #474d54 !important;
+}
+
+.md-search-hit {
+    background: rgba(199, 140, 60, 0.81);
+    color: #eee;
+}
+
+.md-search-hit * {
+    color: #eee;
+}
+
+#md-searchpanel input {
+    color: white;
+}
+
+.modal-backdrop.in {
+    opacity: 1;
+    backdrop-filter: blur(1px);
+}
+
+.clear-btn-icon {
+    top: 8px;
+}
+
+/* try fix https://github.com/typora/typora-issues/issues/5253 */
+.file-node-expanded>.file-node-children {
+    display: grid;
+  }
+
+.md-alert-text-note {
+    color: rgb(47, 129, 247);
+}
+.md-alert-text-important {
+    color: rgb(163, 113, 247);
+}
+.md-alert-text-warning {
+    color:  rgb(210, 153, 34);
+}
+
+ @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title></title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='pvenode1-pvenode1）'><span>pvenode(1) pvenode（1）</span></h1><p><strong><span>Proxmox Server Solutions GmbH</span>
+<span>Proxmox 服务器解决方案有限公司</span></strong>
+<a href='mailto:[support@proxmox.com](mailto:support@proxmox.com)' target='_blank' class='url'>[support@proxmox.com](mailto:support@proxmox.com)</a>
+<span>version 8.2.3, Wed Jul 31 16:58:41 CEST 2024</span>
+<span>版本 8.2.3， 星期三 Jul 31 16：58：41 CEST 2024</span></p><h2 id='name-名字'><span>NAME 名字</span></h2><p><span>pvenode - Proxmox VE Node Management</span>
+<span>pvenode - Proxmox VE 节点管理</span></p><h2 id='synopsis-概要'><span>SYNOPSIS 概要</span></h2><p><strong><span>pvenode</span></strong><span> </span><COMMAND><span> [ARGS] [OPTIONS]</span>
+<strong><span>pvenode</span></strong><span> </span><command><span> [参数] [选项]</span></p><p><strong><span>pvenode acme account deactivate</span></strong><span> [</span><name><span>]</span>
+<strong><span>pvenode acme 帐户停用</span></strong><span> [</span><name><span>]</span></p><p><span>Deactivate existing ACME account at CA.</span>
+<span>在 CA 停用现有的 ACME 帐户。</span></p><ul><li><p><name><span>: </span><name><span> (</span><em><span>default =</span></em><span> default) </span><name><span>： </span><name><span>（</span><em><span>默认值 =</span></em><span> 默认值）</span></p><p><span>ACME account config file name. ACME 帐户配置文件名。</span></p></li></ul><p><strong><span>pvenode acme account info</span></strong><span> [</span><name><span>] [FORMAT_OPTIONS]</span>
+<strong><span>pvenode acme 帐户信息</span></strong><span> [</span><name><span>] [FORMAT_OPTIONS]</span></p><p><span>Return existing ACME account information.</span>
+<span>返回现有的 ACME 帐户信息。</span></p><ul><li><p><name><span>: </span><name><span> (</span><em><span>default =</span></em><span> default) </span><name><span>： </span><name><span>（</span><em><span>默认值 =</span></em><span> 默认值）</span></p><p><span>ACME account config file name. ACME 帐户配置文件名。</span></p></li></ul><p><strong><span>pvenode acme account list</span>
+<span>PVEnode ACME 账户列表</span></strong></p><p><span>ACMEAccount index. ACMEAccount 索引。</span></p><p><strong><span>pvenode acme account register</span></strong><span> [</span><name><span>] {</span><contact><span>} [OPTIONS]</span>
+<strong><span>pvenode acme 帐户注册</span></strong><span> [</span><name><span>] {</span><contact><span>} [选项]</span></p><p><span>Register a new ACME account with a compatible CA.</span>
+<span>在兼容的 CA 中注册一个新的 ACME 帐户。</span></p><ul><li><p><name><span>: </span><name><span> (</span><em><span>default =</span></em><span> default) </span><name><span>： </span><name><span>（</span><em><span>默认值 =</span></em><span> 默认值）</span></p><p><span>ACME account config file name. ACME 帐户配置文件名。</span></p></li><li><p><contact><span>: </span><string><span> </span><contact><span>： </span><string></p><p><span>Contact email addresses. 联系电子邮件地址。</span></p></li><li><p><span>--directory ^https?://.* --目录 ^https？：//.*</span></p><p><span>URL of ACME CA directory endpoint. ACME CA 目录端点的 URL。</span></p></li></ul><p><strong><span>pvenode acme account update</span></strong><span> [</span><name><span>] [OPTIONS]</span>
+<strong><span>pvenode acme 帐户更新</span></strong><span> [</span><name><span>] [选项]</span></p><p><span>Update existing ACME account information with CA. Note: not specifying any new account information triggers a refresh.</span>
+<span>使用 CA 更新现有的 ACME 帐户信息。注意：未指定任何新的帐户信息会触发刷新。</span></p><ul><li><p><name><span>: </span><name><span> (</span><em><span>default =</span></em><span> default) </span><name><span>： </span><name><span>（</span><em><span>默认值 =</span></em><span> 默认值）</span></p><p><span>ACME account config file name. ACME 帐户配置文件名。</span></p></li><li><p><span>--contact </span><string></p><p><span>Contact email addresses. 联系电子邮件地址。</span></p></li></ul><p><strong><span>pvenode acme cert order</span></strong><span> [OPTIONS]</span>
+<strong><span>pvenode acme 证书订单</span></strong><span> [选项]</span></p><p><span>Order a new certificate from ACME-compatible CA.</span>
+<span>从与 ACME 兼容的 CA 订购新证书。</span></p><ul><li><p><span>--force </span><boolean><span> (</span><em><span>default =</span></em><span> 0) --force </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Overwrite existing custom certificate. 覆盖现有的自定义证书。</span></p></li></ul><p><strong><span>pvenode acme cert renew</span></strong><span> [OPTIONS]</span>
+<strong><span>pvenode acme cert renew</span></strong><span> [选项]</span></p><p><span>Renew existing certificate from CA.</span>
+<span>从 CA 续订现有证书。</span></p><ul><li><p><span>--force </span><boolean><span> (</span><em><span>default =</span></em><span> 0) --force </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Force renewal even if expiry is more than 30 days away. 即使到期时间超过 30 天，也可以强制续订。</span></p></li></ul><p><strong><span>pvenode acme cert revoke PVEnode ACME 证书吊销</span></strong></p><p><span>Revoke existing certificate from CA.</span>
+<span>从 CA 吊销现有证书。</span></p><p><strong><span>pvenode acme plugin add</span></strong><span> </span><type><span> </span><id><span> [OPTIONS]</span>
+<strong><span>pvenode acme 插件添加</span></strong><span> </span><type><span> </span><id><span> [选项]</span></p><p><span>Add ACME plugin configuration.</span>
+<span>添加 ACME 插件配置。</span></p><ul><li><p><type><span>: &lt;dns | standalone&gt; </span><type><span>： &lt;dns | 独立&gt;</span></p><p><span>ACME challenge type. ACME挑战型。</span></p></li><li><p><id><span>: </span><string><span> </span><id><span>： </span><string></p><p><span>ACME Plugin ID name ACME 插件 ID 名称</span></p></li><li><p><span>--api &lt;1984hosting | acmedns | acmeproxy | active24 | ad | ali | anx | artfiles | arvan | aurora | autodns | aws | azion | azure | bookmyname | bunny | cf | clouddns | cloudns | cn | conoha | constellix | cpanel | curanet | cyon | da | ddnss | desec | df | dgon | dnsexit | dnshome | dnsimple | dnsservices | do | doapi | domeneshop | dp | dpi | dreamhost | duckdns | durabledns | dyn | dynu | dynv6 | easydns | edgedns | euserv | exoscale | fornex | freedns | gandi_livedns | gcloud | gcore | gd | geoscaling | googledomains | he | hetzner | hexonet | hostingde | huaweicloud | infoblox | infomaniak | internetbs | inwx | ionos | ipv64 | ispconfig | jd | joker | kappernet | kas | kinghost | knot | la | leaseweb | lexicon | linode | linode_v4 | loopia | lua | maradns | me | miab | misaka | myapi | mydevil | mydnsjp | mythic_beasts | namecheap | namecom | namesilo | nanelo | nederhost | neodigit | netcup | netlify | nic | njalla | nm | nsd | nsone | nsupdate | nw | oci | one | online | openprovider | openstack | opnsense | ovh | pdns | pleskxml | pointhq | porkbun | rackcorp | rackspace | rage4 | rcode0 | regru | scaleway | schlundtech | selectel | selfhost | servercow | simply | tele3 | tencent | transip | udr | ultra | unoeuro | variomedia | veesp | vercel | vscale | vultr | websupport | world4you | yandex | yc | zilore | zone | zonomi&gt; --应用程序接口 &lt;1984hosting | acmedns | acmeproxy | active24 | ad | ali | anx | artfiles | arvan | aurora | autodns | aws | azion | azure | bookmyname | bunny | cf | clouddns | cloudns | cn | conoha | constellix | cpanel | curanet | cyon | da | ddnss | desec | df | dgon | dnsexit | dnshome | dnsimple | dnsservices | do | doapi | domeneshop | dp | dpi | dreamhost | duckdns | durabledns | dyn | dynu | dynv6 | easydns | edgedns | euserv | exoscale | fornex | freedns | gandi_livedns | gcloud | gcore | gd | geoscaling | googledomains | he | hetzner | hexonet | hostingde | huaweicloud | infoblox | infomaniak | internetbs | inwx | ionos | ipv64 | ispconfig | jd | joker | kappernet | kas | kinghost | knot | la | leaseweb | lexicon | linode | linode_v4 | loopia | lua | maradns | me | miab | misaka | myapi | mydevil | mydnsjp | mythic_beasts | namecheap | namecom | namesilo | nanelo | nederhost | neodigit | netcup | netlify | nic | njalla | nm | nsd | nsone | nsupdate | nw | oci | one | online | openprovider | openstack | opnsense | ovh | pdns | pleskxml | pointhq | porkbun | rackcorp | rackspace | rage4 | rcode0 | regru | scaleway | schlundtech | selectel | selfhost | servercow | simply | tele3 | tencent | transip | udr | ultra | unoeuro | variomedia | veesp | vercel | vscale | vultr | websupport | world4you | yandex | yc | zilore | zone | zonomi&gt;</span></p><p><span>API plugin name API 插件名称</span></p></li><li><p><span>--data File with one key-value pair per line, will be base64url encode for storage in plugin config. --data 每行有一个键值对的文件，将按照 base64url 编码在插件配置中存储。</span></p><p><span>DNS plugin data. (base64 encoded) DNS 插件数据。（base64 编码）</span></p></li><li><p><span>--disable </span><boolean><span> --禁用 </span><boolean></p><p><span>Flag to disable the config. 用于禁用配置的标志。</span></p></li><li><p><span>--nodes </span><string></p><p><span>List of cluster node names. 群集节点名称的列表。</span></p></li><li><p><span>--validation-delay </span><integer><span> (0 - 172800) (</span><em><span>default =</span></em><span> 30) --validation-delay </span><integer><span> （0 - 172800） （</span><em><span>默认值 =</span></em><span> 30）</span></p><p><span>Extra delay in seconds to wait before requesting validation. Allows to cope with a long TTL of DNS records. 在请求验证之前等待的额外延迟（以秒为单位）。允许处理 DNS 记录的长 TTL。</span></p></li></ul><p><strong><span>pvenode acme plugin config</span></strong><span> </span><id><span> [FORMAT_OPTIONS]</span>
+<strong><span>pvenode acme 插件配置</span></strong><span> </span><id><span> [FORMAT_OPTIONS]</span></p><p><span>Get ACME plugin configuration.</span>
+<span>获取 ACME 插件配置。</span></p><ul><li><p><id><span>: </span><string><span> </span><id><span>： </span><string></p><p><span>Unique identifier for ACME plugin instance. ACME 插件实例的唯一标识符。</span></p></li></ul><p><strong><span>pvenode acme plugin list</span></strong><span> [OPTIONS] [FORMAT_OPTIONS]</span>
+<strong><span>pvenode acme 插件列表</span></strong><span> [选项] [FORMAT_OPTIONS]</span></p><p><span>ACME plugin index. ACME插件索引。</span></p><ul><li><p><span>--type &lt;dns | standalone&gt; --type &lt;dns | 独立&gt;</span></p><p><span>Only list ACME plugins of a specific type 仅列出特定类型的 ACME 插件</span></p></li></ul><p><strong><span>pvenode acme plugin remove</span></strong><span> </span><id>
+<strong><span>pvenode acme 插件删除</span></strong><span> </span><id></p><p><span>Delete ACME plugin configuration.</span>
+<span>删除 ACME 插件配置。</span></p><ul><li><p><id><span>: </span><string><span> </span><id><span>： </span><string></p><p><span>Unique identifier for ACME plugin instance. ACME 插件实例的唯一标识符。</span></p></li></ul><p><strong><span>pvenode acme plugin set</span></strong><span> </span><id><span> [OPTIONS]</span>
+<strong><span>pvenode acme 插件集</span></strong><span> </span><id><span> [选项]</span></p><p><span>Update ACME plugin configuration.</span>
+<span>更新 ACME 插件配置。</span></p><ul><li><p><id><span>: </span><string><span> </span><id><span>： </span><string></p><p><span>ACME Plugin ID name ACME 插件 ID 名称</span></p></li><li><p><span>--api &lt;1984hosting | acmedns | acmeproxy | active24 | ad | ali | anx | artfiles | arvan | aurora | autodns | aws | azion | azure | bookmyname | bunny | cf | clouddns | cloudns | cn | conoha | constellix | cpanel | curanet | cyon | da | ddnss | desec | df | dgon | dnsexit | dnshome | dnsimple | dnsservices | do | doapi | domeneshop | dp | dpi | dreamhost | duckdns | durabledns | dyn | dynu | dynv6 | easydns | edgedns | euserv | exoscale | fornex | freedns | gandi_livedns | gcloud | gcore | gd | geoscaling | googledomains | he | hetzner | hexonet | hostingde | huaweicloud | infoblox | infomaniak | internetbs | inwx | ionos | ipv64 | ispconfig | jd | joker | kappernet | kas | kinghost | knot | la | leaseweb | lexicon | linode | linode_v4 | loopia | lua | maradns | me | miab | misaka | myapi | mydevil | mydnsjp | mythic_beasts | namecheap | namecom | namesilo | nanelo | nederhost | neodigit | netcup | netlify | nic | njalla | nm | nsd | nsone | nsupdate | nw | oci | one | online | openprovider | openstack | opnsense | ovh | pdns | pleskxml | pointhq | porkbun | rackcorp | rackspace | rage4 | rcode0 | regru | scaleway | schlundtech | selectel | selfhost | servercow | simply | tele3 | tencent | transip | udr | ultra | unoeuro | variomedia | veesp | vercel | vscale | vultr | websupport | world4you | yandex | yc | zilore | zone | zonomi&gt; --应用程序接口 &lt;1984hosting | acmedns | acmeproxy | active24 | ad | ali | anx | artfiles | arvan | aurora | autodns | aws | azion | azure | bookmyname | bunny | cf | clouddns | cloudns | cn | conoha | constellix | cpanel | curanet | cyon | da | ddnss | desec | df | dgon | dnsexit | dnshome | dnsimple | dnsservices | do | doapi | domeneshop | dp | dpi | dreamhost | duckdns | durabledns | dyn | dynu | dynv6 | easydns | edgedns | euserv | exoscale | fornex | freedns | gandi_livedns | gcloud | gcore | gd | geoscaling | googledomains | he | hetzner | hexonet | hostingde | huaweicloud | infoblox | infomaniak | internetbs | inwx | ionos | ipv64 | ispconfig | jd | joker | kappernet | kas | kinghost | knot | la | leaseweb | lexicon | linode | linode_v4 | loopia | lua | maradns | me | miab | misaka | myapi | mydevil | mydnsjp | mythic_beasts | namecheap | namecom | namesilo | nanelo | nederhost | neodigit | netcup | netlify | nic | njalla | nm | nsd | nsone | nsupdate | nw | oci | one | online | openprovider | openstack | opnsense | ovh | pdns | pleskxml | pointhq | porkbun | rackcorp | rackspace | rage4 | rcode0 | regru | scaleway | schlundtech | selectel | selfhost | servercow | simply | tele3 | tencent | transip | udr | ultra | unoeuro | variomedia | veesp | vercel | vscale | vultr | websupport | world4you | yandex | yc | zilore | zone | zonomi&gt;</span></p><p><span>API plugin name API 插件名称</span></p></li><li><p><span>--data File with one key-value pair per line, will be base64url encode for storage in plugin config. --data 每行有一个键值对的文件，将按照 base64url 编码在插件配置中存储。</span></p><p><span>DNS plugin data. (base64 encoded) DNS 插件数据。（base64 编码）</span></p></li><li><p><span>--delete </span><string><span> --删除 </span><string></p><p><span>A list of settings you want to delete. 要删除的设置列表。</span></p></li><li><p><span>--digest </span><string></p><p><span>Prevent changes if current configuration file has a different digest. This can be used to prevent concurrent modifications. 如果当前配置文件具有不同的摘要，则防止更改。这可用于防止并发修改。</span></p></li><li><p><span>--disable </span><boolean><span> --禁用 </span><boolean></p><p><span>Flag to disable the config. 用于禁用配置的标志。</span></p></li><li><p><span>--nodes </span><string></p><p><span>List of cluster node names. 群集节点名称的列表。</span></p></li><li><p><span>--validation-delay </span><integer><span> (0 - 172800) (</span><em><span>default =</span></em><span> 30) --validation-delay </span><integer><span> （0 - 172800） （</span><em><span>默认值 =</span></em><span> 30）</span></p><p><span>Extra delay in seconds to wait before requesting validation. Allows to cope with a long TTL of DNS records. 在请求验证之前等待的额外延迟（以秒为单位）。允许处理 DNS 记录的长 TTL。</span></p></li></ul><p><strong><span>pvenode cert delete</span></strong><span> [</span><restart><span>]</span>
+<strong><span>pvenode 证书删除</span></strong><span> [</span><restart><span>]</span></p><p><span>DELETE custom certificate chain and key.</span>
+<span>删除自定义证书链和密钥。</span></p><ul><li><p><restart><span>: </span><boolean><span> (</span><em><span>default =</span></em><span> 0) </span><restart><span>： </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Restart pveproxy. 重启 pveproxy。</span></p></li></ul><p><strong><span>pvenode cert info</span></strong><span> [FORMAT_OPTIONS]</span>
+<strong><span>PVEnode 证书信息</span></strong><span> [FORMAT_OPTIONS]</span></p><p><span>Get information about node’s certificates.</span>
+<span>获取有关节点证书的信息。</span></p><p><strong><span>pvenode cert set</span></strong><span> </span><certificates><span> [</span><key><span>] [OPTIONS] [FORMAT_OPTIONS]</span>
+<strong><span>pvenode 证书集</span></strong><span> </span><certificates><span> [</span><key><span>] [选项] [FORMAT_OPTIONS]</span></p><p><span>Upload or update custom certificate chain and key.</span>
+<span>上传或更新自定义证书链和密钥。</span></p><ul><li><p><certificates><span>: </span><string><span> </span><certificates><span>： </span><string></p><p><span>PEM encoded certificate (chain). PEM编码证书（链）。</span></p></li><li><p><key><span>: </span><string><span> </span><key><span>： </span><string></p><p><span>PEM encoded private key. PEM 编码的私钥。</span></p></li><li><p><span>--force </span><boolean><span> (</span><em><span>default =</span></em><span> 0) --force </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Overwrite existing custom or ACME certificate files. 覆盖现有的自定义或 ACME 证书文件。</span></p></li><li><p><span>--restart </span><boolean><span> (</span><em><span>default =</span></em><span> 0) --restart </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Restart pveproxy. 重启 pveproxy。</span></p></li></ul><p><strong><span>pvenode config get</span></strong><span> [OPTIONS]</span>
+<strong><span>pvenode config get</span></strong><span> [选项]</span></p><p><span>Get node configuration options.</span>
+<span>获取节点配置选项。</span></p><ul><li><p><span>--property &lt;acme | acmedomain0 | acmedomain1 | acmedomain2 | acmedomain3 | acmedomain4 | acmedomain5 | description | startall-onboot-delay | wakeonlan&gt; (</span><em><span>default =</span></em><span> all) --property &lt;acme | acmedomain0 | acmedomain1 | acmedomain2 | acmedomain3 | acmedomain4 | acmedomain5 | description | startall-onboot-delay | wakeonlan&gt; （</span><em><span>默认值 =</span></em><span> all）</span></p><p><span>Return only a specific property from the node configuration. 仅返回节点配置中的特定属性。</span></p></li></ul><p><strong><span>pvenode config set</span></strong><span> [OPTIONS]</span>
+<strong><span>pvenode 配置集</span></strong><span> [OPTIONS]</span></p><p><span>Set node configuration options.</span>
+<span>设置节点配置选项。</span></p><ul><li><p><span>--acme [account=</span><name><span>] [,domains=&lt;domain[;domain;...]&gt;] --acme [帐户=</span><name><span>] [，域=&lt;域[;域;...]&gt;]</span></p><p><span>Node specific ACME settings. 特定于节点的 ACME 设置。</span></p></li><li><p><span>--acmedomain[n] [domain=]</span><domain><span> [,alias=</span><domain><span>] [,plugin=</span><name of the plugin configuration><span>] --acmedomain[n] [domain=]</span><domain><span> [，alias=</span><domain><span>] [，plugin=&lt;插件配置名&gt;]</span></p><p><span>ACME domain and validation plugin ACME域名和验证插件</span></p></li><li><p><span>--delete </span><string><span> --删除 </span><string></p><p><span>A list of settings you want to delete. 要删除的设置列表。</span></p></li><li><p><span>--description </span><string></p><p><span>Description for the Node. Shown in the web-interface node notes panel. This is saved as comment inside the configuration file. 节点的描述。显示在 Web 界面节点注释面板中。这将在配置文件中另存为注释。</span></p></li><li><p><span>--digest </span><string></p><p><span>Prevent changes if current configuration file has different SHA1 digest. This can be used to prevent concurrent modifications. 如果当前配置文件具有不同的 SHA1 摘要，则防止更改。这可用于防止并发修改。</span></p></li><li><p><span>--startall-onboot-delay </span><integer><span> (0 - 300) (</span><em><span>default =</span></em><span> 0) --startall-onboot-delay </span><integer><span> （0 - 300） （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Initial delay in seconds, before starting all the Virtual Guests with on-boot enabled. 初始延迟（以秒为单位），然后启动所有启用了启动时的虚拟客户机。</span></p></li><li><p><span>--wakeonlan [mac=]</span><MAC address><span> [,bind-interface=</span><bind interface><span>] [,broadcast-address=</span><IPv4 broadcast address><span>] --wakeonlan [mac=]&lt;MAC地址&gt; [，bind-interface=</span><bind interface><span>] [，broadcast-address=&lt;IPv4广播地址&gt;]</span></p><p><span>Node specific wake on LAN settings. 特定于节点的 LAN 唤醒设置。</span></p></li></ul><p><strong><span>pvenode help</span></strong><span> [OPTIONS]</span>
+<strong><span>pvenode 帮助</span></strong><span> [选项]</span></p><p><span>Get help about specified command.</span>
+<span>获取有关指定命令的帮助。</span></p><ul><li><p><span>--extra-args </span><array></p><p><span>Shows help for a specific command 显示特定命令的帮助</span></p></li><li><p><span>--verbose </span><boolean><span> --详细 </span><boolean></p><p><span>Verbose output format. 详细的输出格式。</span></p></li></ul><p><strong><span>pvenode migrateall</span></strong><span> </span><target><span> [OPTIONS]</span>
+<strong><span>pvenode migrateall</span></strong><span> </span><target><span> [选项]</span></p><p><span>Migrate all VMs and Containers.</span>
+<span>迁移所有 VM 和容器。</span></p><ul><li><p><target><span>: </span><string><span> </span><target><span>： &lt;字符串&gt;</span></p><p><span>Target node. 目标节点。</span></p></li><li><p><span>--maxworkers </span><integer><span> (1 - N) --maxworkers </span><integer><span> （1 - N）</span></p><p><span>Maximal number of parallel migration job. If not set, uses’max_workers&#39; from datacenter.cfg. One of both must be set! 并行迁移作业的最大数量。如果未设置，则使用 datacenter.cfg 中的“max_workers”。必须设置两者之一！</span></p></li><li><p><span>--vms </span><string></p><p><span>Only consider Guests with these IDs. 仅考虑拥有这些 ID 的房客。</span></p></li><li><p><span>--with-local-disks </span><boolean></p><p><span>Enable live storage migration for local disk 为本地磁盘启用实时存储迁移</span></p></li></ul><p><strong><span>pvenode startall</span></strong><span> [OPTIONS]</span>
+<strong><span>pvenode startall</span></strong><span> [选项]</span></p><p><span>Start all VMs and containers located on this node (by default only those with onboot=1).</span>
+<span>启动位于此节点上的所有 VM 和容器（默认情况下，仅启动 onboot=1 的 VM 和容器）。</span></p><ul><li><p><span>--force </span><boolean><span> (</span><em><span>default =</span></em><span> off) --force </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 关闭）</span></p><p><span>Issue start command even if virtual guest have </span><em><span>onboot</span></em><span> not set or set to off. 即使虚拟客户机未设置 </span><em><span>onboot</span></em><span> 或将其设置为 off，也要发出 start 命令。</span></p></li><li><p><span>--vms </span><string></p><p><span>Only consider guests from this comma separated list of VMIDs. 仅考虑此逗号分隔的 VMID 列表中的来宾。</span></p></li></ul><p><strong><span>pvenode stopall</span></strong><span> [OPTIONS]</span>
+<strong><span>pvenode stopall</span></strong><span> [选项]</span></p><p><span>Stop all VMs and Containers.</span>
+<span>停止所有 VM 和容器。</span></p><ul><li><p><span>--force-stop </span><boolean><span> (</span><em><span>default =</span></em><span> 1) --force-stop </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>Force a hard-stop after the timeout. 超时后强制硬停止。</span></p></li><li><p><span>--timeout </span><integer><span> (0 - 7200) (</span><em><span>default =</span></em><span> 180) --timeout </span><integer><span> （0 - 7200） （</span><em><span>默认值 =</span></em><span> 180）</span></p><p><span>Timeout for each guest shutdown task. Depending on force-stop, the shutdown gets then simply aborted or a hard-stop is forced. 每个客户机关闭任务的超时。根据强制停止，关机会简单地中止或强制硬停止。</span></p></li><li><p><span>--vms </span><string></p><p><span>Only consider Guests with these IDs. 仅考虑拥有这些 ID 的房客。</span></p></li></ul><p><strong><span>pvenode task list</span></strong><span> [OPTIONS] [FORMAT_OPTIONS]</span>
+<strong><span>pvenode 任务列表</span></strong><span> [选项] [FORMAT_OPTIONS]</span></p><p><span>Read task list for one node (finished tasks).</span>
+<span>读取一个节点的任务列表（已完成的任务）。</span></p><ul><li><p><span>--errors </span><boolean><span> (</span><em><span>default =</span></em><span> 0) --errors </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Only list tasks with a status of ERROR. 仅列出状态为 ERROR 的任务。</span></p></li><li><p><span>--limit </span><integer><span> (0 - N) (</span><em><span>default =</span></em><span> 50) --limit </span><integer><span> （0 - N） （</span><em><span>默认值 =</span></em><span> 50）</span></p><p><span>Only list this amount of tasks. 仅列出此数量的任务。</span></p></li><li><p><span>--since </span><integer><span> --自 </span><integer></p><p><span>Only list tasks since this UNIX epoch. 仅列出自此 UNIX 纪元以来的任务。</span></p></li><li><p><span>--source &lt;active | all | archive&gt; (</span><em><span>default =</span></em><span> archive) --source &lt;active | all | archive&gt;（</span><em><span>默认值 =</span></em><span> 存档）</span></p><p><span>List archived, active or all tasks. 列出已存档的任务、活动的任务或所有任务。</span></p></li><li><p><span>--start </span><integer><span> (0 - N) (</span><em><span>default =</span></em><span> 0) --start </span><integer><span> （0 - N） （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>List tasks beginning from this offset. 列出从此偏移量开始的任务。</span></p></li><li><p><span>--statusfilter </span><string></p><p><span>List of Task States that should be returned. 应返回的任务状态列表。</span></p></li><li><p><span>--typefilter </span><string></p><p><span>Only list tasks of this type (e.g., vzstart, vzdump). 仅列出此类型的任务（例如，vzstart、vzdump）。</span></p></li><li><p><span>--until </span><integer><span> --直到 </span><integer></p><p><span>Only list tasks until this UNIX epoch. 仅列出此 UNIX 纪元之前的任务。</span></p></li><li><p><span>--userfilter </span><string></p><p><span>Only list tasks from this user. 仅列出此用户的任务。</span></p></li><li><p><span>--vmid </span><integer><span> (100 - 999999999) --vmid </span><integer><span> （100 - 999999999）</span></p><p><span>Only list tasks for this VM. 仅列出此 VM 的任务。</span></p></li></ul><p><strong><span>pvenode task log</span></strong><span> </span><upid><span> [OPTIONS]</span>
+<strong><span>pvenode 任务日志</span></strong><span> </span><upid><span> [选项]</span></p><p><span>Read task log. 读取任务日志。</span></p><ul><li><p><upid><span>: </span><string><span> </span><upid><span>： </span><string></p><p><span>The task’s unique ID. 任务的唯一 ID。</span></p></li><li><p><span>--download </span><boolean><span> --下载 </span><boolean></p><p><span>Whether the tasklog file should be downloaded. This parameter can’t be used in conjunction with other parameters 是否应下载 tasklog 文件。此参数不能与其他参数一起使用</span></p></li><li><p><span>--start </span><integer><span> (0 - N) (</span><em><span>default =</span></em><span> 0) --start </span><integer><span> （0 - N） （</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Start at this line when reading the tasklog 读取任务日志时，从此行开始</span></p></li></ul><p><strong><span>pvenode task status</span></strong><span> </span><upid><span> [FORMAT_OPTIONS]</span>
+<strong><span>pvenode 任务状态</span></strong><span> </span><upid><span> [FORMAT_OPTIONS]</span></p><p><span>Read task status. 读取任务状态。</span></p><ul><li><p><upid><span>: </span><string><span> </span><upid><span>： </span><string></p><p><span>The task’s unique ID. 任务的唯一 ID。</span></p></li></ul><p><strong><span>pvenode wakeonlan</span></strong><span> </span><node></p><p><span>Try to wake a node via </span><em><span>wake on LAN</span></em><span> network packet.</span>
+<span>尝试通过 LAN 网络数据包</span><em><span>唤醒</span></em><span>来唤醒节点。</span></p><ul><li><p><node><span>: </span><string><span> </span><node><span>： </span><string></p><p><span>target node for wake on LAN packet LAN 数据包唤醒的目标节点</span></p></li></ul><h2 id='description-描述'><span>DESCRIPTION 描述</span></h2><p><span>The Proxmox VE node management tool (pvenode) allows you to control node specific settings and resources.</span>
+<span>Proxmox VE 节点管理工具 （pvenode） 允许您控制节点特定的设置和资源。</span></p><p><span>Currently pvenode allows you to set a node’s description, run various bulk operations on the node’s guests, view the node’s task history, and manage the node’s SSL certificates, which are used for the API and the web GUI through pveproxy.</span>
+<span>目前 pvenode 允许您设置节点的描述，在节点的 guest 上运行各种批量操作，查看节点的任务历史记录，以及管理节点的 SSL 证书，这些证书用于 API 和 web GUI 通过 pveproxy。</span></p><h2 id='formatoptions'><span>FORMAT_OPTIONS </span></h2><p><span>It is possible to specify the output format using the --output-format parameter. The default format </span><em><span>text</span></em><span> uses ASCII-art to draw nice borders around tables. It additionally transforms some values into human-readable text, for example:</span>
+<span>可以使用 --output-format 参数指定输出格式。默认格式</span><em><span>文本</span></em><span>使用 ASCII 艺术在表格周围绘制漂亮的边框。它还将一些值转换为人类可读的文本，例如：</span></p><ul><li><p><span>Unix epoch is displayed as ISO 8601 date string.</span>
+<span>Unix 纪元显示为 ISO 8601 日期字符串。</span></p></li><li><p><span>Durations are displayed as week/day/hour/minute/second count, i.e 1d 5h.</span>
+<span>持续时间显示为周/天/小时/分钟/秒计数，即 1d 5h。</span></p></li><li><p><span>Byte sizes value include units (B, KiB, MiB, GiB, TiB, PiB).</span>
+<span>字节大小值包括单位（B、KiB、MiB、GiB、TiB、PiB）。</span></p></li><li><p><span>Fractions are display as percentage, i.e. 1.0 is displayed as 100%.</span>
+<span>分数显示为百分比，即 1.0 显示为 100%。</span></p></li></ul><p><span>You can also completely suppress output using option --quiet.</span>
+<span>您也可以使用选项 --quiet 完全抑制输出。</span></p><ul><li><p><span>--human-readable </span><boolean><span> (</span><em><span>default =</span></em><span> 1) --human-readable </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 1）</span></p><p><span>Call output rendering functions to produce human readable text. 调用输出呈现函数以生成人类可读的文本。</span></p></li><li><p><span>--noborder </span><boolean><span> (</span><em><span>default =</span></em><span> 0) --noborder </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Do not draw borders (for </span><em><span>text</span></em><span> format). 不要绘制边框（对于</span><em><span>文本</span></em><span>格式）。</span></p></li><li><p><span>--noheader </span><boolean><span> (</span><em><span>default =</span></em><span> 0) --noheader </span><boolean><span>（</span><em><span>默认值 =</span></em><span> 0）</span></p><p><span>Do not show column headers (for </span><em><span>text</span></em><span> format). 不显示列标题（对于</span><em><span>文本</span></em><span>格式）。</span></p></li><li><p><span>--output-format &lt;json | json-pretty | text | yaml&gt; (</span><em><span>default =</span></em><span> text) --output-format &lt;json | json-pretty | text | yaml&gt; （</span><em><span>默认值 =</span></em><span> 文本）</span></p><p><span>Output format. 输出格式。</span></p></li><li><p><span>--quiet </span><boolean></p><p><span>Suppress printing results. 禁止显示打印结果。</span></p></li></ul><h3 id='examples-例子'><span>Examples 例子 </span></h3><p><span>Install an externally provided certificate</span>
+<span>安装外部提供的证书</span></p><p><span>pvenode cert set certificate.crt certificate.key -force</span></p><p><span>Both files need to be PEM encoded. certificate.key contains the private key and certificate.crt contains the whole certificate chain.</span>
+<span>这两个文件都需要进行 PEM 编码。certificate.key包含私钥，certificate.crt 包含整个证书链。</span></p><p><span>Setup ACME account and order a certificate for the local node.</span>
+<span>设置 ACME 帐户并为本地节点订购证书。</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode acme account register default mail@example.invalid</span></pre></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode config set --acme domains=example.invalid</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode acme cert order</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">systemctl restart pveproxy</span></pre></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 104px;"></div><div class="CodeMirror-gutters" style="display: none; height: 104px;"></div></div></div></pre><h3 id='wake-on-lan-局域网唤醒'><span>Wake-on-LAN 局域网唤醒 </span></h3><p><span>Wake-on-LAN (WoL) allows you to switch on a sleeping computer in the network, by sending a magic packet. At least one NIC must support this feature, and the respective option needs to be enabled in the computer’s firmware (BIOS/UEFI) configuration. The option name can vary from </span><em><span>Enable Wake-on-Lan</span></em><span> to </span><em><span>Power On By PCIE Device</span></em><span>; check your motherboard’s vendor manual, if you’re unsure. ethtool can be used to check the WoL configuration of </span><interface><span> by running:</span>
+<span>Wake-on-LAN （WoL） 允许您通过发送幻数据包来打开网络中处于休眠状态的计算机。至少有一个 NIC 必须支持此功能，并且需要在计算机的固件 （BIOS/UEFI） 配置中启用相应的选项。选项名称可以从</span><em><span>“启用局域网唤醒</span></em><span>”到</span><em><span>“通过 PCIE 设备开机</span></em><span>”不等;如果您不确定，请查看您的主板供应商手册。ethtool 可用于检查 </span><interface><span> 的 WoL 配置，具体做法是运行：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">ethtool &lt;interface&gt; | grep Wake-on</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><span>pvenode allows you to wake sleeping members of a cluster via WoL, using the command:</span>
+<span>pvenode 允许您使用以下命令通过 WoL 唤醒集群的休眠成员：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode wakeonlan &lt;node&gt;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><span>This broadcasts the WoL magic packet on UDP port 9, containing the MAC address of </span><node><span> obtained from the wakeonlan property. The node-specific wakeonlan property can be set using the following command:</span>
+<span>这将在 UDP 端口 9 上广播 WoL 魔术数据包，其中包含从 wakeonlan 属性获取的 </span><node><span> 的 MAC 地址。可以使用以下命令设置特定于节点的 wakeonlan 属性：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode config set -wakeonlan XX:XX:XX:XX:XX:XX</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><span>The interface via which to send the WoL packet is determined from the default route. It can be overwritten by setting the bind-interface via the following command:</span>
+<span>发送 WoL 数据包的接口是根据默认路由确定的。可以通过以下命令设置 bind-interface 来覆盖它：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode config set -wakeonlan XX:XX:XX:XX:XX:XX,bind-interface=&lt;iface-name&gt;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 52px;"></div><div class="CodeMirror-gutters" style="display: none; height: 52px;"></div></div></div></pre><p><span>The broadcast address (default 255.255.255.255) used when sending the WoL packet can further be changed by setting the broadcast-address explicitly using the following command:</span>
+<span>发送 WoL 数据包时使用的广播地址（默认为 255.255.255.255）可以通过使用以下命令显式设置广播地址来进一步更改：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode config set -wakeonlan XX:XX:XX:XX:XX:XX,broadcast-address=&lt;broadcast-address&gt;</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 52px;"></div><div class="CodeMirror-gutters" style="display: none; height: 52px;"></div></div></div></pre><h3 id='task-history-任务历史记录'><span>Task History 任务历史记录 </span></h3><p><span>When troubleshooting server issues, for example, failed backup jobs, it can often be helpful to have a log of the previously run tasks. With Proxmox VE, you can access the nodes’s task history through the pvenode task command.</span>
+<span>在对服务器问题进行故障排除时（例如，失败的备份作业），记录以前运行的任务通常会有所帮助。使用 Proxmox VE，您可以通过 pvenode 任务命令访问节点的任务历史记录。</span></p><p><span>You can get a filtered list of a node’s finished tasks with the list subcommand. For example, to get a list of tasks related to VM </span><em><span>100</span></em><span> that ended with an error, the command would be:</span>
+<span>您可以使用 list 子命令获取节点已完成任务的过滤列表。例如，要获取以错误结束的与 VM </span><em><span>100</span></em><span> 相关的任务列表，命令为：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode task list --errors --vmid 100</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><span>The log of a task can then be printed using its UPID:</span>
+<span>然后，可以使用任务的 UPID 打印任务的日志：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode task log UPID:pve1:00010D94:001CA6EA:6124E1B9:vzdump:100:root@pam:</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 52px;"></div><div class="CodeMirror-gutters" style="display: none; height: 52px;"></div></div></div></pre><h3 id='bulk-guest-power-management-批量客户机电源管理'><span>Bulk Guest Power Management 批量客户机电源管理 </span></h3><p><span>In case you have many VMs/containers, starting and stopping guests can be carried out in bulk operations with the startall and stopall subcommands of pvenode. By default, pvenode startall will only start VMs/containers which have been set to automatically start on boot (see </span><a href='https://pve.proxmox.com/pve-docs/qm.1.html#qm_startup_and_shutdown'><span>Automatic Start and Shutdown of Virtual Machines</span></a><span>), however, you can override this behavior with the --force flag. Both commands also have a --vms option, which limits the stopped/started guests to the specified VMIDs.</span>
+<span>如果您有很多虚拟机/容器，可以使用 pvenode 的 startall 和 stopall 子命令批量操作来启动和停止 guest。默认情况下，pvenode startall 只会启动已设置为在启动时自动启动的虚拟机/容器（请参阅</span><a href='https://pve.proxmox.com/pve-docs/qm.1.html#qm_startup_and_shutdown'><span>虚拟机的自动启动和关闭</span></a><span>），但是，您可以使用 --force 标志覆盖此行为。这两个命令还具有 --vms 选项，该选项将已停止/启动的客户机限制为指定的 VMID。</span></p><p><span>For example, to start VMs </span><em><span>100</span></em><span>, </span><em><span>101</span></em><span>, and </span><em><span>102</span></em><span>, regardless of whether they have onboot set, you can use:</span>
+<span>例如，要启动虚拟机 </span><em><span>100</span></em><span>、</span><em><span>101</span></em><span> 和 </span><em><span>102</span></em><span>，无论它们是否设置了 onboot，都可以使用：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode startall --vms 100,101,102 --force</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><p><span>To stop these guests (and any other guests that may be running), use the command:</span>
+<span>要停止这些客户机（以及可能正在运行的任何其他客户机），请使用以下命令：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode stopall</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><figure class='table-figure'><table><thead><tr><th><img src="data:image/png;base64,%0AiVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAJhUlEQVRoge2ZWWycVxXHf+fce7/v%0Am/GaGCde4pI0aQlJC0kRtE1L00JbLIjY4QkeUB9YHhAIJFCExAsKUkE8IAFFPIDUIqhBRSDRBUqC%0ACimFFBCBpCWx02IaZ3G2SdyxPZ7vHh6+mcnSZnFjKIge6Wj8zYzvPf9z/me5d8TM+F8WfbkNuFx5%0ABcDLLf/fAEZGRmx4eNh6enqsp6fHhoeHbWRk5D9aFeSlVqHNmzfb6H33sHnT7ZQmD5GfOMax6Sm+%0APl5h1Yc+xpYtW2SBbX1ReUkRGBkZsdH77mHLW95EOv4Ms3ueJh6YYPHUFF9aljJ63z3cf//9/5FI%0AvKQIDA8P293L2yhVjjH7t51ocDiviFecF46n7XzBreChhx4qNhH5t0XjJUVgx44ddGUZ9b/vIpQD%0AoRQIWSDJAiFL6B9axo4dO4gxAmANWVDLG+Ln82URMRGhVCqRHxonlAPqFXWKC4r6IhI6OMjMzBN4%0A/4LlTUQQEZxzZ32QJAlpmrb+p16vU6vVOHXq1AWjN18AnDj0F971vrs4OnmYJVkoDA4FCPUO172I%0ACgnt7SV++4vvsGhRJx3tJbIsRVVpsUnOBBABBVFEClKYwbKr7sTM7EIUnBcA7z21k7t49x1X8JXv%0AbOWra7rw5QRtcN8PLCfvvZJvb9vJycpJpg4/hp/N0I4SMQs4Jw0A5zBXHGiCaIZIKABgpGlKjPEF%0A0TpT5pUDRXiVt99+Le03r+WzuytM1gO6pB/3+o0cbxvk8yOPMjW6i2iR2lxOjJDHSDMFogmGwzQ7%0ArRJAUpAENAGXIZq2AFzQpvkACCEQcahP+cRH3sKHn9zHXU+MM7rtGeD33NDXzaZynZU9gcezpUw9%0AX6OzIyOakkfF4QEpPG6nDRNNEA2FSgKimETSNCXPc0II57VpXhEolUqoOrxPSLOMT330Dv5SqfKD%0ANR388Y2L+caQsjITNv3pMBs3rOT56ZyZGaM+J0QUxDc0INrWUgggoRGBAOIRAt77hY1AmqaoeJxP%0AcN645jVDbNn8Hj73o8fZ/af9mEE9j9y2YRXt5YzZWmRmzjj1/BwhTXAKzitOHEbeWlc0AVwDnCv8%0AKoZzjotV33lTSL1HNKAuEtKM1169jM98/E6mTk3x4Nbd7Bk7TEdHRvAeVY+hmDqmZwx1kIkiqrhz%0AS2zL+AbNMC6l/80LgHMOEY9oQvBCks5RKpXo7JhFxbhz42pet2aQet1YtLiDJAkIDq8BHwJmwlwO%0AUaD0ojsrNKuUReIZyb9gABCHcwWFgg+0lTPyvIRToVzKWLpkMfV6REQplYvmZCj1uuBUSdJwTg8A%0AXBdoCZMOsBkQBeGi/J83gBgjmABC8AlJGsjzFLMyaXDM1etEA0VR50iCx6mSZhkiijpPjEpQD+SF%0A4WdJrTAewdCFB1CtVlFVVATnhMQnWJqC5aTBk+c5IIgWRoTgSZJAmiZAo1s7hwsppglI+fTiljeY%0AnyHkLQotKIAYI4igzpFHISQOiwEnKTEG8hhRVZw6YjRQLfJGHcF7jleqTBw8znXr12MABnv37efY%0AiSnesG4tiUsRUQwD7JIAzKsPqCqiRbVwweM04XdPjhJN+dvTBxgbn6G9q59yZx9/3HWEb33vN+zc%0A/RzOJ+w/eJLtO8Z5ZNtT7PvHIUQTvvv9X/Lc/mN0d3by3fseRLQwvWh0Fy+h8wbQ2VFG1KM+xfuA%0Aqufo8So/fejPPD/rqJys8pvf7eLAoeNMHqnw2U9+kH3jVQ5MClMzKUla5obr13HliiEMmDx6gltv%0AuY7Vr1nBQF8PJopQ9AFTt/AROFfMjCW9XTy19xB33Hodb924jr1j+/nDk3/nzTdei4jw3nfeyCOP%0Abufa1y5jzeoVrcHM8HR3dfHlr/2Q+x94jFtuuh44/9B2PplXDryYLF3STXd3e+t5UXcHY89OsOH6%0ANS2Qed7wpM1Rm50G4MGHH2P961Zy3bqreXrPP5mrzwLt5y6/cACq1eoLCKm+TN/SAebmfn8aUG83%0APYs7+cnPH+eqKwd5as8/edc7bi02847pmVkATk1VWbF8AOcca1Yv59DkqcYK0tCL02deACqVCldc%0A0YdIwLmEPM9RV6NnUZlPf3wT6oqJcePN6wHhzTeu4/CRCrfctJ4sSxBRli7pYfHEMUSU97/7Th75%0A1RP8eec+Yp5zzTVXM9DfDyogBvHS6HTJACYmJnjVoq5GFw0454gCEOnoaMfiNGZFFRFxJGkbywZ6%0Ai1NWoy9kWYmbb1gHKCHApuGbisVFGyoYUswa5OR5ftF56JIBjI6OMtDfWwAQ35jnc8AVpRXBohVq%0AUowECKqK4RBxoE0W6gvGCcEjaOEAwEQWdpgbGxujt7erOLO2mk3R8i0Wz9EiuUGz+qlKEQEUaJbI%0A4lTHmTVePKgWzpDGJGpc8CDTlEsuo88++wxXDA0UIUbAOP23KGZKjI48KnkuhcbiPbPCOBoeBikO%0ALk2VxjqNRilaAEqSZGEAbN261bZt+zW33XY7IAXXm6Ou0YhIMamaaUOl5WRrzg00viuKWWxpQUOH%0ANAZFQRpD48Xlkig0MTHBB95zG+VSylz1KCbWyDOh2XyK+56IqjWMKigkUnzWnPPFFFRRLZ29SQRU%0AELOGY4pZ6LKOlM07mZ07d/KOtw1TcB4sGkTDiDQ9K1IkrKeYmQC08d7pZLSiRBpE5s7aS0XAHFEK%0AAGY51Wr18g80Zmb33nsvX/z8XdSmj2AWOXhwkrxe46+79jB55Dh/3T2GxUhHextdXW2sXN7PNWtW%0AIQKDA71FFBoAjIgQkVg/a5+oHrU5zIznDhxk964xKpXKggAoTlWW8+OfPorlOQ//cjsDy1bS2dFO%0AW+diVly1iL6+Pqanpzl5qsL4pPHwN3/G1InDlMsZ7Z1tDA30cfWqIa5dexV9fb2YnT7UTxw4xsHJ%0Ao4yOjfOP8QOMjx/k4OQx7r777lY0zycXvJ02M4sxMjg4SL1eR0TYsGEDw8PD9PX10d7ejogUN3a1%0AGqpKCIE8z5mdnUVVqVarbN++nba2Nvbu3csDDzyAqrJ8+atb+zjn6e/vZ/Xq1axatYq1a9fS29tL%0AlmUMDQ1RKpXOm9EXvV6v1+tWr9eZnp5mZmaGWq1GjLHF62aiNZ+bnPfe45xrvTZzxMyYmZk56+LX%0AzKjX661DvHOOJElIkoRSqYT3/vLvRlW15eHCa4VxzdvmpjZDfubzuXeb3vuzqCEixBhbo0NTkyS5%0APAr9L8j/96+U/w3yCoCXW14B8HLLvwDd67nwZIEPdgAAAABJRU5ErkJggg==" referrerpolicy="no-referrer" alt="Note"></th><th><span>The stopall command first attempts to perform a clean shutdown and then waits until either all guests have successfully shut down or an overridable timeout (3 minutes by default) has expired. Once that happens and the force-stop parameter is not explicitly set to 0 (false), all virtual guests that are still running are hard stopped. stopall 命令首先尝试执行干净关闭，然后等待，直到所有客户机都已成功关闭或可覆盖的超时（默认为 3 分钟）过期。一旦发生这种情况，并且 force-stop 参数未显式设置为 0 （false），则所有仍在运行的虚拟客户机都将被硬停止。</span></th></tr></thead><tbody><tr><td>&nbsp;</td><td>&nbsp;</td></tr></tbody></table></figure><h3 id='first-guest-boot-delay-首次客户机启动延迟'><span>First Guest Boot Delay 首次客户机启动延迟 </span></h3><p><span>In case your VMs/containers rely on slow-to-start external resources, for example an NFS server, you can also set a per-node delay between the time Proxmox VE boots and the time the first VM/container that is configured to autostart boots (see </span><a href='https://pve.proxmox.com/pve-docs/qm.1.html#qm_startup_and_shutdown'><span>Automatic Start and Shutdown of Virtual Machines</span></a><span>).</span>
+<span>如果您的虚拟机/容器依赖于启动缓慢的外部资源（例如 NFS 服务器），您还可以在 Proxmox VE 启动时间与配置为自动启动的第一个虚拟机/容器启动时间之间设置每个节点的延迟（请参阅</span><a href='https://pve.proxmox.com/pve-docs/qm.1.html#qm_startup_and_shutdown'><span>虚拟机的自动启动和关闭</span></a><span>）。</span></p><p><span>You can achieve this by setting the following (where 10 represents the delay in seconds):</span>
+<span>您可以通过设置以下内容来实现此目的（其中 10 表示以秒为单位的延迟）：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode config set --startall-onboot-delay 10</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><h3 id='bulk-guest-migration-批量客户机迁移'><span>Bulk Guest Migration 批量客户机迁移 </span></h3><p><span>In case an upgrade situation requires you to migrate all of your guests from one node to another, pvenode also offers the migrateall subcommand for bulk migration. By default, this command will migrate every guest on the system to the target node. It can however be set to only migrate a set of guests.</span>
+<span>如果升级情况需要您将所有客户机从一个节点迁移到另一个节点，pvenode 还提供 migrateall 子命令用于批量迁移。默认情况下，此命令会将系统上的每个客户机迁移到目标节点。但是，它可以设置为仅迁移一组客户机。</span></p><p><span>For example, to migrate VMs </span><em><span>100</span></em><span>, </span><em><span>101</span></em><span>, and </span><em><span>102</span></em><span>, to the node </span><em><span>pve2</span></em><span>, with live-migration for local disks enabled, you can run:</span>
+<span>例如，要将虚拟机 </span><em><span>100</span></em><span>、</span><em><span>101</span></em><span> 和 </span><em><span>102</span></em><span> 迁移到节点 </span><em><span>pve2</span></em><span>，并启用本地磁盘的实时迁移，您可以运行：</span></p><pre class="md-fences md-end-block ty-contain-cm modeLoaded" spellcheck="false" lang=""><div class="CodeMirror cm-s-inner cm-s-null-scroll CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 11px; left: 4px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: 0px; width: 0px;"></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">pvenode migrateall pve2 --vms 100,101,102 --with-local-disks</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom-width: 0px; border-bottom-style: solid; border-bottom-color: transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="display: none; height: 26px;"></div></div></div></pre><h2 id='copyright-and-disclaimer-版权及免责声明'><span>Copyright and Disclaimer 版权及免责声明</span></h2><p><span>Copyright © 2007-2022 Proxmox Server Solutions GmbH</span>
+<span>版权所有 © 2007-2022 Proxmox Server Solutions GmbH</span></p><p><span>This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</span>
+<span>该程序是自由软件：您可以根据自由软件基金会发布的 GNU Affero 通用公共许可证的条款重新分发和/或修改它，该许可证的版本 3 或（由您选择）任何更高版本。</span></p><p><span>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.</span>
+<span>分发该程序是希望它有用，但没有任何保证;甚至没有对适销性或特定用途适用性的默示保证。有关更多详细信息，请参阅 GNU Affero 通用公共许可证。</span></p><p><span>You should have received a copy of the GNU Affero General Public License along with this program. If not, see </span><a href='https://www.gnu.org/licenses/' target='_blank' class='url'>https://www.gnu.org/licenses/</a>
+<span>您应该已经收到了 GNU Affero 通用公共许可证的副本以及此程序。如果没有，请参阅 </span><a href='https://www.gnu.org/licenses/' target='_blank' class='url'>https://www.gnu.org/licenses/</a></p><p><span>Version 8.2.3 版本 8.2.3</span>
+<span>Last updated Wed Jul 31 16:58:41 CEST 2024</span>
+<span>最后更新 星期三 Jul 31 16：58：41 CEST 2024</span></p></div></div>
+</body>
+</html>
