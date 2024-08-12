@@ -55,7 +55,7 @@
   - [28.附录GMarkdown入门](doc/28.AppendixG-MarkdownPrimer.html)
   - [29.附录HGNU自由文档许可证](doc/29.AppendixH-GNUFreeDocumentationLicense.html)
  
-- [ProxmoxVE手册-命令行]
+- [PVE手册-命令行]
   - [1.高可用性](doc/ha-manager.1.html)
   - [2.Proxmox容器工具包](doc/pct.1.html)
   - [3.容器镜像](doc/pveam.1.html)
@@ -72,7 +72,23 @@
   - [14.还原虚拟机](doc/qmrestore.1.html)
   - [15.备份和恢复](doc/vzdump.1.html)
 
+- [PVE手册-服务守护进程]
+  - [1.Proxmox集群文件系统pmxcfs](doc/pmxcfs.8.html)
+  - [2.ProxmoxVE防火墙](doc/pve-firewall.8.html)
+  - [3.集群资源管理器守护程序](doc/pve-ha-crm.8.html)
+  - [4.本地资源管理器守护程序](doc/pve-ha-lrm.8.html)
+  - [5.ProxmoxVEAPI守护程序](doc/pvedaemon.8.html)
+  - [6.ProxmoxVEAPI代理守护程序](doc/pveproxy.8.html)
+  - [7.ProxmoxVE调度程序守护程序](doc/pvescheduler.8.html)
+  - [8.ProxmoxVE状态守护程序](doc/pvestatd.8.html)
+  - [9.PVEQEMU事件守护进程](doc/qmeventd.8.html)
+  - [10.SPICE代理服务](doc/spiceproxy.8.html)
 
+- [PVE手册-配置选项]
+  - [1.自定义CPU型号配置](doc/cpu-models.conf.5.html)
+  - [2.数据中心配置](doc/datacenter.cfg.5.html)
+  - [3.容器配置](doc/pct.conf.5.html)
+  - [4.虚拟机配置](doc/qm.conf.5.html)
 
 
 
