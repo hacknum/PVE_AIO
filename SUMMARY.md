@@ -55,7 +55,22 @@
   - [28.附录GMarkdown入门](doc/28.AppendixG-MarkdownPrimer.html)
   - [29.附录HGNU自由文档许可证](doc/29.AppendixH-GNUFreeDocumentationLicense.html)
  
-
+- [ProxmoxVE手册-命令行]
+  - [1.高可用性](doc/ha-manager.1.html)
+  - [2.Proxmox容器工具包](doc/doc/pct.1.html)
+  - [3.容器镜像](doc/pveam.1.html)
+  - [4.部署超融合Ceph集群](doc/pveceph.1.html)
+  - [5.集群管理器](doc/pvecm.1.html)
+  - [6.Proxmox节点管理](doc/pvenode.1.html)
+  - [7.ProxmoxVE基准测试脚本](doc/pveperf.1.html)
+  - [8.ProxmoxVEAPI的Shell接口](doc/pvesh.1.html)
+  - [9.ProxmoxVE存储](doc/pvesm.1.html)
+  - [10.存储复制](doc/pvesr.1.html)
+  - [11.订阅管理](doc/pvesubscription.1.html)
+  - [12.用户管理](doc/pveum.1.html)
+  - [13.QEMU/KVM虚拟机](doc/qm.1.html)
+  - [14.还原虚拟机](doc/qmrestore.1.html)
+  - [15.备份和恢复](doc/vzdump.1.html)
 
 
 
