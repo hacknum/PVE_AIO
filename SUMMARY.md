@@ -32,7 +32,7 @@
 - [3.主机系统管理](doc/3.HostSystemAdministration.html)
 - [4.图形用户界面](doc/4.GraphicalUserInterface.html)
 - [5.集群管理器](doc/5.ClusterManager.html)
-- [6.Proxmox集群文件系统pmxcfs](doc/6.ProxmoxClusterFileSystem-pmxcfs.html)
+- [6.集群文件系统pmxcfs](doc/6.ProxmoxClusterFileSystem-pmxcfs.html)
 - [7.ProxmoxVE存储](doc/7.ProxmoxVEStorage.html)
 - [8.部署超融合Ceph集群](doc/8.DeployHyper-ConvergedCephCluster.html)
 - [9.存储复制](doc/9.StorageReplication.html)
@@ -55,7 +55,7 @@
 - [26.附录EQEMUvCPU列表](doc/26.AppendixE-QEMUvCPUList.html)
 - [27.附录F防火墙宏定义](doc/27.AppendixF-FirewallMacroDefinitions.html)
 - [28.附录GMarkdown入门](doc/28.AppendixG-MarkdownPrimer.html)
-- [29.附录HGNU自由文档许可证](doc/29.AppendixH-GNUFreeDocumentationLicense.html)
+- [29.GNU自由文档许可证](doc/29.AppendixH-GNUFreeDocumentationLicense.html)
 
 ## PVE手册-命令行 <a id="pve-Command-line-Interface"></a>
 
@@ -65,8 +65,8 @@
 - [4.部署超融合Ceph集群](doc/pveceph.1.html)
 - [5.集群管理器](doc/pvecm.1.html)
 - [6.Proxmox节点管理](doc/pvenode.1.html)
-- [7.ProxmoxVE基准测试脚本](doc/pveperf.1.html)
-- [8.ProxmoxVEAPI的Shell接口](doc/pvesh.1.html)
+- [7.PVE基准测试脚本](doc/pveperf.1.html)
+- [8.PVE_API的Shell接口](doc/pvesh.1.html)
 - [9.ProxmoxVE存储](doc/pvesm.1.html)
 - [10.存储复制](doc/pvesr.1.html)
 - [11.订阅管理](doc/pvesubscription.1.html)
@@ -77,14 +77,14 @@
 
 ## PVE手册-服务守护进程 <a id="pve-Service-Daemons"></a>
 
-- [1.Proxmox集群文件系统pmxcfs](doc/pmxcfs.8.html)
+- [1.集群文件系统pmxcfs](doc/pmxcfs.8.html)
 - [2.ProxmoxVE防火墙](doc/pve-firewall.8.html)
 - [3.集群资源管理器守护程序](doc/pve-ha-crm.8.html)
 - [4.本地资源管理器守护程序](doc/pve-ha-lrm.8.html)
-- [5.ProxmoxVEAPI守护程序](doc/pvedaemon.8.html)
-- [6.ProxmoxVEAPI代理守护程序](doc/pveproxy.8.html)
-- [7.ProxmoxVE调度程序守护程序](doc/pvescheduler.8.html)
-- [8.ProxmoxVE状态守护程序](doc/pvestatd.8.html)
+- [5.PVEAPI守护程序](doc/pvedaemon.8.html)
+- [6.PVEAPI代理守护程序](doc/pveproxy.8.html)
+- [7.PVE调度程序守护程序](doc/pvescheduler.8.html)
+- [8.PVE状态守护程序](doc/pvestatd.8.html)
 - [9.PVEQEMU事件守护进程](doc/qmeventd.8.html)
 - [10.SPICE代理服务](doc/spiceproxy.8.html)
 
