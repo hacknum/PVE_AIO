@@ -20,10 +20,27 @@
  
 ## AIO最佳实践 <a id="aio"></a>
 
-- [AMD]
-  - [铭凡UM790XTX](aio/amd/mingfanUM790XTX.md)
-- [Intel]
-  - [待添加](aio/intel/0.md)
+- [铭凡UM790XTX](aio/amd/mingfanUM790XTX.md)
+- [铭凡UM780XTX](aio/intel/0.md)
+- [铭凡UH125PRO](aio/intel/0.md)
+- [铭凡MS-A1](aio/intel/0.md)
+- [铭凡UM880PRO](aio/intel/0.md)
+- [铭凡UM890PRO](aio/intel/0.md)
+- [铭凡UN1270](aio/intel/0.md)
+- [铭凡UM690S](aio/intel/0.md)
+- [铭凡UM690WT](aio/intel/0.md)
+- [铭凡NAB6](aio/intel/0.md)
+- [铭凡NAB7](aio/intel/0.md)
+- [铭凡NAB9](aio/intel/0.md)
+- [铭凡HX99G](aio/intel/0.md)
+- [铭凡MS-01](aio/intel/0.md)
+- [铭凡UN100D](aio/intel/0.md)
+- [铭凡UM760Pro](aio/intel/0.md)
+- [铭凡UM790Pro](aio/intel/0.md)
+- [铭凡EM780](aio/intel/0.md)
+- [铭凡NPB6](aio/intel/0.md)
+- [铭凡X500](aio/intel/0.md)
+- [铭凡B550PRO](aio/intel/0.md)
  
 ## ProxmoxVE管理指南 <a id="pve-admin-guide"></a>
 
