@@ -18,7 +18,7 @@
   - [常见名词](pve/changjianmingci.md)
   - [常见问题](pve/changjianwenti.md)
  
-## AIO <a id="aio"></a>
+## ALLINONE最佳实践 <a id="aio"></a>
 
 - [AMD]
   - [铭凡UM790XTX](aio/amd/mingfanUM790XTX.md)
