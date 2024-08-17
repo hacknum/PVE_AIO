@@ -14,8 +14,9 @@
 - iStoreOS（提供科学分流）
 - AdGuard Home（提供高效的DNS解析）
 - TrueNAS Core（统一管理，提供所有Docker服务的存储）
-- Docker（LXC踩坑中，待补充）
-- HomeAssistant（智能家居聚合，提供米家等设备桥接进HomeKit家庭的能力）
+- Docker（轻量化运行所有需要的服务）
+- HAOS（智能家居聚合，提供米家等设备桥接进HomeKit家庭的能力）
+- Ubuntu Server（用于SSH远程开发的编译机，避免多开发设备平台环境不统一导致的问题）
 
 ## 网络规划
 
@@ -26,7 +27,8 @@
 - Docker（10.0.0.5）
 - TrueNAS Core（10.0.0.6）
 
-- HomeAssistant（10.0.0.7）
+- HAOS（10.0.0.7）
+- Ubuntu Server（10.0.0.8）
 
 ## iKuai部署
 
@@ -46,7 +48,7 @@
 - 镜像：[官方下载](https://fw.koolcenter.com/iStoreOS/)
 - CPU：4核
 - 内存：2G
-- 磁盘：img镜像直接加载
+- 磁盘：img镜像直接加载（光盘启动更改为硬盘启动）
 
 ## AdGuard Home部署
 
@@ -78,3 +80,24 @@
 - 内存：32G / 交换内存：16G
 - 磁盘：128G
 
+## HAOS部署
+
+### 配置参数
+
+- 方式：虚拟机
+- 镜像：[官方下载](https://github.com/home-assistant/operating-system/releases)
+
+- CPU：4核
+- 内存：4G
+- 磁盘：img镜像直接加载（光盘启动更改为硬盘启动）
+
+## Ubuntu Server部署
+
+### 配置参数
+
+- 方式：虚拟机
+- 镜像：[官方下载](https://cn.ubuntu.com/download/server/thank-you?version=24.04&architecture=amd64)
+
+- CPU：8核
+- 内存：16G
+- 磁盘：256G
