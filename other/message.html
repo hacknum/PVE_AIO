@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>留言板</title>
+        <link rel='stylesheet' href='/bootstrap/bootstrap.min.css'>
+        <link rel='stylesheet' href='/bootstrap/bootstrap-theme.min.css'>
+        <script src='/bootstrap/jquery-3.2.1.min.js'></script>
+        <script src='/bootstrap/bootstrap.min.js'></script>
+        <script src='/bootstrap/marked.js'></script>
+        <script src='/bootstrap/highlight.min.js'></script>
+        <style>
+        .row{
+            font-size: 16px;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        h4{
+            color:#159957;
+        }
+        .panel-title{
+            font-weight:bold;
+        }
+        </style>
+    </head>
+    
+    <body>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                         <h3 class="panel-title">留言列表</h3>
+                    </div>
+                    <div class="panel-body" id="messagecontent">
+                        <table class="table table-striped">
+                          <thead>
+                            <tr>
+                              <th>序号</th>
+                              <th>用户昵称</th>
+                              <th>留言建议</th>
+                              <th>时间</th>
+                            </tr>
+                          </thead>
+                          <tbody id="tbody">
+                          </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">
+                         <h3 class="panel-title">留言建议</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form id="message">
+                            <div class="input-group">
+                                <span class="input-group-addon">用户昵称</span>
+                                <input type="text" class="form-control" placeholder="请输入" id="name" AUTOCOMPLETE="off">
+                            </div>
+                            <br>
+                            <div class="input-group">
+                                <span class="input-group-addon">留言建议</span>
+                                <textarea class="form-control" rows="3" placeholder="请输入" id="content" AUTOCOMPLETE="off"></textarea>
+                            </div>
+                        </form>
+                        <button type="button" class="btn btn-default" id="reset">重置</button>
+                        <button type="button" class="btn btn-primary" id="submit">立即提交</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+<script>
+$(document).ready(function(){
+    $.ajax({
+        url: "message.php",
+        type: "POST",
+        data: {
+            action:"getmessage"
+        },
+        dataType: "json",
+        success: function(src){
+            console.log(src);
+            if(src.code==1000){
+                $("#messagecontent").prepend("<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 获取数据成功 ! </strong></div>");
+                window.setTimeout(function(){
+                    $('[data-dismiss="alert"]').alert('close');
+                },5000);
+                //console.log(src.data);
+                //var ob=JSON.parse(src.data);
+                $.each(src.data, function (index,item){
+                    $("#tbody").append("<tr><th scope='row'>"+item["id"]+"</th><td>"+item["name"]+"</td><td>"+item["content"]+"</td><td>"+item["create_time"]+"</td></tr>");
+                });
+            }
+            if(src.code==1001){
+                $("#messagecontent").prepend("<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 当前数据为空 ! </strong></div>");
+                window.setTimeout(function(){
+                    $('[data-dismiss="alert"]').alert('close');
+                },5000);
+            }
+        },
+        error:function(){
+            $("#messagecontent").prepend("<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 错误 ! </strong> 您的网络异常，无法获取数据 ！</div>");
+            window.setTimeout(function(){
+                $('[data-dismiss="alert"]').alert('close');
+            },5000);
+        } 
+    });
+});
+$("#reset").click(function(){
+    $("#name").val("");
+    $("#content").val("");
+});
+$("#submit").click(function(){
+    var name=$("#name").val();
+    var content=$("#content").val();
+    console.log(name);
+    console.log(content);
+    $("#reset").click();
+    if(name==""||content==""){
+        $("#message").prepend("<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 错误 ! </strong> 用户昵称、留言建议不能为空 ！</div>");
+            window.setTimeout(function(){
+                $('[data-dismiss="alert"]').alert('close');
+            },5000);
+        return;
+    }
+    $.ajax({
+        url: "message.php",
+        type: "POST",
+        data: {
+            name:name,
+            content:content,
+            action:"addmessage"
+        },
+        dataType: "json",
+        success: function(src){
+            console.log(src);
+            if(src==10000){
+                $("#message").prepend("<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 恭喜您 ! </strong> 提交成功 ！</div>");
+                $("#tbody").html("");
+                $.ajax({
+                    url: "message.php",
+                    type: "POST",
+                    data: {
+                        action:"getmessage"
+                    },
+                    dataType: "json",
+                    success: function(src){
+                        //console.log(src);
+                        if(src.code==1000){
+                            $("#messagecontent").prepend("<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 获取数据成功 ! </strong></div>");
+                            window.setTimeout(function(){
+                                $('[data-dismiss="alert"]').alert('close');
+                            },5000);
+                            //console.log(src.data);
+                            //var ob=JSON.parse(src.data);
+                            $.each(src.data, function (index,item){
+                                $("#tbody").append("<tr><th scope='row'>"+item["id"]+"</th><td>"+item["name"]+"</td><td>"+item["content"]+"</td><td>"+item["create_time"]+"</td></tr>");
+                            });
+                        }
+                        if(src.code==1001){
+                            $("#messagecontent").prepend("<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 当前数据为空 ! </strong></div>");
+                            window.setTimeout(function(){
+                                $('[data-dismiss="alert"]').alert('close');
+                            },5000);
+                        }
+                    },
+                    error:function(){
+                        $("#messagecontent").prepend("<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 错误 ! </strong> 您的网络异常，无法获取数据 ！</div>");
+                        window.setTimeout(function(){
+                            $('[data-dismiss="alert"]').alert('close');
+                        },5000);
+                    } 
+                });
+            }
+            if(src==10001){
+                $("#message").prepend("<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 错误 ! </strong> 提交失败,请咨询管理员 ！</div>");
+
+            }
+            window.setTimeout(function(){
+                $('[data-dismiss="alert"]').alert('close');
+            },5000);
+        },
+        error:function(){
+            $("#message").prepend("<div class='alert alert-danger alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 错误 ! </strong> 您的网络异常，请重新提交！</div>");
+            window.setTimeout(function(){
+                $('[data-dismiss="alert"]').alert('close');
+            },5000);
+        } 
+    });
+});
+</script>
+
+
