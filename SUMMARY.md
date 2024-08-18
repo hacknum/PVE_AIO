@@ -3,7 +3,7 @@
 - [简介](README.md)
 - [更新日志](CHANGELOG.md)
 - [贡献列表](CONTRIBUTOR.md)
-- [留言板](other/message.html)
+- [留言列表](other/message.html)
 
 # 主目录
 
