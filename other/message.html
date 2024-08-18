@@ -78,7 +78,7 @@
 <script>
 $(document).ready(function(){
     $.ajax({
-        url: "message.php",
+        url: "/message.php",
         type: "POST",
         data: {
             action:"getmessage"
@@ -130,7 +130,7 @@ $("#submit").click(function(){
         return;
     }
     $.ajax({
-        url: "message.php",
+        url: "/message.php",
         type: "POST",
         data: {
             name:name,
@@ -144,7 +144,7 @@ $("#submit").click(function(){
                 $("#message").prepend("<div class='alert alert-success alert-dismissible' role='alert'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button><strong> 恭喜您 ! </strong> 提交成功 ！</div>");
                 $("#tbody").html("");
                 $.ajax({
-                    url: "message.php",
+                    url: "/message.php",
                     type: "POST",
                     data: {
                         action:"getmessage"
