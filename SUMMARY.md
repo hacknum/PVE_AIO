@@ -24,6 +24,14 @@
 - [基础知识]
   - [常见名词](pve/changjianmingci.md)
   - [常见问题](pve/changjianwenti.md)
+- [参考文章]
+  - [未分类1](pve/weifenlei/weizhengli1.md)
+  - [未分类2](pve/weifenlei/weizhengli2.md)
+  - [未分类3](pve/weifenlei/weizhengli3.md)
+  - [未分类4](pve/weifenlei/weizhengli4.md)
+  - [未分类5](pve/weifenlei/weizhengli5.md)
+  - [未分类6](pve/weifenlei/weizhengli6.md)
+  - [未分类7](pve/weifenlei/weizhengli7.md)
  
 ## AIO最佳实践 <a id="aio"></a>
 
