@@ -33,6 +33,7 @@
   - [未分类6](pve/weifenlei/weizhengli6.html)
   - [未分类7](pve/weifenlei/weizhengli7.html)
   - [未分类8](pve/weifenlei/weizhengli8.html)
+  - [未分类9](pve/weifenlei/9.html)
  
 ## AIO最佳实践 <a id="aio"></a>
 
