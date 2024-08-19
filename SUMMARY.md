@@ -18,8 +18,9 @@
 
 - [常用工具]
   - [pve_source](tools/pve_source.md)
-  - [pve_source_html](tools/pve_source.html)
+  - [pve_source网页版](tools/pve_source.html)
   - [pvetools](tools/pvetools.md)
+  - [pvetools网页版](tools/pvetools.html)
 - [基础知识]
   - [常见名词](pve/changjianmingci.md)
   - [常见问题](pve/changjianwenti.md)
