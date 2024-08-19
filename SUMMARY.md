@@ -17,9 +17,9 @@
 ## PVE <a id="pve"></a>
 
 - [常用工具]
-  - [pve_source](pve/pve_source.md)
-  - [pve_source_html](pve/pve_source.html)
-  - [pvetools](pve/pvetools.md)
+  - [pve_source](tools/pve_source.md)
+  - [pve_source_html](tools/pve_source.html)
+  - [pvetools](tools/pvetools.md)
 - [基础知识]
   - [常见名词](pve/changjianmingci.md)
   - [常见问题](pve/changjianwenti.md)
