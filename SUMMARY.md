@@ -46,6 +46,8 @@
   - [19](pve/weifenlei/19.html)
   - [20](pve/weifenlei/20.html)
   - [21](pve/weifenlei/21.html)
+  - [22](pve/weifenlei/22.html)
+  - [23](pve/weifenlei/23.html)
  
 ## AIO最佳实践 <a id="aio"></a>
 
