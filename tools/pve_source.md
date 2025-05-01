@@ -194,7 +194,11 @@ P.S.
 
 **示意图：**
 
-![img](https://bbs.x86pi.cn/file/topic/2023-12-22/image/ccba370abce04d6c801d9df9463f6d38b2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2023-12-22/image/ccba370abce04d6c801d9df9463f6d38b2.png)
+
+
 
 
 
@@ -202,7 +206,11 @@ P.S.
 
 **案例一 it87-dkms 依赖的 dksm 版本过低，如下图：**
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/e33084df74394b46acca94be62c308d4b2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/e33084df74394b46acca94be62c308d4b2.png)
+
+
 
 原因分析：因为安装dkms前没有更新软件数据库。
 
@@ -234,7 +242,11 @@ apt update && apt upgrade -y
 
 **案例二 apt 和 dpkg 安装工具故障。提示需要用 dpkg --configure -a 命令修复问题，如下图：**
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/b1ba6c6e97e94d39bf4f8c08cf830230b2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/b1ba6c6e97e94d39bf4f8c08cf830230b2.png)
+
+
 
 原因分析：CW 56-58 部分设备因 12V 5A 电源功率不够，在首次运行更新数据库、更新软件包、更新系统等任务时掉电关机，导致工具故障。此故障也会导致其他安装或卸载工具命令运行失败。
 
@@ -248,31 +260,55 @@ dpkg --configure -a
 
 **同理，基础工具安装失败也可能是由以上原因导致的，分别根据症状排查修复。**
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/5ef35474892c48a99c4136d8b1893273b2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/5ef35474892c48a99c4136d8b1893273b2.png)
+
+
 
 
 
 **案例三 概要信息栏中，CPU温度信息空栏。如下图：**
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/8dace039137c434ebc1debf27d008398b2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/8dace039137c434ebc1debf27d008398b2.png)
+
+
 
 原因分析：未按要求将 conf 文件上传至 /etc/sensors.d 路径且拷贝错了文件。
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/1a2f074ab8934942a0387a2154b6988cb2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/1a2f074ab8934942a0387a2154b6988cb2.png)
+
+
 
 解决办法：将正确的 conf 文件上传至 /etc/sensors.d 路径，并删除无用文件。
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/c36f8217396c4060bd775cab9d0f6df8b2.jpg)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/c36f8217396c4060bd775cab9d0f6df8b2.jpg)
+
+
 
 
 
 **案例四 vbios、群晖img等文件填写报错。如下图：**
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/c34a322a2f0d4158aba1fd34ae6f9a7cb2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/c34a322a2f0d4158aba1fd34ae6f9a7cb2.png)
+
+
 
 原因分析：填写内容与实际文件路径、名称不一致
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/8a358d9027944a9fb2079e91a551e77ab2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/8a358d9027944a9fb2079e91a551e77ab2.png)
+
+
 
 解决办法：按要求填写
 
@@ -280,21 +316,29 @@ dpkg --configure -a
 
 **案例五 直通核显的虚拟机启动报错类型如下图：**
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/e43b9a2ecbd648c8b14e3c75bae12f72b2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/e43b9a2ecbd648c8b14e3c75bae12f72b2.png)
+
+
 
 原因分析：未提前安装系统就直通核显。
 
 解决办法：删除已直通的核显及高清音频PCI设备，再将显示改成默认，先安装好Windows 10及以下系统(不支持Windows 11等无法传统引导的系统)后。再通过 pve_source 添加直通核显，安装核显驱动，且将显示调整为none。重启PVE后通过 HDMI 或 DP 输出显示器。
 
-![img](https://bbs.x86pi.cn/file/topic/2022-10-16/image/706d2f656f2041429e53193b7dc0657fb2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2022-10-16/image/706d2f656f2041429e53193b7dc0657fb2.png)
+
+
 
 
 
 **一、pve_source 下载地址及使用方法**
 
-[附件一①：稳定版pve_source.tar.gz](https://bbs.x86pi.cn/file/topic/2023-11-28/file/01ac88d7d2b840cb88c15cb5e19d4305b2.gz)
+[附件一①：稳定版pve_source.tar.gz](https://api.x86pi.com/file/topic/2023-11-28/file/01ac88d7d2b840cb88c15cb5e19d4305b2.gz)
 
-[附件一②：开发版pve_source.tar.gz](https://bbs.x86pi.cn/file/topic/2024-01-06/file/24f723efc6ab4913b1f99c97a1d1a472b2.gz)
+[附件一②：开发版pve_source.tar.gz](https://api.x86pi.com/file/topic/2024-01-06/file/24f723efc6ab4913b1f99c97a1d1a472b2.gz)
 
 **使用方法：**
 
@@ -326,15 +370,19 @@ wget -q -O /root/pve_source.tar.gz 'https://bbs.x86pi.cn/file/topic/2024-01-06/f
 
 复制
 
-![img](https://bbs.x86pi.cn/file/topic/2023-12-22/image/93bc7414e17e4d859ef83fb71902f2a7b2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2023-12-22/image/93bc7414e17e4d859ef83fb71902f2a7b2.png)
+
+
 
 
 
 **二、传感器驱动下载地址及使用方法**
 
-[附件二①(it87 系列传感器驱动，显示 PVE 风扇转速)：IT87传感器驱动_it87-dkms_1.0.63-1_all.deb](https://bbs.x86pi.cn/file/topic/2023-12-03/file/5434427fbfde4da7a71e654c3d178d17b2.deb)
+[附件二①(it87 系列传感器驱动，显示 PVE 风扇转速)：IT87传感器驱动_it87-dkms_1.0.63-1_all.deb](https://api.x86pi.com/file/topic/2023-12-03/file/5434427fbfde4da7a71e654c3d178d17b2.deb)
 
-[附件二②(nct 系列传感器驱动，显示 PVE 风扇转速)：NCT6687D传感器驱动_nct6687d-dkms_20231128-212556_all.deb](https://bbs.x86pi.cn/file/topic/2023-12-03/file/f0759a0dc7764194a62824e0b464c582b2.deb)
+[附件二②(nct 系列传感器驱动，显示 PVE 风扇转速)：NCT6687D传感器驱动_nct6687d-dkms_20231128-212556_all.deb](https://api.x86pi.com/file/topic/2023-12-03/file/f0759a0dc7764194a62824e0b464c582b2.deb)
 
 ```bash
 使用方法：
@@ -350,24 +398,28 @@ reboot                                                                     ## �
 
 **三、核显直通文件下载地址及使用方法**
 
-[附件三①(用于Intel 10代~14代核显直通)：Intel_10-14_Gop_Igd_vbios.rom](https://bbs.x86pi.cn/file/topic/2024-01-12/file/f9aacc8ac9694ed59d18a58a32aa6671b2.rom)
+[附件三①(用于Intel 6代~14代核显直通)：Intel_6-14_Gop_Igd_vbios.rom](https://api.x86pi.com/file/topic/2024-12-18/file/07441f6b7e3d46beb294f532d8780c39b2.rom)
 
 ```bash
+说明：
 GitHub 1：https://github.com/tianocore/edk2
 GitHub 2：https://github.com/cmd2001/build-edk2-gvtd
-初编译：李晓流
-重编译：Jazz，解决J4125花屏的 BUG
+编译：李晓流
 
 J4125 使用 OVMF+vbios_gvt_uefi.rom 或者合成单 rom 方案 HDMI 完美输出画面 BIOS 必选项(有些设备出厂已经预设，不用手调)：
-Advanced - CSM Configuration - CSM Support - Enabled, Video - Legacy
+Advanced - CSM Configuration - CSM Support - Enabled, Video - Legacy 
 J4125 核显直通必须同时黑名单 blacklist i915 与 blacklist snd_hda_intel 或将 VGA 与 Audio 的设备 ID 强行绑定到 vfio-pci 模块，否则高清音频设备会丢失且画面高宽比异常。
 可使用Intel® 第 7 代至第 10 代处理器显示芯片 - Windows* 驱动
 官方地址：https://www.intel.cn/content/www/cn/zh/download/776137/intel-7th-10th-gen-processor-graphics-windows.html
+
+更新日志：
+2024.12.06
+①添加 Ultra 一代及 N150 vbios。
 ```
 
 复制
 
-[附件三②：J4125高清音频驱动包.zip](https://bbs.x86pi.cn/file/topic/2023-12-18/file/f585e4eac97a46ad9be5777b80e83ad6b2.zip)
+[附件三②：J4125高清音频驱动包.zip](https://api.x86pi.com/file/topic/2023-12-18/file/f585e4eac97a46ad9be5777b80e83ad6b2.zip)
 
 ```bash
 说明：
@@ -378,7 +430,7 @@ J4125 核显直通必须同时黑名单 blacklist i915 与 blacklist snd_hda_int
 
 复制
 
-[附件三③-1：AMD_Lucienne_Cezanne_Barcelo_Gop_vbios.rom](https://bbs.x86pi.cn/file/topic/2024-06-20/file/1c140cfeb9d046119e3ab0504e3397d3b2.rom)
+[附件三③-1：AMD_Lucienne_Cezanne_Barcelo_Gop_vbios.rom](https://api.x86pi.com/file/topic/2024-06-20/file/1c140cfeb9d046119e3ab0504e3397d3b2.rom)
 
 ```bash
 说明：
@@ -395,7 +447,7 @@ J4125 核显直通必须同时黑名单 blacklist i915 与 blacklist snd_hda_int
 
 复制
 
-[附件三③-2：AMD_Phoenix_Gop_vbios.rom](https://bbs.x86pi.cn/file/topic/2024-06-19/file/0f41a0e2143b4c83b4356ba1d1daf166b2.rom)
+[附件三③-2：AMD_Phoenix_Gop_vbios.rom](https://api.x86pi.com/file/topic/2024-06-19/file/0f41a0e2143b4c83b4356ba1d1daf166b2.rom)
 
 ```bash
 说明：
@@ -413,7 +465,7 @@ J4125 核显直通必须同时黑名单 blacklist i915 与 blacklist snd_hda_int
 
 复制
 
-[附件三③-3：AMD_Raphael_Gop_vbios.rom](https://bbs.x86pi.cn/file/topic/2024-06-19/file/0b30d69e217c4e7e8a8b8c8b608e3b81b2.rom)
+[附件三③-3：AMD_Raphael_Gop_vbios.rom](https://api.x86pi.com/file/topic/2024-06-19/file/0b30d69e217c4e7e8a8b8c8b608e3b81b2.rom)
 
 ```bash
 说明：
@@ -426,11 +478,11 @@ J4125 核显直通必须同时黑名单 blacklist i915 与 blacklist snd_hda_int
 
 复制
 
-[附件三④：RadeonResetBugFixService v0.1.7.zip](https://bbs.x86pi.cn/file/topic/2023-12-22/file/26745696f47e4d2fae4b4cf139798e9fb2.zip)
+[附件三④：RadeonResetBugFixService v0.1.7.zip](https://api.x86pi.com/file/topic/2023-12-22/file/26745696f47e4d2fae4b4cf139798e9fb2.zip)
 
 ```bash
 GitHub：https://github.com/inga-lovinde/RadeonResetBugFix
-原作者：inga-lovinde
+原作者：inga-lovinde 
 Repack：Jazz，重新打包加入管理员权限批处理 bat 文件，便于一键安装
 说明：
 ①用于改善 AMD 核显直通虚拟 Windows 系统 vendor reset BUG；
@@ -470,37 +522,22 @@ dkms remove i915-sriov-dkms/6.1 --all
 
 复制
 
-[附件四①：i915-sriov-dkms_6.1.11_all.deb](https://bbs.x86pi.cn/file/topic/2024-05-13/file/7f12279527104fb288c2383d4e141e0cb2.deb)
+[附件四①：i915-sriov-dkms_2024.08.09_all.deb](https://api.x86pi.com/file/topic/2024-09-03/file/a626ba7c160d433b9e767ca84dd413c3b2.deb)
 
 ```bash
 GitHub：https://github.com/strongtz/i915-sriov-dkms
 用于 Gen 11 (如 i5-1135G7 的 Iris Xe 核显)、Gen12 (如 i7-1270p 的 Iris Xe 核显)及 Gen 13 (如 i5-13400 的 UHD 730 核显) SR-IOV
 * 部分 Gen 11 核显 SR-IOV 失败可尝试使用 intel-i915-dkms 驱动
-内核要求：适用于 PVE 6.2.16-16 及以上且 6.8 以下的内核
+内核要求：适用于 PVE 6.1.0-1 ~ 6.2.9-1、 6.5.13-3-pve ~ 6.8.12-1 的内核
 使用方法：
 首次安装需安装两次。
 安装过程中动态编译时间较长，需耐心等待，安装完成后需重启系统。
-wget -q -O '/root/i915-sriov-dkms_6.1.11_all(PVE_6.2.16-16+).deb' 'https://bbs.x86pi.cn/file/topic/2024-05-13/file/7f12279527104fb288c2383d4e141e0cb2.deb' && dpkg -i '/root/i915-sriov-dkms_6.1.11_all(PVE_6.2.16-16+).deb'
+wget -q -O '/root/i915-sriov-dkms_2024.08.09_all.deb' 'https://bbs.x86pi.cn/file/topic/2024-09-03/file/a626ba7c160d433b9e767ca84dd413c3b2.deb' && dpkg -i '/root/i915-sriov-dkms_2024.08.09_all.deb'
 ```
 
 复制
 
-[附件四②：i915-sriov-dkms_6.1.11_all.deb](https://bbs.x86pi.cn/file/topic/2023-11-14/file/b14f8d40f19f4ec5a8878653950e3b24b2.deb)
-
-```bash
-GitHub：https://github.com/strongtz/i915-sriov-dkms
-用于 Gen 11 (如 i5-1135G7 的 Iris Xe 核显)、Gen12 (如 i7-1270p 的 Iris Xe 核显)及 Gen 13 (如 i5-13400 的 UHD 730 核显) SR-IOV
-* 部分 Gen 11 核显 SR-IOV 失败可尝试使用 intel-i915-dkms 驱动
-内核要求：适用于 PVE 6.2.16-15 及以下内核
-使用方法：
-首次安装需安装两次。
-安装过程中动态编译时间较长，需耐心等待，安装完成后需重启系统。
-wget -q -O '/root/i915-sriov-dkms_6.1.11_all(PVE_6.2.16-15-).deb' 'https://bbs.x86pi.cn/file/topic/2023-11-14/file/b14f8d40f19f4ec5a8878653950e3b24b2.deb' && dpkg -i '/root/i915-sriov-dkms_6.1.11_all(PVE_6.2.16-15-).deb'
-```
-
-复制
-
-[附件四③：intel-i915-dkms_1.24.1.19.240119.1.nodrm+i3-1_all.deb](https://bbs.x86pi.cn/file/topic/2024-05-13/file/594f60a1e29745a68d3c2f43626268dab2.deb)
+[附件四②：intel-i915-dkms_1.24.1.19.240119.1.nodrm+i3-1_all.deb](https://api.x86pi.com/file/topic/2024-05-13/file/594f60a1e29745a68d3c2f43626268dab2.deb)
 
 ```bash
 GitHub(Intel 官方)：https://github.com/intel-gpu/intel-gpu-i915-backports
@@ -523,7 +560,7 @@ GitHub(适配及重打包)：https://github.com/MoetaYuko/intel-gpu-i915-backpor
 
 **五、PVE 系统 Intel 核显固件下载地址及使用方法**
 
-[附件五：intel-gpu-firmware_20231108_001.tar.gz](https://bbs.x86pi.cn/file/topic/2023-11-08/file/bb05958d54484ffbb6cb0be85b7dc46fb2.gz)
+[附件五：intel-gpu-firmware_20231108_001.tar.gz](https://api.x86pi.com/file/topic/2023-11-08/file/bb05958d54484ffbb6cb0be85b7dc46fb2.gz)
 
 ```bash
 GitHub：https://github.com/intel-gpu/intel-gpu-firmware
@@ -594,16 +631,16 @@ reboot
 
 **七、其他文件**
 
-[附件六：r8125-dkms_9.013.02-1_all.deb](https://bbs.x86pi.cn/file/topic/2024-05-13/file/66999143c76144bd989c711d1dd16853b2.deb)
+[附件六：r8125-dkms_9.015.00-1_all.deb](https://api.x86pi.com/file/topic/2025-03-02/file/dbc30aa820464f838f291692db3a4c81b2.deb)
 
 ```bash
 Realtek RTL8125 2.5GbE 网卡驱动
-原作者：Gzxhwq
+原作者：Gzxhwq 
 Repack：Jazz，根据 2.5G/5G Ethernet LINUX driver r8125 for kernel up to 6.4 源码重新打包且降低 dkms 版本要求，以兼容 PVE 7
 
 更新日志：
-2024.05.13
-①更新 9.013.02 。
+2025.03.02
+①更新 9.015.00 。
 
 安装驱动并重启系统
 本驱动通过 alias 地址自动适配 r8125 网卡，通常无需手动屏蔽 r8169 模块。具体可通过 lspci -Dnnk 观察驱动的依赖模块
@@ -612,9 +649,11 @@ Repack：Jazz，根据 2.5G/5G Ethernet LINUX driver r8125 for kernel up to 6.4 
 apt update && apt install -y pve-headers proxmox-headers-$(uname -r) dkms  ## PVE 8 安装 dkms 及头文件
 apt update && apt install -y pve-headers pve-headers-$(uname -r) dkms      ## PVE 7 安装 dkms 及头文件
 ②
-dpkg -i r8125-dkms_9.013.02-1_all.deb
+dpkg -i r8125-dkms_9.015.00-1_all.deb
 ```
 
 复制
 
-![img](https://bbs.x86pi.cn/file/topic/2023-12-03/image/8df40fd1ff624858a167fd68b05c022db2.png)
+
+
+![img](https://api.x86pi.com/file/topic/2023-12-03/image/8df40fd1ff624858a167fd68b05c022db2.png)
